@@ -84,7 +84,56 @@ body {
 <meta name="apple-mobile-web-app-status-bar-style" content="black">
 <meta name="apple-mobile-web-app-title" content="Aetheria">
 <meta name="theme-color" content="#1b2033">
-	</head>
+	<!-- TEMPORARY diagnostic (the iPad freeze after leaving town, 2026-10-17): the web page and app
+     builds inject this into <head> (tools/build_pixel_web_page.sh, tools/build_pwa.sh). A small
+     badge at the top centre shows:
+       js HH:MM:SS  - ticks every second from a setInterval: if it freezes too, the page's main
+                      thread is blocked (a script loop or a synchronous shader compile / readback);
+       game Ns      - seconds since the game last wrote window.__aetheriaState (every 0.2 s from
+                      PixelGame._process): grows while the js clock still ticks = the game loop
+                      stopped (wasm crash) or only the drawing stopped (WebGL context lost);
+       GL LOST / ERR <text> - a webglcontextlost event or an uncaught error / rejection.
+     The last 20 events are kept in localStorage "aetheria-freeze" (survive a reload). -->
+<script>
+(function () {
+	var log = [];
+	try { log = JSON.parse(localStorage.getItem("aetheria-freeze") || "[]"); } catch (e) { log = []; }
+	function note(t) {
+		log.push(new Date().toISOString().slice(11, 19) + " " + t);
+		log = log.slice(-20);
+		try { localStorage.setItem("aetheria-freeze", JSON.stringify(log)); } catch (e) { /* private mode */ }
+	}
+	var lastState = null, lastChange = Date.now(), flags = "";
+	window.addEventListener("error", function (e) { flags = "ERR " + String(e.message).slice(0, 80); note(flags); });
+	window.addEventListener("unhandledrejection", function (e) { flags = "REJ " + String(e.reason).slice(0, 80); note(flags); });
+	document.addEventListener("webglcontextlost", function () { flags = "GL LOST"; note(flags); }, true);
+	document.addEventListener("webglcontextrestored", function () { note("GL restored"); }, true);
+	var oldErr = console.error;
+	console.error = function () { try { note("console.error " + Array.prototype.join.call(arguments, " ").slice(0, 100)); } catch (e) { } return oldErr.apply(console, arguments); };
+	function badge() {
+		var b = document.getElementById("freeze-badge");
+		if (!b && document.body) {
+			b = document.createElement("div");
+			b.id = "freeze-badge";
+			b.style.cssText = "position:fixed;left:50%;transform:translateX(-50%);top:calc(2px + env(safe-area-inset-top, 0px));z-index:99999;font:10px monospace;color:#fff;background:rgba(0,0,0,.45);padding:1px 5px;border-radius:4px;pointer-events:none";
+			document.body.appendChild(b);
+			var c = document.querySelector("canvas");
+			if (c) { c.addEventListener("webglcontextlost", function () { flags = "GL LOST"; note(flags); }); }
+		}
+		return b;
+	}
+	setInterval(function () {
+		if (window.__aetheriaState !== lastState) { lastState = window.__aetheriaState; lastChange = Date.now(); }
+		var stale = (Date.now() - lastChange) / 1000;
+		if (stale > 3 && !window.__freezeNoted) { window.__freezeNoted = true; note("game stalled (js alive) " + flags); }
+		if (stale < 1) { window.__freezeNoted = false; }
+		var b = badge();
+		if (b) { b.textContent = "js " + new Date().toTimeString().slice(0, 8) + "  game " + stale.toFixed(0) + "s " + flags; }
+	}, 1000);
+}());
+</script>
+
+</head>
 	<body>
 		<canvas id="canvas">
 			Your browser does not support the canvas tag.
@@ -98,12 +147,12 @@ body {
 			<img id="status-splash" src="index.png" alt="">
 			<progress id="status-progress"></progress>
 			<div id="status-notice"></div>
-			<div id="aetheria-build" style="position:absolute;left:10px;bottom:8px;font:12px sans-serif;color:#7f88aa">build 20261017205154</div>
+			<div id="aetheria-build" style="position:absolute;left:10px;bottom:8px;font:12px sans-serif;color:#7f88aa">build 20261017224549</div>
 		</div>
 
-		<script src="index.20261017205154.js"></script>
+		<script src="index.20261017224549.js"></script>
 		<script>
-const GODOT_CONFIG = {"args":[],"canvasResizePolicy":2,"ensureCrossOriginIsolationHeaders":false,"executable":"index.20261017205154","experimentalVK":false,"fileSizes":{"index.20261017205154.pck":10931312,"index.20261017205154.wasm":35376909},"focusCanvas":true,"gdextensionLibs":[],"serviceWorker":"index.service.worker.js"};
+const GODOT_CONFIG = {"args":[],"canvasResizePolicy":2,"ensureCrossOriginIsolationHeaders":false,"executable":"index.20261017224549","experimentalVK":false,"fileSizes":{"index.20261017224549.pck":10984272,"index.20261017224549.wasm":35376909},"focusCanvas":true,"gdextensionLibs":[],"serviceWorker":"index.service.worker.js"};
 const GODOT_THREADS_ENABLED = false;
 const engine = new Engine(GODOT_CONFIG);
 
@@ -201,7 +250,7 @@ window.aetheriaStart = (function () {
 });
 
 (function () {
-	const BUILD = "20261017205154";
+	const BUILD = "20261017224549";
 	let started = false;
 	const go = () => { if (!started) { started = true; window.aetheriaStart(); } };
 	const timer = setTimeout(go, 2500);                // offline or slow: play the copy we have
