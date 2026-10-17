@@ -98,15 +98,16 @@ body {
 			<img id="status-splash" src="index.png" alt="">
 			<progress id="status-progress"></progress>
 			<div id="status-notice"></div>
+			<div id="aetheria-build" style="position:absolute;left:10px;bottom:8px;font:12px sans-serif;color:#7f88aa">build 20261017195713</div>
 		</div>
 
-		<script src="index.js"></script>
+		<script src="index.20261017195713.js"></script>
 		<script>
-const GODOT_CONFIG = {"args":[],"canvasResizePolicy":2,"ensureCrossOriginIsolationHeaders":false,"executable":"index","experimentalVK":false,"fileSizes":{"index.pck":9666144,"index.wasm":35376909},"focusCanvas":true,"gdextensionLibs":[],"serviceWorker":"index.service.worker.js"};
+const GODOT_CONFIG = {"args":[],"canvasResizePolicy":2,"ensureCrossOriginIsolationHeaders":false,"executable":"index.20261017195713","experimentalVK":false,"fileSizes":{"index.20261017195713.pck":9666272,"index.20261017195713.wasm":35376909},"focusCanvas":true,"gdextensionLibs":[],"serviceWorker":"index.service.worker.js"};
 const GODOT_THREADS_ENABLED = false;
 const engine = new Engine(GODOT_CONFIG);
 
-(function () {
+window.aetheriaStart = (function () {
 	const statusOverlay = document.getElementById('status');
 	const statusProgress = document.getElementById('status-progress');
 	const statusNotice = document.getElementById('status-notice');
@@ -197,6 +198,28 @@ const engine = new Engine(GODOT_CONFIG);
 			setStatusMode('hidden');
 		}, displayFailureNotice);
 	}
+});
+
+(function () {
+	const BUILD = "20261017195713";
+	let started = false;
+	const go = () => { if (!started) { started = true; window.aetheriaStart(); } };
+	const timer = setTimeout(go, 2500);                // offline or slow: play the copy we have
+	fetch("version.json?t=" + Date.now(), { cache: "no-store" }).then((r) => (r.ok ? r.json() : null)).then((v) => {
+		let seen = null;
+		try { seen = sessionStorage.getItem("aetheria-update"); } catch (e) { /* private mode */ }
+		if (started || !v || !v.build || v.build === BUILD || seen === v.build) { clearTimeout(timer); go(); return; }
+		clearTimeout(timer);
+		started = true;
+		try { sessionStorage.setItem("aetheria-update", v.build); } catch (e) { /* private mode */ }
+		const notice = document.getElementById("status-notice");
+		if (notice) { notice.textContent = "Updating to build " + v.build; notice.style.display = "block"; }
+		const regs = ("serviceWorker" in navigator) ? navigator.serviceWorker.getRegistrations() : Promise.resolve([]);
+		const keys = ("caches" in window) ? caches.keys() : Promise.resolve([]);
+		Promise.all([keys.then((ks) => Promise.all(ks.map((k) => caches.delete(k)))),
+			regs.then((rs) => Promise.all(rs.map((r) => r.unregister())))])
+			.catch(() => null).then(() => location.replace("index.html?u=" + v.build));
+	}).catch(() => { clearTimeout(timer); go(); });
 }());
 		</script>
 	</body>

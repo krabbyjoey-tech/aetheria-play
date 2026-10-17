@@ -4,7 +4,7 @@
 // Incrementing CACHE_VERSION will kick off the install event and force
 // previously cached resources to be updated from the network.
 /** @type {string} */
-const CACHE_VERSION = '1792265687|6222176';
+const CACHE_VERSION = '1792267032|6767594';
 /** @type {string} */
 const CACHE_PREFIX = 'Aetheria-sw-cache-';
 const CACHE_NAME = CACHE_PREFIX + CACHE_VERSION;
@@ -14,14 +14,14 @@ const OFFLINE_URL = 'index.offline.html';
 const ENSURE_CROSSORIGIN_ISOLATION_HEADERS = false;
 // Files that will be cached on load.
 /** @type {string[]} */
-const CACHED_FILES = ["index.html","index.js","index.offline.html","index.icon.png","index.apple-touch-icon.png","index.audio.worklet.js"];
+const CACHED_FILES = ["index.html","index.20261017195713.js","index.offline.html","index.icon.png","index.apple-touch-icon.png","index.20261017195713.audio.worklet.js"];
 // Files that we might not want the user to preload, and will only be cached on first load.
 /** @type {string[]} */
-const CACHABLE_FILES = ["index.wasm","index.pck"];
+const CACHABLE_FILES = ["index.20261017195713.wasm","index.20261017195713.pck"];
 const FULL_CACHE = CACHED_FILES.concat(CACHABLE_FILES);
 
 self.addEventListener('install', (event) => {
-	event.waitUntil(caches.open(CACHE_NAME).then((cache) => cache.addAll(CACHED_FILES)).then(() => self.skipWaiting()));
+	event.waitUntil(caches.open(CACHE_NAME).then((cache) => cache.addAll(CACHED_FILES.map((f) => new Request(f, { cache: 'reload' })))).then(() => self.skipWaiting()));
 });
 
 self.addEventListener('activate', (event) => {
@@ -32,7 +32,7 @@ self.addEventListener('activate', (event) => {
 		}
 	).then(function () {
 		// Enable navigation preload if available.
-		return ('navigationPreload' in self.registration) ? self.registration.navigationPreload.enable() : Promise.resolve();
+		return ('navigationPreload' in self.registration) ? self.registration.navigationPreload.disable() : Promise.resolve();
 	}));
 });
 
@@ -72,7 +72,8 @@ async function fetchAndCache(event, cache, isCacheable) {
 	let response = await event.preloadResponse;
 	if (response == null) {
 		// Or, go over network.
-		response = await self.fetch(event.request);
+		response = await self.fetch(event.request.mode === 'navigate'
+			? new Request(event.request.url, { cache: 'reload' }) : new Request(event.request, { cache: 'reload' }));
 	}
 
 	if (ENSURE_CROSSORIGIN_ISOLATION_HEADERS) {
