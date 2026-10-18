@@ -4,7 +4,7 @@
 // Incrementing CACHE_VERSION will kick off the install event and force
 // previously cached resources to be updated from the network.
 /** @type {string} */
-const CACHE_VERSION = '1792278126|5590614';
+const CACHE_VERSION = '1792284213|8285930';
 /** @type {string} */
 const CACHE_PREFIX = 'Aetheria-sw-cache-';
 const CACHE_NAME = CACHE_PREFIX + CACHE_VERSION;
@@ -14,10 +14,10 @@ const OFFLINE_URL = 'index.offline.html';
 const ENSURE_CROSSORIGIN_ISOLATION_HEADERS = false;
 // Files that will be cached on load.
 /** @type {string[]} */
-const CACHED_FILES = ["index.html","index.20261017230207.js","index.offline.html","index.icon.png","index.apple-touch-icon.png","index.20261017230207.audio.worklet.js"];
+const CACHED_FILES = ["index.html","index.20261018004334.js","index.offline.html","index.icon.png","index.apple-touch-icon.png","index.20261018004334.audio.worklet.js"];
 // Files that we might not want the user to preload, and will only be cached on first load.
 /** @type {string[]} */
-const CACHABLE_FILES = ["index.20261017230207.wasm","index.20261017230207.pck","music/boss_elder.ogg","music/brightvale_day.ogg","music/brightvale_night.ogg","music/dewleaf_fields.ogg","music/sporecap_grove.ogg"];
+const CACHABLE_FILES = ["index.20261018004334.wasm","index.20261018004334.pck","music/boss_elder.ogg","music/brightvale_day.ogg","music/brightvale_night.ogg","music/dewleaf_fields.ogg","music/sporecap_grove.ogg"];
 const FULL_CACHE = CACHED_FILES.concat(CACHABLE_FILES);
 
 self.addEventListener('install', (event) => {
