@@ -589,12 +589,12 @@ body {
 			<img id="status-splash" src="index.png" alt="">
 			<progress id="status-progress"></progress>
 			<div id="status-notice"></div>
-			<div id="aetheria-build" style="position:absolute;left:10px;bottom:8px;font:12px sans-serif;color:#7f88aa">build 20261018200015</div>
+			<div id="aetheria-build" style="position:absolute;left:10px;bottom:8px;font:12px sans-serif;color:#7f88aa">v1.0.0 · build 20261018234213</div>
 		</div>
 
-		<script src="index.20261018200015.js"></script>
+		<script src="index.20261018234213.js"></script>
 		<script>
-const GODOT_CONFIG = {"args":[],"canvasResizePolicy":2,"ensureCrossOriginIsolationHeaders":false,"executable":"index.20261018200015","experimentalVK":false,"fileSizes":{"index.20261018200015.pck":15576768,"index.20261018200015.wasm":35376909},"focusCanvas":true,"gdextensionLibs":[],"serviceWorker":"index.service.worker.js"};
+const GODOT_CONFIG = {"args":[],"canvasResizePolicy":2,"ensureCrossOriginIsolationHeaders":false,"executable":"index.20261018234213","experimentalVK":false,"fileSizes":{"index.20261018234213.pck":15996112,"index.20261018234213.wasm":35376909},"focusCanvas":true,"gdextensionLibs":[],"serviceWorker":"index.service.worker.js"};
 const GODOT_THREADS_ENABLED = false;
 const engine = new Engine(GODOT_CONFIG);
 
@@ -692,7 +692,7 @@ window.aetheriaStart = (function () {
 });
 
 (function () {
-	const BUILD = "20261018200015";
+	const BUILD = "20261018234213";
 	let started = false;
 	const go = () => { if (!started) { started = true; window.aetheriaStart(); } };
 	const timer = setTimeout(go, 2500);                // offline or slow: play the copy we have
@@ -704,7 +704,7 @@ window.aetheriaStart = (function () {
 		started = true;
 		try { sessionStorage.setItem("aetheria-update", v.build); } catch (e) { /* private mode */ }
 		const notice = document.getElementById("status-notice");
-		if (notice) { notice.textContent = "Updating to build " + v.build; notice.style.display = "block"; }
+		if (notice) { notice.textContent = "Updating to " + (v.version ? "v" + v.version + " (build " + v.build + ")" : "build " + v.build); notice.style.display = "block"; }
 		const regs = ("serviceWorker" in navigator) ? navigator.serviceWorker.getRegistrations() : Promise.resolve([]);
 		const keys = ("caches" in window) ? caches.keys() : Promise.resolve([]);
 		Promise.all([keys.then((ks) => Promise.all(ks.map((k) => caches.delete(k)))),
