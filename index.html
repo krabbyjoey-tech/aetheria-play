@@ -84,102 +84,448 @@ body {
 <meta name="apple-mobile-web-app-status-bar-style" content="black">
 <meta name="apple-mobile-web-app-title" content="Aetheria">
 <meta name="theme-color" content="#1b2033">
-	<!-- TEMPORARY diagnostic (the iPad freeze after leaving town, 2026-10-17): the web page and app
-     builds inject this into <head> (tools/build_pixel_web_page.sh, tools/build_pwa.sh). A small
-     badge at the top centre shows:
-       js HH:MM:SS  - ticks every second from a setInterval: if it freezes too, the page's main
-                      thread is blocked (a script loop or a synchronous shader compile / readback);
-       game Ns      - seconds since the game last wrote window.__aetheriaState (every 0.2 s from
-                      PixelGame._process): grows while the js clock still ticks = the game loop
-                      stopped (wasm crash) or only the drawing stopped (WebGL context lost);
-       GL LOST / ERR <text> - a webglcontextlost event or an uncaught error / rejection.
-     The last 20 events are kept in localStorage "aetheria-freeze" (survive a reload). -->
+	<!-- TEMPORARY diagnostics (the freeze after leaving town, 2026-10-17). The web page and app builds
+     inject this into <head> (tools/build_pixel_web_page.sh, tools/build_pwa.sh). Remove it once
+     the freeze is understood.
+
+     BLACK BOX (flight recorder). Survives a reload or a killed app (localStorage):
+       aetheria-blackbox  {"v":1,"rec":[...],"ev":[...]}: the last 90 one-second records and the
+                          last 40 events of every session (a session = one page load, id "s").
+                          record: t wall ms, s session, r browser frames (requestAnimationFrame)
+                          in the last tick, g longest gap between those frames (ms), f game frame
+                          (window.__aetheriaState.frame), m map, k last breadcrumb, fp fps,
+                          p player px, w wasm heap MB, sm / tm / vm / bm static / texture / video /
+                          buffer MB, o objects, n nodes, v visibility (v / h).
+                          event: t, s, e kind (start, error, rejection, gl-lost, gl-restored,
+                          pagehide, pageshow, hidden, visible, abort, console, blocked, stall,
+                          recover), x text.
+       aetheria-marks     the last 40 breadcrumbs [{t, s, l}], written SYNCHRONOUSLY by
+                          window.__aetheriaMark(label) (the game calls it at phase boundaries,
+                          WebBlackBox.mark): a hang inside a phase leaves that phase as the last mark.
+       aetheria-blackbox-report  the text of the last previous-session report that showed a problem.
+     Live classification (every 1 s): JS ticking but no browser frames = "browser stopped drawing";
+     browser frames but the game frame stuck = "game loop stopped"; a late 1 s tick = "page
+     blocked for N s" (only seen afterwards: the JS thread itself was busy).
+     On load, the previous session is checked: if it ended without a pagehide while visible in the
+     game, or logged a long stall / GL loss / error / abort, a PREVIOUS SESSION panel shows over
+     the start screen (tap to close). Tap the badge three times quickly to open it again.
+
+     BADGE (top centre): "js HH:MM:SS raf N game Ns": js ticks from a setInterval (frozen = the
+     page's main thread is blocked), raf = browser frames in the last second, game = seconds since
+     the game frame last changed; GL LOST / ERR <text> flags.
+
+     Persistence: in Chromium a mark set right before the page's main thread hangs still reaches
+     disk (the browser's storage process writes it), but only in batches about a minute apart, so
+     a kill of the whole browser loses up to the last minute (tools/web_checks/black_box_check.js).
+     How soon WebKit (iPhone / iPad) writes localStorage to disk is not measured.
+
+     RED OVERLAY "FREEZE DIAGNOSIS": shown at once on a page error, an engine abort / out-of-memory
+     line, or a stall of 5 s; the last engine console lines. Tap it to hide it.
+     The last 20 problems also go to the older log "aetheria-freeze". -->
 <script>
 (function () {
-	var log = [];
-	try { log = JSON.parse(localStorage.getItem("aetheria-freeze") || "[]"); } catch (e) { log = []; }
+	'use strict';
+	var KEY_BOX = 'aetheria-blackbox', KEY_MARKS = 'aetheria-marks', KEY_REPORT = 'aetheria-blackbox-report';
+	var KEY_OLD = 'aetheria-freeze';
+	var MAX_REC = 90, MAX_EV = 40, MAX_MARKS = 40, MAX_CONSOLE = 10;
+	var STALL_MS = 5000;       // a stall this long is a problem: red overlay now, panel on the next load
+	var GAP_MS = 2500;         // 1 s ticks this far apart = the page was blocked (logged, listed)
+	var LIFE = { pagehide: 1, pageshow: 1, hidden: 1, visible: 1 };
+	var PROBLEM = { error: 1, rejection: 1, 'gl-lost': 1, abort: 1, stall: 1 };
+	var t0 = Date.now();
+	var sid = t0.toString(36).slice(-5) + Math.random().toString(36).slice(2, 4);
+
+	function lsGet(k) { try { return window.localStorage.getItem(k); } catch (e) { return null; } }
+	function lsSet(k, v) { try { window.localStorage.setItem(k, v); return true; } catch (e) { return false; } }
+	function parse(s, d) { try { var v = s ? JSON.parse(s) : null; return v || d; } catch (e) { return d; } }
+	function list(a) { return Array.isArray(a) ? a.filter(function (x) { return x && typeof x.t === 'number'; }) : []; }
+	function clip(s, n) { s = String(s); return s.length > n ? s.slice(0, n - 1) + '~' : s; }
+	function p2(n) { return n < 10 ? '0' + n : '' + n; }
+	function hms(t) { var d = new Date(t); return p2(d.getHours()) + ':' + p2(d.getMinutes()) + ':' + p2(d.getSeconds()); }
+	function hmsm(t) { return hms(t) + '.' + ('00' + new Date(t).getMilliseconds()).slice(-3); }
+	function secs(ms) { return (ms / 1000).toFixed(1) + ' s'; }
+	function pad(s, n) { s = String(s); while (s.length < n) s += ' '; return s; }
+	function lpad(s, n) { s = String(s); while (s.length < n) s = ' ' + s; return s; }
+	function visible() { return document.visibilityState !== 'hidden'; }
+
+	// --- what the previous page loads left (read before this session writes anything) ----------
+	var box = parse(lsGet(KEY_BOX), {});
+	var oldRecs = list(box.rec), oldEvs = list(box.ev), oldMarks = list(parse(lsGet(KEY_MARKS), []));
+	// stored as pre-serialised strings: a write is one join, never a re-encode of the whole ring
+	var recStr = oldRecs.slice(-MAX_REC).map(function (x) { return JSON.stringify(x); });
+	var evStr = oldEvs.slice(-MAX_EV).map(function (x) { return JSON.stringify(x); });
+	var markStr = oldMarks.slice(-MAX_MARKS).map(function (x) { return JSON.stringify(x); });
+	function push(arr, s, max) { arr.push(s); if (arr.length > max) arr.splice(0, arr.length - max); }
+	function writeBox() { lsSet(KEY_BOX, '{"v":1,"rec":[' + recStr.join(',') + '],"ev":[' + evStr.join(',') + ']}'); }
+
+	// this session, in memory (the live part of the panel)
+	var cur = { marks: [], events: [], problems: [], recs: 0 };
+	var lastMark = null, consoleEvents = 0, flags = '';
+
+	// --- the older 20-line log, kept for the earlier instructions ------------------------------
+	var oldLog = parse(lsGet(KEY_OLD), []);
 	function note(t) {
-		log.push(new Date().toISOString().slice(11, 19) + " " + t);
-		log = log.slice(-20);
-		try { localStorage.setItem("aetheria-freeze", JSON.stringify(log)); } catch (e) { /* private mode */ }
+		if (!Array.isArray(oldLog)) oldLog = [];
+		oldLog.push(hms(Date.now()) + ' ' + t);
+		oldLog = oldLog.slice(-20);
+		lsSet(KEY_OLD, JSON.stringify(oldLog));
 	}
-	var lastState = null, lastChange = Date.now(), flags = "";
-	window.addEventListener("error", function (e) { flags = "ERR " + String(e.message).slice(0, 80); note(flags); });
-	window.addEventListener("unhandledrejection", function (e) { flags = "REJ " + String(e.reason).slice(0, 80); note(flags); });
-	document.addEventListener("webglcontextlost", function () { flags = "GL LOST"; note(flags); }, true);
-	document.addEventListener("webglcontextrestored", function () { note("GL restored"); }, true);
-	var oldErr = console.error;
-	console.error = function () { try { note("console.error " + Array.prototype.join.call(arguments, " ").slice(0, 100)); } catch (e) { } return oldErr.apply(console, arguments); };
+
+	// --- events and breadcrumbs (both written at once) ------------------------------------------
+	function event(kind, text) {
+		var e = { t: Date.now(), s: sid, e: kind };
+		if (text) e.x = clip(text, 160);
+		push(evStr, JSON.stringify(e), MAX_EV);
+		cur.events.push(e);
+		if (cur.events.length > 12) cur.events.shift();
+		if (PROBLEM[kind] || kind === 'blocked') { cur.problems.push(e); note(kind + ' ' + (text || '')); }
+		writeBox();
+		return e;
+	}
+	window.__aetheriaMark = function (label) {
+		var m = { t: Date.now(), s: sid, l: clip(label, 64) };
+		lastMark = m;
+		push(markStr, JSON.stringify(m), MAX_MARKS);
+		cur.marks.push(m);
+		if (cur.marks.length > 12) cur.marks.shift();
+		lsSet(KEY_MARKS, '[' + markStr.join(',') + ']');
+	};
+
+	// --- wasm heap size: the engine's WebAssembly.Memory, caught when the engine instantiates ----
+	var wasmMem = null;
+	function grab(imports) {
+		return function (r) {
+			try {
+				var inst = r && (r.instance || r);
+				var m = inst && inst.exports && inst.exports.memory;
+				if (!m && imports && imports.env) m = imports.env.memory;
+				if (m && m.buffer) wasmMem = m;
+			} catch (e) { /* keep going */ }
+			return r;
+		};
+	}
+	if (window.WebAssembly) {
+		['instantiate', 'instantiateStreaming'].forEach(function (n) {
+			var f = WebAssembly[n];
+			if (typeof f !== 'function') return;
+			WebAssembly[n] = function (src, imports) { return f.apply(WebAssembly, arguments).then(grab(imports)); };
+		});
+	}
+	function wasmMB() { try { return wasmMem ? Math.round(wasmMem.buffer.byteLength / 1048576) : 0; } catch (e) { return 0; } }
+
+	// --- the browser's own frame counter (separate from the game's) ---------------------------
+	var raf = 0, rafAtTick = 0, rafLast = 0, rafMaxGap = 0;
+	function onRaf(ts) {
+		raf++;
+		if (rafLast && ts - rafLast > rafMaxGap) rafMaxGap = ts - rafLast;
+		rafLast = ts;
+		window.requestAnimationFrame(onRaf);
+	}
+	window.requestAnimationFrame(onRaf);
+
+	// --- console lines: engine aborts / heap growth failures; the last lines for the overlay ----
+	var LINES = 40, lines = [];
+	var ABORT_RE = /Failed to grow the heap|Cannot enlarge memory|Aborted\(|RuntimeError|out of memory|\bOOM\b|abort\(/i;
+	function keep(kind, args) {
+		try {
+			var s = Array.prototype.map.call(args, function (a) { return (a && a.stack) ? a.stack : String(a); }).join(' ');
+			lines.push(((Date.now() - t0) / 1000).toFixed(1) + 's ' + kind + ': ' + s);
+			if (lines.length > LINES) lines.shift();
+			if (ABORT_RE.test(s)) {
+				event('abort', s);
+				red('engine: ' + s.slice(0, 200));
+			} else if (kind === 'error' && consoleEvents < MAX_CONSOLE) {
+				consoleEvents++;
+				event('console', s);
+			}
+		} catch (e) { /* never break the console */ }
+	}
+	['error', 'warn', 'log'].forEach(function (k) {
+		var orig = console[k];
+		console[k] = function () {
+			if (k !== 'log' || lines.length < LINES || /ERROR|SCRIPT|Abort|heap/.test(String(arguments[0]))) keep(k, arguments);
+			return orig.apply(console, arguments);
+		};
+	});
+
+	// --- page events ------------------------------------------------------------------------------
+	window.addEventListener('error', function (e) {
+		var m = String(e.message) + (e.filename ? ' @' + String(e.filename).split('/').pop() + ':' + e.lineno : '');
+		flags = 'ERR ' + clip(e.message, 60);
+		event('error', m);
+		red('page error: ' + m);
+	});
+	window.addEventListener('unhandledrejection', function (e) {
+		var r = e.reason && e.reason.stack ? e.reason.stack : String(e.reason);
+		flags = 'REJ ' + clip(r, 60);
+		event('rejection', r);
+		red('unhandled rejection: ' + r);
+	});
+	// WebGL context events do not bubble: a capture listener on the window sees every canvas'
+	window.addEventListener('webglcontextlost', function () { flags = 'GL LOST'; event('gl-lost', 'WebGL context lost'); }, true);
+	window.addEventListener('webglcontextrestored', function () { flags = 'GL restored'; event('gl-restored', 'WebGL context restored'); }, true);
+	window.addEventListener('pagehide', function (e) { record(); event('pagehide', e.persisted ? 'into the back-forward cache' : ''); }, true);
+	window.addEventListener('pageshow', function (e) { if (e.persisted) event('pageshow', 'back from the back-forward cache'); }, true);
+	document.addEventListener('visibilitychange', function () {
+		rafLast = 0;          // the hidden time is not a long frame
+		if (visible()) { event('visible', ''); } else { record(); event('hidden', ''); }
+	}, true);
+
+	// --- the one-second records and the live classification -------------------------------------
+	var lastTick = Date.now(), wasVisible = visible(), lastFrame = null, frameChanged = Date.now();
+	var noRafMs = 0, sameFrameMs = 0, stall = null, rafAtRec = 0;
+	function record() {
+		var st = window.__aetheriaState || null, mem = (st && st.mem) || null;
+		var r = { t: Date.now(), s: sid, r: raf - rafAtRec, g: Math.round(rafMaxGap), v: visible() ? 'v' : 'h' };
+		rafAtRec = raf;
+		rafMaxGap = 0;
+		if (st) {
+			r.f = st.frame;
+			r.m = st.map || (mem && mem.map) || '';
+			r.fp = st.fps;
+			if (st.player) r.p = [Math.round(st.player[0]), Math.round(st.player[1])];
+		}
+		var w = wasmMB();
+		if (w) r.w = w;
+		if (mem) {
+			if (mem.static_mb > 0) r.sm = mem.static_mb;      // Godot counts it in debug builds only (0 in a release export)
+			r.tm = mem.tex_mb; r.vm = mem.vid_mb; r.bm = mem.buf_mb; r.o = mem.objects; r.n = mem.nodes;
+		}
+		if (lastMark) r.k = clip(lastMark.l, 48);
+		push(recStr, JSON.stringify(r), MAX_REC);
+		cur.recs++;
+		writeBox();
+		return r;
+	}
+	function tick() {
+		var now = Date.now(), dt = now - lastTick, vis = visible();
+		lastTick = now;
+		if (dt >= GAP_MS && wasVisible && vis) {
+			event('blocked', 'page blocked ~' + secs(dt - 1000) + ' (1 s ticks ' + secs(dt) + ' apart); last mark: ' +
+				(lastMark ? lastMark.l : '-'));
+		}
+		var rafN = raf - rafAtTick;
+		rafAtTick = raf;
+		var st = window.__aetheriaState || null, f = st ? st.frame : null;
+		if (f !== lastFrame) { lastFrame = f; frameChanged = now; }
+		// only on-time ticks count towards a stall: the JS thread was free all along. A late tick
+		// is a blocked page (one long frame can cover it without the game frame changing).
+		if (vis && dt < GAP_MS) {
+			noRafMs = rafN === 0 ? noRafMs + dt : 0;
+			sameFrameMs = (st && rafN > 0 && now - frameChanged >= dt) ? sameFrameMs + dt : 0;
+		} else {
+			noRafMs = 0;
+			sameFrameMs = 0;
+		}
+		var kind = noRafMs >= STALL_MS ? 'browser stopped drawing' : (sameFrameMs >= STALL_MS ? 'game loop stopped' : '');
+		if (kind && !stall) {
+			stall = { kind: kind, since: now - (noRafMs >= STALL_MS ? noRafMs : sameFrameMs) };
+			event('stall', kind + ' since ' + hms(stall.since) + ' (the JS clock still ticks); last mark: ' + (lastMark ? lastMark.l : '-'));
+			red(kind + ' for ' + secs(now - stall.since) + ' (the JS thread is free)');
+		} else if (!kind && stall) {
+			event('recover', stall.kind + ' ended after ' + secs(now - stall.since));
+			stall = null;
+		}
+		record();
+		wasVisible = vis;
+		var b = badge();
+		if (b) {
+			var live = noRafMs >= 2000 ? ' NO DRAW' : (sameFrameMs >= 2000 ? ' LOOP STOPPED' : '');
+			b.textContent = 'js ' + hms(now) + ' raf ' + rafN + ' game ' + (st ? ((now - frameChanged) / 1000).toFixed(0) + 's' : '-') + live + (flags ? ' ' + flags : '');
+		}
+	}
+
+	// --- the previous session: how it ended --------------------------------------------------------
+	function kilo(n) { return n === undefined ? '-' : (n >= 10000 ? (n / 1000).toFixed(1) + 'k' : '' + n); }
+	function shortMap(m) { return { brightvale: 'town', dewleaf_fields: 'field', dewleaf_crossing: 'crossing' }[m] || clip(m || '-', 8); }
+	function analyse() {
+		var id = null, best = -1;
+		[oldRecs, oldEvs, oldMarks].forEach(function (a) { a.forEach(function (x) { if (x.s && x.t > best) { best = x.t; id = x.s; } }); });
+		if (!id) return null;
+		var mine = function (x) { return x.s === id; };
+		var R = oldRecs.filter(mine), E = oldEvs.filter(mine), M = oldMarks.filter(mine);
+		var all = R.concat(E, M), start = Infinity, end = 0;
+		all.forEach(function (x) { if (x.t < start) start = x.t; if (x.t > end) end = x.t; });
+		var lastRec = R.length ? R[R.length - 1] : null, lastM = M.length ? M[M.length - 1] : null;
+		var life = E.filter(function (e) { return LIFE[e.e]; }), lastLife = life.length ? life[life.length - 1] : null;
+		// unloading fires pagehide, then visibilitychange to hidden: a session ended cleanly when its
+		// last pagehide was not followed by a pageshow (a return from the back-forward cache)
+		var hides = E.filter(function (e) { return e.e === 'pagehide'; }), lastHide = hides.length ? hides[hides.length - 1] : null;
+		var clean = !!lastHide && !E.some(function (e) { return e.e === 'pageshow' && e.t > lastHide.t; });
+		var hiddenEnd = !clean && (lastLife ? lastLife.e === 'hidden' : !!(lastRec && lastRec.v === 'h'));
+		var inGame = M.length > 0 || R.some(function (r) { return r.f !== undefined; });
+		var problems = [];
+		// the first map's +3 s mark: a block before it is the engine start (listed, never alone a reason for the panel)
+		var playing = M.filter(function (m) { return / arrival \+3 s/.test(m.l); }).map(function (m) { return m.t; })[0] || Infinity;
+		// gaps between consecutive visible records = the page was blocked (with the phases inside);
+		// the session start counts as a record, so a block before the first tick shows too
+		var startEv = E.filter(function (e) { return e.e === 'start'; })[0];
+		var RG = startEv ? [{ t: startEv.t, v: 'v' }].concat(R) : R;
+		for (var i = 1; i < RG.length; i++) {
+			var a = RG[i - 1], b = RG[i], gap = b.t - a.t;
+			if (gap < GAP_MS || a.v !== 'v' || b.v !== 'v') continue;
+			if (life.some(function (e) { return e.t > a.t && e.t < b.t; })) continue;
+			// the phases marked inside the gap, longest first (each lasts until the next mark)
+			var inside = M.filter(function (m) { return m.t > a.t && m.t < b.t; }).map(function (m, j, arr) {
+				return [m.l, (j + 1 < arr.length ? arr[j + 1].t : b.t) - m.t];
+			}).sort(function (x, y) { return y[1] - x[1]; });
+			problems.push({ t: a.t, sev: gap >= STALL_MS + 1000 && a.t > playing ? 2 : 1, text: 'page blocked ~' + secs(gap - 1000) +
+				(a.t < playing ? ' while starting' : '') + ' (' + hms(a.t) + ' -> ' + hms(b.t) + ')' + (inside.length ? '; longest phases: ' +
+				inside.slice(0, 4).map(function (x) { return x[0] + ' ' + secs(x[1]); }).join(', ') + (inside.length > 4 ? ' (+' + (inside.length - 4) + ' more)' : '') : '') });
+		}
+		var openStall = null;
+		E.forEach(function (e) {
+			if (e.e === 'stall') { openStall = e; problems.push({ t: e.t, sev: 2, text: e.x || 'stall' }); }
+			else if (e.e === 'recover') { openStall = null; problems.push({ t: e.t, sev: 1, text: e.x || 'recovered' }); }
+			else if (PROBLEM[e.e]) problems.push({ t: e.t, sev: 2, text: e.e + ': ' + (e.x || '') });
+			else if (e.e === 'gl-restored') problems.push({ t: e.t, sev: 1, text: e.x || 'WebGL context restored' });
+		});
+		problems.sort(function (x, y) { return x.t - y.t; });
+		var how;
+		if (clean) how = 'closed normally (pagehide at ' + hms(lastHide.t) + ').';
+		else if (hiddenEnd) how = 'went to the background at ' + hms(lastLife ? lastLife.t : lastRec.t) +
+			' and ended there without a pagehide (iOS or the user closed it in the background).';
+		else if (openStall) how = (openStall.x || 'stall').split(' (')[0] + ': the JS clock kept ticking until ' + (lastRec ? hms(lastRec.t) : '?') +
+			', then the page ended without a pagehide.';
+		else if (lastM && (!lastRec || lastM.t > lastRec.t)) how = 'the JS thread stopped inside "' + lastM.l + '" (marked ' + hmsm(lastM.t) +
+			', no 1 s record after it): blocked there until the page was killed or closed; no pagehide.';
+		else if (lastRec && lastRec.r === 0) how = 'the browser had stopped drawing (no animation frames) at ' + hms(lastRec.t) +
+			' while the JS clock ticked; then the page ended without a pagehide.';
+		else if (lastRec) how = 'ran normally until ' + hms(lastRec.t) + ' (last record: ' + lastRec.r + ' browser frames/s' +
+			(lastRec.f !== undefined ? ', game frame ' + lastRec.f : '') + '), then nothing and no pagehide: killed or closed while visible, ' +
+			'or the JS thread blocked right after its last record.';
+		else how = 'no records (the page ended within a second of loading).';
+		var serious = problems.some(function (p) { return p.sev >= 2; });
+		return { id: id, start: start, end: end, R: R, E: E, M: M, clean: clean, hiddenEnd: hiddenEnd, inGame: inGame,
+			problems: problems, how: how, show: (inGame && !clean && !hiddenEnd) || serious };
+	}
+
+	function recLine(r, prev) {
+		var gf = (r.f !== undefined && prev && prev.f !== undefined) ? '+' + (r.f - prev.f) : (r.f !== undefined ? '' + r.f : '-');
+		return hms(r.t) + ' ' + pad(shortMap(r.m), 8) + lpad(r.r, 4) + lpad(r.g, 6) + lpad(gf, 6) + lpad(r.fp !== undefined ? r.fp : '-', 4) +
+			lpad(r.w || '-', 5) + lpad(r.tm !== undefined ? Math.round(r.tm) : '-', 5) + lpad(kilo(r.o), 6) + '  ' + r.v + '  ' + clip(r.k || '', 40);
+	}
+	var REC_HEAD = 'time     map       raf  long   +gf fps wasm  tex   objs vis last mark';
+	function report(a) {
+		var out = [];
+		var ago = Math.round((t0 - a.end) / 60000);
+		out.push('PREVIOUS SESSION ' + a.id + '  ' + hms(a.start) + ' -> ' + hms(a.end) + '   (this page ' + hms(t0) +
+			(ago >= 1 ? ', ' + ago + ' min later' : '') + ')');
+		out.push('HOW IT ENDED: ' + a.how);
+		var last = a.R.length ? a.R[a.R.length - 1] : null;
+		if (last) {
+			var mb = [['wasm heap', last.w], ['static', last.sm], ['texture', last.tm], ['video', last.vm], ['buffer', last.bm]]
+				.filter(function (x) { return x[1] !== undefined; }).map(function (x) { return x[0] + ' ' + x[1]; });
+			out.push('LAST RECORD ' + hms(last.t) + ': ' + (last.m || 'no game yet') + (last.p ? ' at ' + last.p.join(',') : '') +
+				(mb.length ? '  MB: ' + mb.join(', ') : '') + (last.o !== undefined ? '  objects ' + last.o + '  nodes ' + last.n : ''));
+		}
+		out.push('RECORDS (last 10; raf = browser frames in the second, long = longest frame ms, +gf = game frames):');
+		out.push('  ' + REC_HEAD);
+		var R = a.R.slice(-11);
+		for (var i = Math.max(1, R.length - 10); i < R.length; i++) out.push('  ' + recLine(R[i], R[i - 1]));
+		if (R.length === 1) out.push('  ' + recLine(R[0], null));
+		out.push('MARKS (last 10):');
+		a.M.slice(-10).forEach(function (m) { out.push('  ' + hmsm(m.t) + '  ' + m.l); });
+		if (a.problems.length) {
+			out.push('PROBLEMS (last 8):');
+			a.problems.slice(-8).forEach(function (p) { out.push('  ' + hms(p.t) + '  ' + p.text); });
+		} else out.push('PROBLEMS: none logged');
+		var ev = a.E.filter(function (e) { return !LIFE[e.e] && e.e !== 'start'; }).slice(-8);
+		if (ev.length) {
+			out.push('ERRORS / EVENTS (last 8):');
+			ev.forEach(function (e) { out.push('  ' + hms(e.t) + '  ' + e.e + (e.x ? ': ' + e.x : '')); });
+		}
+		var start = a.E.filter(function (e) { return e.e === 'start'; })[0];
+		if (start) out.push('device: ' + start.x);
+		return out.join('\n');
+	}
+	function liveText() {
+		var out = ['THIS SESSION ' + sid + ' since ' + hms(t0) + ': ' + cur.recs + ' records, wasm ' + (wasmMB() || '?') + ' MB' +
+			(stall ? ', NOW: ' + stall.kind + ' since ' + hms(stall.since) : '')];
+		cur.problems.slice(-6).forEach(function (e) { out.push('  ' + hms(e.t) + '  ' + e.e + ': ' + (e.x || '')); });
+		cur.marks.slice(-6).forEach(function (m) { out.push('  mark ' + hmsm(m.t) + '  ' + m.l); });
+		return out.join('\n');
+	}
+
+	// --- the panel (previous session) and the red overlay (now) --------------------------------------
+	function overlay(id, text, bg) {
+		var old = document.getElementById(id);
+		if (old) old.parentNode.removeChild(old);
+		var d = document.createElement('pre');
+		d.id = id;
+		d.style.cssText = 'position:fixed;left:0;top:0;right:0;bottom:0;margin:0;z-index:100000;overflow:auto;-webkit-overflow-scrolling:touch;' +
+			'box-sizing:border-box;padding:max(8px,env(safe-area-inset-top)) max(10px,env(safe-area-inset-right)) ' +
+			'max(8px,env(safe-area-inset-bottom)) max(10px,env(safe-area-inset-left));background:' + bg + ';color:#eef1ff;' +
+			'font:12px/1.35 ui-monospace,Menlo,Consolas,monospace;white-space:pre-wrap;word-break:break-word;cursor:pointer;' +
+			'-webkit-text-size-adjust:100%;text-size-adjust:100%;touch-action:pan-x pan-y';
+		d.textContent = text;
+		d.addEventListener('click', function () { if (d.parentNode) d.parentNode.removeChild(d); });
+		(document.body || document.documentElement).appendChild(d);
+		return d;
+	}
+	var prev = analyse(), saved = parse(lsGet(KEY_REPORT), null), prevText = prev ? report(prev) : '';
+	if (prev && prev.show) lsSet(KEY_REPORT, JSON.stringify({ id: prev.id, at: t0, text: prevText }));
+	function showPanel() {
+		var parts = ['BLACK BOX  (tap anywhere to close)'];
+		parts.push(prevText || 'PREVIOUS SESSION: nothing stored.');
+		if (saved && saved.text && (!prev || saved.id !== prev.id)) parts.push('LAST SAVED PROBLEM REPORT (from the page load at ' + hms(saved.at) + '):\n' + saved.text);
+		parts.push(liveText());
+		return overlay('aetheria-blackbox-panel', parts.join('\n\n'), 'rgba(6,10,26,0.95)');
+	}
+	var redShown = false;
+	function red(reason) {
+		if (redShown) return;
+		redShown = true;
+		var mem = [];
+		try { if (performance.memory) mem.push('js heap ' + (performance.memory.usedJSHeapSize / 1048576).toFixed(0) + ' MB'); } catch (e) { /* Safari */ }
+		if (wasmMB()) mem.push('wasm ' + wasmMB() + ' MB');
+		try { var s = window.__aetheriaState; if (s) mem.push('state ' + JSON.stringify({ p: s.player, fps: s.fps, map: s.map, mem: s.mem })); } catch (e) { /* ignore */ }
+		var go = function () {
+			var d = overlay('aetheria-freeze-overlay', 'FREEZE DIAGNOSIS (' + ((Date.now() - t0) / 1000).toFixed(1) + 's, tap to hide)\n' + reason + '\n' +
+				mem.join(' | ') + '\nlast marks: ' + cur.marks.slice(-5).map(function (m) { return hmsm(m.t) + ' ' + m.l; }).join(' / ') +
+				'\n----\n' + lines.join('\n'), 'rgba(40,0,0,0.9)');
+			d.style.bottom = 'auto';
+			d.style.maxHeight = '70%';
+		};
+		if (document.body) go(); else document.addEventListener('DOMContentLoaded', go);
+	}
+	window.__aetheriaBlackBox = { sid: sid, previous: prev, showPanel: showPanel, text: function () { return prevText; } };
+
+	// --- the badge: tap it three times quickly for the panel (it takes touches on its own box only) ---
+	var taps = [];
 	function badge() {
-		var b = document.getElementById("freeze-badge");
+		var b = document.getElementById('freeze-badge');
 		if (!b && document.body) {
-			b = document.createElement("div");
-			b.id = "freeze-badge";
-			b.style.cssText = "position:fixed;left:50%;transform:translateX(-50%);top:calc(2px + env(safe-area-inset-top, 0px));z-index:99999;font:10px monospace;color:#fff;background:rgba(0,0,0,.45);padding:1px 5px;border-radius:4px;pointer-events:none";
+			b = document.createElement('div');
+			b.id = 'freeze-badge';
+			b.style.cssText = 'position:fixed;left:50%;transform:translateX(-50%);top:calc(2px + env(safe-area-inset-top, 0px));z-index:99999;' +
+				'font:10px monospace;color:#fff;background:rgba(0,0,0,.45);padding:2px 6px;border-radius:4px;white-space:nowrap;' +
+				'pointer-events:auto;touch-action:manipulation;-webkit-user-select:none;user-select:none;-webkit-touch-callout:none;cursor:pointer';
+			b.addEventListener('pointerdown', function (e) {
+				e.stopPropagation();
+				var now = Date.now();
+				taps.push(now);
+				taps = taps.filter(function (t) { return now - t < 900; });
+				if (taps.length >= 3) { taps = []; showPanel(); }
+			});
+			b.addEventListener('touchend', function (e) { if (e.cancelable) e.preventDefault(); }, { passive: false });   // no double-tap zoom
 			document.body.appendChild(b);
-			var c = document.querySelector("canvas");
-			if (c) { c.addEventListener("webglcontextlost", function () { flags = "GL LOST"; note(flags); }); }
 		}
 		return b;
 	}
-	setInterval(function () {
-		if (window.__aetheriaState !== lastState) { lastState = window.__aetheriaState; lastChange = Date.now(); }
-		var stale = (Date.now() - lastChange) / 1000;
-		if (stale > 3 && !window.__freezeNoted) { window.__freezeNoted = true; note("game stalled (js alive) " + flags); }
-		if (stale < 1) { window.__freezeNoted = false; }
-		var b = badge();
-		if (b) { b.textContent = "js " + new Date().toTimeString().slice(0, 8) + "  game " + stale.toFixed(0) + "s " + flags; }
-	}, 1000);
+
+	// --- start ------------------------------------------------------------------------------
+	var ua = navigator.userAgent, dev = /iPad/.test(ua) ? 'iPad' : (/iPhone/.test(ua) ? 'iPhone' : (/Mac OS X/.test(ua) && navigator.maxTouchPoints > 1 ? 'iPad (desktop UA)' : ''));
+	event('start', [dev, (ua.match(/OS [\d_]+|Version\/[\d.]+|Chrome\/[\d.]+/g) || []).join(' '), 'dpr ' + (window.devicePixelRatio || 1),
+		screen.width + 'x' + screen.height, (window.navigator.standalone || (window.matchMedia && window.matchMedia('(display-mode: standalone)').matches)) ? 'home-screen app' : 'page',
+		location.pathname.split('/').pop() || '/'].filter(Boolean).join(' | '));
+	setInterval(tick, 1000);
+	var onBody = function () {
+		badge();
+		if (prev && prev.show) showPanel();
+	};
+	if (document.body) onBody(); else document.addEventListener('DOMContentLoaded', onBody);
 }());
-</script>
-<!-- TEMPORARY too: the freeze overlay. Keeps the last engine console lines and shows them on
-     screen when the page throws (a wasm trap, an abort), when the engine prints an abort /
-     out-of-memory line ("Failed to grow the heap", "Aborted(", "RuntimeError"), or when
-     window.__aetheriaState stops changing for 6 s while the browser itself still runs (the main
-     loop stopped, JS thread free). A freeze with no overlay = the JS thread itself is blocked
-     (a hang inside the engine or a script), not a crash. Tap the overlay to hide it. -->
-<script>
-(function () {
-  var LINES = 40, log = [], shown = false, lastState = null, lastChange = Date.now(), t0 = Date.now();
-  function stamp() { return ((Date.now() - t0) / 1000).toFixed(1) + 's '; }
-  function keep(kind, args) {
-    try {
-      var s = Array.prototype.map.call(args, function (a) { return (a && a.stack) ? a.stack : String(a); }).join(' ');
-      log.push(stamp() + kind + ': ' + s);
-      if (log.length > LINES) log.shift();
-      if (/Failed to grow the heap|Cannot enlarge memory|Aborted\(|RuntimeError|out of memory|OOM/i.test(s)) show('engine: ' + s.slice(0, 200));
-    } catch (e) {}
-  }
-  ['error', 'warn', 'log'].forEach(function (k) {
-    var orig = console[k];
-    console[k] = function () { if (k !== 'log' || log.length < LINES || /ERROR|SCRIPT|Abort|heap/.test(arguments[0])) keep(k, arguments); return orig.apply(console, arguments); };
-  });
-  function memText() {
-    var parts = [];
-    try { if (performance.memory) parts.push('js heap ' + (performance.memory.usedJSHeapSize / 1048576).toFixed(0) + ' MB'); } catch (e) {}
-    try { if (window.__aetheriaState) parts.push('state ' + JSON.stringify({ p: window.__aetheriaState.player, fps: window.__aetheriaState.fps })); } catch (e) {}
-    return parts.join(' | ');
-  }
-  function show(reason) {
-    if (shown) return;
-    shown = true;
-    var d = document.createElement('pre');
-    d.style.cssText = 'position:fixed;left:0;top:0;right:0;max-height:70%;overflow:auto;margin:0;padding:8px;z-index:99999;' +
-      'background:rgba(40,0,0,0.88);color:#fff;font:11px/1.3 monospace;white-space:pre-wrap;';
-    d.textContent = 'FREEZE DIAGNOSIS (' + stamp() + ')\n' + reason + '\n' + memText() + '\n----\n' + log.join('\n');
-    d.onclick = function () { d.remove(); };
-    (document.body || document.documentElement).appendChild(d);
-  }
-  window.addEventListener('error', function (e) { keep('onerror', [e.message + ' @' + e.filename + ':' + e.lineno]); show('page error: ' + e.message); });
-  window.addEventListener('unhandledrejection', function (e) { keep('rejection', [e.reason]); show('unhandled rejection: ' + e.reason); });
-  setInterval(function () {
-    var s = null;
-    try { s = window.__aetheriaState ? JSON.stringify(window.__aetheriaState) : null; } catch (e) {}
-    if (s === null) { lastChange = Date.now(); return; }      // not in the game yet
-    if (s !== lastState) { lastState = s; lastChange = Date.now(); return; }
-    if (!document.hidden && Date.now() - lastChange > 6000) show('main loop stopped: no game update for ' + ((Date.now() - lastChange) / 1000).toFixed(0) + ' s (JS thread is free)');
-  }, 1000);
-})();
 </script>
 
 </head>
@@ -196,12 +542,12 @@ body {
 			<img id="status-splash" src="index.png" alt="">
 			<progress id="status-progress"></progress>
 			<div id="status-notice"></div>
-			<div id="aetheria-build" style="position:absolute;left:10px;bottom:8px;font:12px sans-serif;color:#7f88aa">build 20261018020620</div>
+			<div id="aetheria-build" style="position:absolute;left:10px;bottom:8px;font:12px sans-serif;color:#7f88aa">build 20261018033442</div>
 		</div>
 
-		<script src="index.20261018020620.js"></script>
+		<script src="index.20261018033442.js"></script>
 		<script>
-const GODOT_CONFIG = {"args":[],"canvasResizePolicy":2,"ensureCrossOriginIsolationHeaders":false,"executable":"index.20261018020620","experimentalVK":false,"fileSizes":{"index.20261018020620.pck":11067392,"index.20261018020620.wasm":35376909},"focusCanvas":true,"gdextensionLibs":[],"serviceWorker":"index.service.worker.js"};
+const GODOT_CONFIG = {"args":[],"canvasResizePolicy":2,"ensureCrossOriginIsolationHeaders":false,"executable":"index.20261018033442","experimentalVK":false,"fileSizes":{"index.20261018033442.pck":11166464,"index.20261018033442.wasm":35376909},"focusCanvas":true,"gdextensionLibs":[],"serviceWorker":"index.service.worker.js"};
 const GODOT_THREADS_ENABLED = false;
 const engine = new Engine(GODOT_CONFIG);
 
@@ -299,7 +645,7 @@ window.aetheriaStart = (function () {
 });
 
 (function () {
-	const BUILD = "20261018020620";
+	const BUILD = "20261018033442";
 	let started = false;
 	const go = () => { if (!started) { started = true; window.aetheriaStart(); } };
 	const timer = setTimeout(go, 2500);                // offline or slow: play the copy we have
