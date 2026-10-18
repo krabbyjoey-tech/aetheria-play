@@ -110,9 +110,16 @@ body {
      game, or logged a long stall / GL loss / error / abort, a PREVIOUS SESSION panel shows over
      the start screen (tap to close). Tap the badge three times quickly to open it again.
 
-     BADGE (top centre): "js HH:MM:SS raf N game Ns": js ticks from a setInterval (frozen = the
-     page's main thread is blocked), raf = browser frames in the last second, game = seconds since
-     the game frame last changed; GL LOST / ERR <text> flags.
+     BADGE (a corner the HUD leaves free): "js HH:MM:SS raf N game Ns": js ticks from a setInterval
+     (frozen = the page's main thread is blocked), raf = browser frames in the last second, game =
+     seconds since the game frame last changed (the game mirrors it while paused too: the
+     new-character screen, a paused window); GL LOST / ERR <text> flags. It sat at the top centre
+     over the HUD's target frame; now it starts in the bottom-left corner and, once the game
+     mirrors its HUD (window.__aetheriaState: HUD widget rects and hit rects, the touch buttons,
+     the joystick), moves to the first spot that covers none of them: the bottom-left corner above
+     the EXP strip, else the bottom-right one, else along that bottom row, else along the top row
+     (the phone's joystick and action arc fill both bottom corners; the desktop's chat bar, nav bar
+     and action bar fill the whole bottom row).
 
      Persistence: in Chromium a mark set right before the page's main thread hangs still reaches
      disk (the browser's storage process writes it), but only in batches about a minute apart, so
@@ -332,6 +339,7 @@ body {
 		if (b) {
 			var live = noRafMs >= 2000 ? ' NO DRAW' : (sameFrameMs >= 2000 ? ' LOOP STOPPED' : '');
 			b.textContent = 'js ' + hms(now) + ' raf ' + rafN + ' game ' + (st ? ((now - frameChanged) / 1000).toFixed(0) + 's' : '-') + live + (flags ? ' ' + flags : '');
+			place(b, st);
 		}
 	}
 
@@ -498,8 +506,9 @@ body {
 		if (!b && document.body) {
 			b = document.createElement('div');
 			b.id = 'freeze-badge';
-			b.style.cssText = 'position:fixed;left:50%;transform:translateX(-50%);top:calc(2px + env(safe-area-inset-top, 0px));z-index:99999;' +
-				'font:10px monospace;color:#fff;background:rgba(0,0,0,.45);padding:2px 6px;border-radius:4px;white-space:nowrap;' +
+			// the bottom-left corner until the game mirrors its HUD (then place() picks a free corner)
+			b.style.cssText = 'position:fixed;left:calc(2px + env(safe-area-inset-left, 0px));bottom:calc(2px + env(safe-area-inset-bottom, 0px));z-index:99999;' +
+				'font:9px/11px monospace;color:#fff;background:rgba(0,0,0,.45);padding:1px 4px;border-radius:3px;white-space:nowrap;' +
 				'pointer-events:auto;touch-action:manipulation;-webkit-user-select:none;user-select:none;-webkit-touch-callout:none;cursor:pointer';
 			b.addEventListener('pointerdown', function (e) {
 				e.stopPropagation();
@@ -512,6 +521,44 @@ body {
 			document.body.appendChild(b);
 		}
 		return b;
+	}
+
+	// --- where the badge sits: a corner the game's HUD leaves free --------------------------------------
+	// (it sat at the top centre, over the HUD's target frame). Boxes are [x, y, w, h] in CSS px; the
+	// state's HUD rects are in HUD px (x hud_scale / devicePixelRatio), its buttons and joystick in
+	// canvas px (/ devicePixelRatio).
+	function hudBoxes(st) {
+		var h = st.hud || {}, dpr = window.devicePixelRatio || 1, f = (st.hud_scale || h.scale || 1) / dpr, out = [];
+		function add(r, g) { if (r && r.length === 4 && r[2] > 0 && r[3] > 0) out.push([r[0] * g, r[1] * g, r[2] * g, r[3] * g]); }
+		[h.rects, h.hits].forEach(function (m) { if (m) Object.keys(m).forEach(function (k) { add(m[k], f); }); });
+		if (st.buttons) Object.keys(st.buttons).forEach(function (k) { var c = st.buttons[k]; add([c[0] - c[2], c[1] - c[2], 2 * c[2], 2 * c[2]], 1 / dpr); });
+		if (st.touch && st.touch.active && st.stick_home) { var r = st.touch.radius || 0; add([st.stick_home[0] - r, st.stick_home[1] - r, 2 * r, 2 * r], 1 / dpr); }
+		if (st.windows && st.windows.open) add(st.windows.rect, f);
+		var nc = st.new_character;
+		if (nc && nc.open && nc.panel) add(nc.panel, (nc.k || st.hud_scale || 1) / dpr);
+		return out;
+	}
+	function overlaps(a, b) { return a[0] < b[0] + b[2] && b[0] < a[0] + a[2] && a[1] < b[1] + b[3] && b[1] < a[1] + a[3]; }
+	function place(b, st) {
+		if (!st || !st.hud || !st.hud.rects) return;          // no game yet: the CSS corner
+		var dpr = window.devicePixelRatio || 1, f = (st.hud_scale || st.hud.scale || 1) / dpr;
+		var w = b.offsetWidth, h = b.offsetHeight, boxes = hudBoxes(st);
+		var sf = st.hud.safe || [0, 0, window.innerWidth / f, window.innerHeight / f], ex = st.hud.rects.exp;
+		var left = Math.ceil(sf[0] * f), right = Math.floor((sf[0] + sf[2]) * f) - w, top = Math.ceil(sf[1] * f);
+		var bottom = Math.floor((ex ? ex[1] * f : (sf[1] + sf[3]) * f) - h - 1);     // just above the EXP strip
+		// the bottom-left corner, the bottom-right one, else along the bottom row, else along the top row
+		var spots = [[left, bottom], [right, bottom]], px, at = null;
+		for (px = left + 4; px < right; px += 4) spots.push([px, bottom]);
+		for (px = left; px <= right; px += 4) spots.push([px, top]);
+		for (var i = 0; i < spots.length && at === null; i++) {
+			var me = [spots[i][0], spots[i][1], w, h], hit = false;
+			for (var j = 0; j < boxes.length && !hit; j++) hit = overlaps(me, boxes[j]);
+			if (!hit) at = spots[i];
+		}
+		at = at || [left, bottom];        // nowhere free (a long flag): the bottom-left corner all the same
+		b.style.left = at[0] + 'px';
+		b.style.top = at[1] + 'px';
+		b.style.bottom = 'auto';
 	}
 
 	// --- start ------------------------------------------------------------------------------
@@ -542,12 +589,12 @@ body {
 			<img id="status-splash" src="index.png" alt="">
 			<progress id="status-progress"></progress>
 			<div id="status-notice"></div>
-			<div id="aetheria-build" style="position:absolute;left:10px;bottom:8px;font:12px sans-serif;color:#7f88aa">build 20261018055337</div>
+			<div id="aetheria-build" style="position:absolute;left:10px;bottom:8px;font:12px sans-serif;color:#7f88aa">build 20261018072457</div>
 		</div>
 
-		<script src="index.20261018055337.js"></script>
+		<script src="index.20261018072457.js"></script>
 		<script>
-const GODOT_CONFIG = {"args":[],"canvasResizePolicy":2,"ensureCrossOriginIsolationHeaders":false,"executable":"index.20261018055337","experimentalVK":false,"fileSizes":{"index.20261018055337.pck":11054560,"index.20261018055337.wasm":35376909},"focusCanvas":true,"gdextensionLibs":[],"serviceWorker":"index.service.worker.js"};
+const GODOT_CONFIG = {"args":[],"canvasResizePolicy":2,"ensureCrossOriginIsolationHeaders":false,"executable":"index.20261018072457","experimentalVK":false,"fileSizes":{"index.20261018072457.pck":11664656,"index.20261018072457.wasm":35376909},"focusCanvas":true,"gdextensionLibs":[],"serviceWorker":"index.service.worker.js"};
 const GODOT_THREADS_ENABLED = false;
 const engine = new Engine(GODOT_CONFIG);
 
@@ -645,7 +692,7 @@ window.aetheriaStart = (function () {
 });
 
 (function () {
-	const BUILD = "20261018055337";
+	const BUILD = "20261018072457";
 	let started = false;
 	const go = () => { if (!started) { started = true; window.aetheriaStart(); } };
 	const timer = setTimeout(go, 2500);                // offline or slow: play the copy we have
