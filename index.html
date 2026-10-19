@@ -88,6 +88,11 @@ body {
      inject this into <head> (tools/build_pixel_web_page.sh, tools/build_pwa.sh). Remove it once
      the freeze is understood.
 
+     v1.0: players see none of it. The black box below always records (invisible), but the visible
+     parts - the BADGE, the RED OVERLAY and the PREVIOUS SESSION panel at load - only show with
+     ?diag in the page's address (index.html?diag). Problems found without it are still kept
+     (aetheria-blackbox-report): open the page with ?diag and tap the badge three times to read them.
+
      BLACK BOX (flight recorder). Survives a reload or a killed app (localStorage):
        aetheria-blackbox  {"v":1,"rec":[...],"ev":[...]}: the last 90 one-second records and the
                           last 40 events of every session (a session = one page load, id "s").
@@ -141,6 +146,8 @@ body {
 	var PROBLEM = { error: 1, rejection: 1, 'gl-lost': 1, abort: 1, stall: 1 };
 	var t0 = Date.now();
 	var sid = t0.toString(36).slice(-5) + Math.random().toString(36).slice(2, 4);
+	// the visible parts only with ?diag (or ?diag=1) in the address; the recorder always runs
+	var DIAG = /[?&]diag(?:[=&]|$)/.test(location.search || '');
 
 	function lsGet(k) { try { return window.localStorage.getItem(k); } catch (e) { return null; } }
 	function lsSet(k, v) { try { window.localStorage.setItem(k, v); return true; } catch (e) { return false; } }
@@ -482,7 +489,7 @@ body {
 	}
 	var redShown = false;
 	function red(reason) {
-		if (redShown) return;
+		if (redShown || !DIAG) return;
 		redShown = true;
 		var mem = [];
 		try { if (performance.memory) mem.push('js heap ' + (performance.memory.usedJSHeapSize / 1048576).toFixed(0) + ' MB'); } catch (e) { /* Safari */ }
@@ -497,11 +504,12 @@ body {
 		};
 		if (document.body) go(); else document.addEventListener('DOMContentLoaded', go);
 	}
-	window.__aetheriaBlackBox = { sid: sid, previous: prev, showPanel: showPanel, text: function () { return prevText; } };
+	window.__aetheriaBlackBox = { sid: sid, diag: DIAG, previous: prev, showPanel: showPanel, text: function () { return prevText; } };
 
 	// --- the badge: tap it three times quickly for the panel (it takes touches on its own box only) ---
 	var taps = [];
 	function badge() {
+		if (!DIAG) return null;           // (v1.0: no badge without ?diag)
 		var b = document.getElementById('freeze-badge');
 		if (!b && document.body) {
 			b = document.createElement('div');
@@ -569,7 +577,7 @@ body {
 	setInterval(tick, 1000);
 	var onBody = function () {
 		badge();
-		if (prev && prev.show) showPanel();
+		if (prev && prev.show && DIAG) showPanel();
 	};
 	if (document.body) onBody(); else document.addEventListener('DOMContentLoaded', onBody);
 }());
@@ -589,12 +597,12 @@ body {
 			<img id="status-splash" src="index.png" alt="">
 			<progress id="status-progress"></progress>
 			<div id="status-notice"></div>
-			<div id="aetheria-build" style="position:absolute;left:10px;bottom:8px;font:12px sans-serif;color:#7f88aa">v1.0.0 · build 20261018234213</div>
+			<div id="aetheria-build" style="position:absolute;left:10px;bottom:8px;font:12px sans-serif;color:#7f88aa">v1.0.0 · build 20261019014335</div>
 		</div>
 
-		<script src="index.20261018234213.js"></script>
+		<script src="index.20261019014335.js"></script>
 		<script>
-const GODOT_CONFIG = {"args":[],"canvasResizePolicy":2,"ensureCrossOriginIsolationHeaders":false,"executable":"index.20261018234213","experimentalVK":false,"fileSizes":{"index.20261018234213.pck":15996112,"index.20261018234213.wasm":35376909},"focusCanvas":true,"gdextensionLibs":[],"serviceWorker":"index.service.worker.js"};
+const GODOT_CONFIG = {"args":[],"canvasResizePolicy":2,"ensureCrossOriginIsolationHeaders":false,"executable":"index.20261019014335","experimentalVK":false,"fileSizes":{"index.20261019014335.pck":17985312,"index.20261019014335.wasm":35376909},"focusCanvas":true,"gdextensionLibs":[],"serviceWorker":"index.service.worker.js"};
 const GODOT_THREADS_ENABLED = false;
 const engine = new Engine(GODOT_CONFIG);
 
@@ -692,7 +700,7 @@ window.aetheriaStart = (function () {
 });
 
 (function () {
-	const BUILD = "20261018234213";
+	const BUILD = "20261019014335";
 	let started = false;
 	const go = () => { if (!started) { started = true; window.aetheriaStart(); } };
 	const timer = setTimeout(go, 2500);                // offline or slow: play the copy we have
