@@ -1,0 +1,272 @@
+[
+ {
+  "dropped_by": [
+   {
+    "chance": 0.0005,
+    "elite_chance": null,
+    "monster": "dewdrop_slime"
+   },
+   {
+    "chance": 0.0005,
+    "elite_chance": 0.0015,
+    "monster": "dusk_dewdrop_slime"
+   }
+  ],
+  "effect": "LUK +3, Perfect Dodge +3",
+  "goes_into": "garment",
+  "id": "dewdrop_slime_card",
+  "name": "Dewdrop Slime Card"
+ },
+ {
+  "dropped_by": [
+   {
+    "chance": 0.005,
+    "elite_chance": null,
+    "monster": "elder_sporecap"
+   }
+  ],
+  "effect": "MATK +8%, Max HP -5%",
+  "goes_into": "head_top",
+  "id": "elder_sporecap_card",
+  "name": "Elder Sporecap Card"
+ },
+ {
+  "dropped_by": [
+   {
+    "chance": 0.0005,
+    "elite_chance": null,
+    "monster": "bellwisp"
+   }
+  ],
+  "effect": "Max SP +12%, INT +1",
+  "goes_into": "shoes",
+  "id": "bellwisp_card",
+  "name": "Bellwisp Card"
+ },
+ {
+  "dropped_by": [
+   {
+    "chance": 0.0005,
+    "elite_chance": null,
+    "monster": "bramblebun"
+   }
+  ],
+  "effect": "FLEE +8",
+  "goes_into": "shoes",
+  "id": "bramblebun_card",
+  "name": "Bramblebun Card"
+ },
+ {
+  "dropped_by": [
+   {
+    "chance": 0.005,
+    "elite_chance": null,
+    "monster": "dewroot_regent"
+   }
+  ],
+  "effect": "Damage vs Boss +15%, Max HP -5%",
+  "goes_into": "weapon",
+  "id": "dewroot_regent_card",
+  "name": "Dewroot Regent Card"
+ },
+ {
+  "dropped_by": [
+   {
+    "chance": 0.0005,
+    "elite_chance": null,
+    "monster": "dripfin"
+   }
+  ],
+  "effect": "Damage vs Small +10%",
+  "goes_into": "weapon",
+  "id": "dripfin_card",
+  "name": "Dripfin Card"
+ },
+ {
+  "dropped_by": [
+   {
+    "chance": 0.0005,
+    "elite_chance": null,
+    "monster": "gale_bramblebun"
+   }
+  ],
+  "effect": "CRIT +6",
+  "goes_into": "accessory",
+  "id": "gale_bramblebun_card",
+  "name": "Gale Bramblebun Card"
+ },
+ {
+  "dropped_by": [
+   {
+    "chance": 0.0005,
+    "elite_chance": null,
+    "monster": "hushcap"
+   }
+  ],
+  "effect": "MATK +6, Max SP -5%",
+  "goes_into": "head_top",
+  "id": "hushcap_card",
+  "name": "Hushcap Card"
+ },
+ {
+  "dropped_by": [
+   {
+    "chance": 0.0005,
+    "elite_chance": null,
+    "monster": "reedbeak"
+   }
+  ],
+  "effect": "HIT +10",
+  "goes_into": "weapon",
+  "id": "reedbeak_card",
+  "name": "Reedbeak Card"
+ },
+ {
+  "dropped_by": [
+   {
+    "chance": 0.0005,
+    "elite_chance": null,
+    "monster": "rootmantle"
+   }
+  ],
+  "effect": "Max HP +12%, FLEE -4",
+  "goes_into": "armor",
+  "id": "rootmantle_card",
+  "name": "Rootmantle Card"
+ },
+ {
+  "dropped_by": [
+   {
+    "chance": 0.0005,
+    "elite_chance": null,
+    "monster": "rootnib"
+   }
+  ],
+  "effect": "Damage vs Beast +15%",
+  "goes_into": "weapon",
+  "id": "rootnib_card",
+  "name": "Rootnib Card"
+ },
+ {
+  "dropped_by": [
+   {
+    "chance": 0.0005,
+    "elite_chance": null,
+    "monster": "tuftguard"
+   }
+  ],
+  "effect": "Damage vs Plant +12%",
+  "goes_into": "weapon",
+  "id": "tuftguard_card",
+  "name": "Tuftguard Card"
+ },
+ {
+  "dropped_by": [
+   {
+    "chance": 0.005,
+    "elite_chance": null,
+    "monster": "dewroot_regent"
+   },
+   {
+    "chance": 0.0005,
+    "elite_chance": null,
+    "monster": "wickmoth"
+   }
+  ],
+  "effect": "ASPD +5%, Max SP -5%",
+  "goes_into": "accessory",
+  "id": "wickmoth_card",
+  "name": "Wickmoth Card"
+ },
+ {
+  "dropped_by": [
+   {
+    "chance": 0.0005,
+    "elite_chance": null,
+    "monster": "gildmaw"
+   }
+  ],
+  "effect": "LUK +2",
+  "goes_into": "accessory",
+  "id": "gildmaw_card",
+  "name": "Gildmaw Card"
+ },
+ {
+  "dropped_by": [
+   {
+    "chance": 0.0005,
+    "elite_chance": null,
+    "monster": "moss_slime"
+   }
+  ],
+  "effect": "DEF +5, VIT +2",
+  "goes_into": "shield",
+  "id": "moss_slime_card",
+  "name": "Moss Slime Card"
+ },
+ {
+  "dropped_by": [
+   {
+    "chance": 0.005,
+    "elite_chance": null,
+    "monster": "elder_sporecap"
+   }
+  ],
+  "effect": "AGI +2, Max HP +8%",
+  "goes_into": "shoes",
+  "id": "sporeling_card",
+  "name": "Sporeling Card"
+ },
+ {
+  "dropped_by": [
+   {
+    "chance": 0.0005,
+    "elite_chance": null,
+    "monster": "sporecap"
+   }
+  ],
+  "effect": "INT +2, DEX +2",
+  "goes_into": "head_top",
+  "id": "sporecap_card",
+  "name": "Sporecap Card"
+ },
+ {
+  "dropped_by": [
+   {
+    "chance": 0.0005,
+    "elite_chance": 0.0015,
+    "monster": "dusk_dewdrop_slime"
+   }
+  ],
+  "effect": "Damage vs Medium +10%",
+  "goes_into": "weapon",
+  "id": "dusk_dewdrop_slime_card",
+  "name": "Dusk Slime Card"
+ },
+ {
+  "dropped_by": [
+   {
+    "chance": 0.0005,
+    "elite_chance": 0.0015,
+    "monster": "bog_moss_slime"
+   }
+  ],
+  "effect": "Max HP +8%, Max SP +8%",
+  "goes_into": "armor",
+  "id": "bog_moss_slime_card",
+  "name": "Bog Moss Slime Card"
+ },
+ {
+  "dropped_by": [
+   {
+    "chance": 0.0005,
+    "elite_chance": 0.0015,
+    "monster": "gloom_sporecap"
+   }
+  ],
+  "effect": "ATK +8",
+  "goes_into": "accessory",
+  "id": "gloom_sporecap_card",
+  "name": "Gloom Sporecap Card"
+ }
+]

@@ -1,0 +1,6791 @@
+[
+ {
+  "bonus": [],
+  "bound": false,
+  "card_slots": 0,
+  "classes": [],
+  "description": "A wobbly drop of gel left by a Dewdrop Slime. It sparkles faintly in sunlight.",
+  "dropped_by": [
+   {
+    "chance": 0.8,
+    "elite_chance": 0.8,
+    "monster": "dusk_dewdrop_slime",
+    "pieces": "1"
+   },
+   {
+    "chance": 0.75,
+    "elite_chance": null,
+    "monster": "moss_slime",
+    "pieces": "1"
+   },
+   {
+    "chance": 0.7,
+    "elite_chance": null,
+    "monster": "dewdrop_slime",
+    "pieces": "1"
+   },
+   {
+    "chance": 0.4,
+    "elite_chance": 0.4,
+    "monster": "bog_moss_slime",
+    "pieces": "1"
+   }
+  ],
+  "effect": "Crafting material",
+  "elite_bonus_chance": null,
+  "icon": "img/items/glimmer_gel.png",
+  "id": "glimmer_gel",
+  "level": 0,
+  "name": "Glimmer Gel",
+  "other": [],
+  "quests": [],
+  "rarity": "Normal",
+  "sells_for": 4,
+  "shops": [],
+  "slot": "",
+  "two_handed": false,
+  "type": "material",
+  "weapon": "",
+  "weight": 1
+ },
+ {
+  "bonus": [],
+  "bound": false,
+  "card_slots": 0,
+  "classes": [],
+  "description": "A bitter red herb that knits small wounds.",
+  "dropped_by": [
+   {
+    "chance": 0.15,
+    "elite_chance": null,
+    "monster": "sporecap",
+    "pieces": "1"
+   },
+   {
+    "chance": 0.15,
+    "elite_chance": 0.15,
+    "monster": "gloom_sporecap",
+    "pieces": "1"
+   },
+   {
+    "chance": 0.12,
+    "elite_chance": 0.12,
+    "monster": "dusk_dewdrop_slime",
+    "pieces": "1"
+   },
+   {
+    "chance": 0.12,
+    "elite_chance": 0.12,
+    "monster": "bog_moss_slime",
+    "pieces": "1"
+   },
+   {
+    "chance": 0.1,
+    "elite_chance": null,
+    "monster": "moss_slime",
+    "pieces": "1"
+   },
+   {
+    "chance": 0.06,
+    "elite_chance": null,
+    "monster": "dewdrop_slime",
+    "pieces": "1"
+   },
+   {
+    "chance": 0.05,
+    "elite_chance": null,
+    "monster": "sporeling",
+    "pieces": "1"
+   }
+  ],
+  "effect": "Restores 25 HP",
+  "elite_bonus_chance": 0.6,
+  "icon": "img/items/red_herb.png",
+  "id": "red_herb",
+  "level": 0,
+  "name": "Red Herb",
+  "other": [
+   "gift:cleric"
+  ],
+  "quests": [
+   {
+    "count": 3,
+    "map": "brightvale",
+    "name": "Ready for the Road",
+    "quest": "ready_for_the_road"
+   },
+   {
+    "count": 2,
+    "map": "dewleaf_fields",
+    "name": "Bridge Practice",
+    "quest": "bridge_practice"
+   },
+   {
+    "count": 2,
+    "map": "dewleaf_fields",
+    "name": "Steady Front",
+    "quest": "steady_front"
+   }
+  ],
+  "rarity": "Normal",
+  "sells_for": 6,
+  "shops": [
+   {
+    "map": "brightvale",
+    "name": "General Store",
+    "price": 12,
+    "shop": "general"
+   }
+  ],
+  "slot": "",
+  "two_handed": false,
+  "type": "consumable",
+  "weapon": "",
+  "weight": 3
+ },
+ {
+  "bonus": [],
+  "bound": false,
+  "card_slots": 0,
+  "classes": [],
+  "description": "A soft violet puff shed by Sporecaps. It tingles when squeezed.",
+  "dropped_by": [
+   {
+    "chance": 1.0,
+    "elite_chance": null,
+    "monster": "elder_sporecap",
+    "pieces": "1"
+   },
+   {
+    "chance": 0.6,
+    "elite_chance": 0.6,
+    "monster": "gloom_sporecap",
+    "pieces": "1"
+   },
+   {
+    "chance": 0.55,
+    "elite_chance": null,
+    "monster": "sporecap",
+    "pieces": "1"
+   },
+   {
+    "chance": 0.25,
+    "elite_chance": null,
+    "monster": "sporeling",
+    "pieces": "1"
+   }
+  ],
+  "effect": "Crafting material",
+  "elite_bonus_chance": null,
+  "icon": "img/items/spore_puff.png",
+  "id": "spore_puff",
+  "level": 0,
+  "name": "Spore Puff",
+  "other": [],
+  "quests": [],
+  "rarity": "Normal",
+  "sells_for": 12,
+  "shops": [],
+  "slot": "",
+  "two_handed": false,
+  "type": "material",
+  "weapon": "",
+  "weight": 1
+ },
+ {
+  "bonus": [],
+  "bound": false,
+  "card_slots": 0,
+  "classes": [],
+  "description": "Dew from the bellflowers of Dewleaf. Brightvale's herbalists bottle it cool and bright.",
+  "dropped_by": [
+   {
+    "chance": 0.08,
+    "elite_chance": 0.08,
+    "monster": "dusk_dewdrop_slime",
+    "pieces": "1"
+   },
+   {
+    "chance": 0.06,
+    "elite_chance": 0.06,
+    "monster": "bog_moss_slime",
+    "pieces": "1"
+   },
+   {
+    "chance": 0.05,
+    "elite_chance": null,
+    "monster": "moss_slime",
+    "pieces": "1"
+   },
+   {
+    "chance": 0.04,
+    "elite_chance": null,
+    "monster": "dewdrop_slime",
+    "pieces": "1"
+   }
+  ],
+  "effect": "Restores 20 SP",
+  "elite_bonus_chance": null,
+  "icon": "img/items/dewbell_tonic.png",
+  "id": "dewbell_tonic",
+  "level": 0,
+  "name": "Dewbell Tonic",
+  "other": [
+   "calling"
+  ],
+  "quests": [
+   {
+    "count": 2,
+    "map": "dewleaf_fields",
+    "name": "Field Habits",
+    "quest": "field_habits"
+   },
+   {
+    "count": 2,
+    "map": "dewleaf_fields",
+    "name": "River Round",
+    "quest": "river_round"
+   },
+   {
+    "count": 2,
+    "map": "dewleaf_fields",
+    "name": "Dusk Ruin Patrol",
+    "quest": "dusk_ruin_patrol"
+   },
+   {
+    "count": 2,
+    "map": "dewleaf_fields",
+    "name": "Gloom in the Grove",
+    "quest": "gloom_in_the_grove"
+   },
+   {
+    "count": 2,
+    "map": "dewleaf_fields",
+    "name": "Care on the Road",
+    "quest": "care_on_the_road"
+   },
+   {
+    "count": 3,
+    "map": "dewleaf_fields",
+    "name": "A Golden Outline",
+    "quest": "a_golden_outline"
+   }
+  ],
+  "rarity": "Normal",
+  "sells_for": 9,
+  "shops": [
+   {
+    "map": "brightvale",
+    "name": "General Store",
+    "price": 18,
+    "shop": "general"
+   }
+  ],
+  "slot": "",
+  "two_handed": false,
+  "type": "consumable",
+  "weapon": "",
+  "weight": 2
+ },
+ {
+  "bonus": [],
+  "bound": false,
+  "card_slots": 0,
+  "classes": [],
+  "description": "A scarlet bloom from shaded hollows. Its warmth mends deep wounds.",
+  "dropped_by": [
+   {
+    "chance": 0.45,
+    "elite_chance": null,
+    "monster": "elder_sporecap",
+    "pieces": "1"
+   },
+   {
+    "chance": 0.05,
+    "elite_chance": 0.05,
+    "monster": "gloom_sporecap",
+    "pieces": "1"
+   },
+   {
+    "chance": 0.03,
+    "elite_chance": null,
+    "monster": "sporecap",
+    "pieces": "1"
+   }
+  ],
+  "effect": "Restores 90 HP",
+  "elite_bonus_chance": null,
+  "icon": "img/items/heartbloom.png",
+  "id": "heartbloom",
+  "level": 0,
+  "name": "Heartbloom",
+  "other": [],
+  "quests": [],
+  "rarity": "Normal",
+  "sells_for": 22,
+  "shops": [],
+  "slot": "",
+  "two_handed": false,
+  "type": "consumable",
+  "weapon": "",
+  "weight": 4
+ },
+ {
+  "bonus": [],
+  "bound": false,
+  "card_slots": 0,
+  "classes": [],
+  "description": "A springy clump of moss off a Moss Slime. Still damp.",
+  "dropped_by": [
+   {
+    "chance": 0.6,
+    "elite_chance": 0.6,
+    "monster": "bog_moss_slime",
+    "pieces": "1"
+   },
+   {
+    "chance": 0.45,
+    "elite_chance": null,
+    "monster": "moss_slime",
+    "pieces": "1"
+   }
+  ],
+  "effect": "Crafting material",
+  "elite_bonus_chance": null,
+  "icon": "img/items/moss_tuft.png",
+  "id": "moss_tuft",
+  "level": 0,
+  "name": "Moss Tuft",
+  "other": [],
+  "quests": [],
+  "rarity": "Normal",
+  "sells_for": 5,
+  "shops": [],
+  "slot": "",
+  "two_handed": false,
+  "type": "material",
+  "weapon": "",
+  "weight": 1
+ },
+ {
+  "bonus": [],
+  "bound": false,
+  "card_slots": 0,
+  "classes": [],
+  "description": "A chip of a Sporecap's tough cap. Leatherworkers prize the cream spots.",
+  "dropped_by": [
+   {
+    "chance": 0.8,
+    "elite_chance": null,
+    "monster": "elder_sporecap",
+    "pieces": "1"
+   },
+   {
+    "chance": 0.45,
+    "elite_chance": 0.45,
+    "monster": "gloom_sporecap",
+    "pieces": "1"
+   },
+   {
+    "chance": 0.3,
+    "elite_chance": null,
+    "monster": "sporecap",
+    "pieces": "1"
+   }
+  ],
+  "effect": "Crafting material",
+  "elite_bonus_chance": null,
+  "icon": "img/items/sporecap_shard.png",
+  "id": "sporecap_shard",
+  "level": 0,
+  "name": "Sporecap Shard",
+  "other": [],
+  "quests": [],
+  "rarity": "Normal",
+  "sells_for": 16,
+  "shops": [],
+  "slot": "",
+  "two_handed": false,
+  "type": "material",
+  "weapon": "",
+  "weight": 2
+ },
+ {
+  "bonus": [],
+  "bound": false,
+  "card_slots": 0,
+  "classes": [],
+  "description": "The slow heart of an Elder Sporecap. It hums with violet light.",
+  "dropped_by": [
+   {
+    "chance": 0.6,
+    "elite_chance": null,
+    "monster": "elder_sporecap",
+    "pieces": "1"
+   }
+  ],
+  "effect": "Crafting material",
+  "elite_bonus_chance": null,
+  "icon": "img/items/elder_spore_core.png",
+  "id": "elder_spore_core",
+  "level": 0,
+  "name": "Elder Spore Core",
+  "other": [],
+  "quests": [],
+  "rarity": "Rare",
+  "sells_for": 90,
+  "shops": [],
+  "slot": "",
+  "two_handed": false,
+  "type": "material",
+  "weapon": "",
+  "weight": 5
+ },
+ {
+  "bonus": [],
+  "bound": false,
+  "card_slots": 0,
+  "classes": [],
+  "description": "A gold-flecked stone a fallen Elite leaves behind. Traders pay well for it.",
+  "dropped_by": [
+   {
+    "chance": 1.0,
+    "elite_chance": null,
+    "monster": "gildmaw",
+    "pieces": "1"
+   },
+   {
+    "chance": 0.5,
+    "elite_chance": null,
+    "monster": "gildmaw",
+    "pieces": "1"
+   }
+  ],
+  "effect": "Crafting material",
+  "elite_bonus_chance": 1.0,
+  "icon": "img/items/crownstone.png",
+  "id": "crownstone",
+  "level": 0,
+  "name": "Crownstone",
+  "other": [],
+  "quests": [],
+  "rarity": "Rare",
+  "sells_for": 150,
+  "shops": [],
+  "slot": "",
+  "two_handed": false,
+  "type": "material",
+  "weapon": "",
+  "weight": 2
+ },
+ {
+  "bonus": [
+   "ATK +28"
+  ],
+  "bound": false,
+  "card_slots": 1,
+  "classes": [],
+  "description": "A short blade on a thornwood grip. Light enough for a novice.",
+  "dropped_by": [
+   {
+    "chance": 0.012,
+    "elite_chance": null,
+    "monster": "sporecap",
+    "pieces": "1"
+   },
+   {
+    "chance": 0.008,
+    "elite_chance": null,
+    "monster": "moss_slime",
+    "pieces": "1"
+   }
+  ],
+  "effect": "",
+  "elite_bonus_chance": null,
+  "icon": "img/items/thornwood_dagger.png",
+  "id": "thornwood_dagger",
+  "level": 0,
+  "name": "Thornwood Dagger",
+  "other": [],
+  "quests": [],
+  "rarity": "Normal",
+  "sells_for": 110,
+  "shops": [
+   {
+    "map": "brightvale",
+    "name": "Weapons & Armor",
+    "price": 220,
+    "shop": "arms"
+   }
+  ],
+  "slot": "weapon",
+  "two_handed": false,
+  "type": "equipment",
+  "weapon": "dagger",
+  "weight": 40
+ },
+ {
+  "bonus": [
+   "DEF +2"
+  ],
+  "bound": false,
+  "card_slots": 0,
+  "classes": [],
+  "description": "A soft cap woven from living moss. It smells of rain.",
+  "dropped_by": [
+   {
+    "chance": 0.015,
+    "elite_chance": null,
+    "monster": "moss_slime",
+    "pieces": "1"
+   }
+  ],
+  "effect": "",
+  "elite_bonus_chance": null,
+  "icon": "img/items/mossweave_cap.png",
+  "id": "mossweave_cap",
+  "level": 0,
+  "name": "Mossweave Cap",
+  "other": [],
+  "quests": [
+   {
+    "count": 1,
+    "map": "dewleaf_fields",
+    "name": "Hollow Echoes",
+    "quest": "hollow_echoes"
+   }
+  ],
+  "rarity": "Normal",
+  "sells_for": 80,
+  "shops": [
+   {
+    "map": "brightvale",
+    "name": "Weapons & Armor",
+    "price": 160,
+    "shop": "arms"
+   }
+  ],
+  "slot": "head_top",
+  "two_handed": false,
+  "type": "equipment",
+  "weapon": "",
+  "weight": 20
+ },
+ {
+  "bonus": [
+   "DEF +5"
+  ],
+  "bound": false,
+  "card_slots": 1,
+  "classes": [],
+  "description": "A round shield cut from an Elder Sporecap's cap. Rimmed in brass.",
+  "dropped_by": [
+   {
+    "chance": 0.08,
+    "elite_chance": null,
+    "monster": "elder_sporecap",
+    "pieces": "1"
+   },
+   {
+    "chance": 0.03,
+    "elite_chance": null,
+    "monster": "gildmaw",
+    "pieces": "1"
+   }
+  ],
+  "effect": "",
+  "elite_bonus_chance": 0.015,
+  "icon": "img/items/capshell_buckler.png",
+  "id": "capshell_buckler",
+  "level": 0,
+  "name": "Capshell Buckler",
+  "other": [],
+  "quests": [],
+  "rarity": "Epic",
+  "sells_for": 340,
+  "shops": [],
+  "slot": "shield",
+  "two_handed": false,
+  "type": "equipment",
+  "weapon": "",
+  "weight": 50
+ },
+ {
+  "bonus": [],
+  "bound": false,
+  "card_slots": 0,
+  "classes": [],
+  "description": "Holds the bouncy spirit of a Dewdrop Slime.",
+  "dropped_by": [
+   {
+    "chance": 0.0005,
+    "elite_chance": null,
+    "monster": "dewdrop_slime",
+    "pieces": "1"
+   },
+   {
+    "chance": 0.0005,
+    "elite_chance": 0.0015,
+    "monster": "dusk_dewdrop_slime",
+    "pieces": "1"
+   }
+  ],
+  "effect": "LUK +3, Perfect Dodge +3",
+  "elite_bonus_chance": null,
+  "icon": "img/items/dewdrop_slime_card.png",
+  "id": "dewdrop_slime_card",
+  "level": 0,
+  "name": "Dewdrop Slime Card",
+  "other": [],
+  "quests": [],
+  "rarity": "Rare",
+  "sells_for": 250,
+  "shops": [],
+  "slot": "garment",
+  "two_handed": false,
+  "type": "card",
+  "weapon": "",
+  "weight": 1
+ },
+ {
+  "bonus": [],
+  "bound": false,
+  "card_slots": 0,
+  "classes": [],
+  "description": "Holds the ancient patience of the Elder Sporecap.",
+  "dropped_by": [
+   {
+    "chance": 0.005,
+    "elite_chance": null,
+    "monster": "elder_sporecap",
+    "pieces": "1"
+   }
+  ],
+  "effect": "MATK +8%, Max HP -5%",
+  "elite_bonus_chance": null,
+  "icon": "img/items/elder_sporecap_card.png",
+  "id": "elder_sporecap_card",
+  "level": 0,
+  "name": "Elder Sporecap Card",
+  "other": [],
+  "quests": [],
+  "rarity": "Epic",
+  "sells_for": 1500,
+  "shops": [],
+  "slot": "head_top",
+  "two_handed": false,
+  "type": "card",
+  "weapon": "",
+  "weight": 1
+ },
+ {
+  "bonus": [
+   "ATK +17"
+  ],
+  "bound": false,
+  "card_slots": 0,
+  "classes": [],
+  "description": "A dull practice blade from the guild's rack. Every journey starts with one.",
+  "dropped_by": [
+   {
+    "chance": 0.005,
+    "elite_chance": null,
+    "monster": "dewdrop_slime",
+    "pieces": "1"
+   }
+  ],
+  "effect": "",
+  "elite_bonus_chance": null,
+  "icon": "img/items/training_knife.png",
+  "id": "training_knife",
+  "level": 0,
+  "name": "Training Knife",
+  "other": [
+   "starter"
+  ],
+  "quests": [],
+  "rarity": "Normal",
+  "sells_for": 25,
+  "shops": [
+   {
+    "map": "brightvale",
+    "name": "Weapons & Armor",
+    "price": 50,
+    "shop": "arms"
+   }
+  ],
+  "slot": "weapon",
+  "two_handed": false,
+  "type": "equipment",
+  "weapon": "dagger",
+  "weight": 30
+ },
+ {
+  "bonus": [
+   "ATK +90",
+   "FLEE -2"
+  ],
+  "bound": false,
+  "card_slots": 2,
+  "classes": [],
+  "description": "A long blade of ironbark, hard as steel. It takes both hands and a steady stance.",
+  "dropped_by": [
+   {
+    "chance": 0.06,
+    "elite_chance": null,
+    "monster": "gildmaw",
+    "pieces": "1"
+   },
+   {
+    "chance": 0.05,
+    "elite_chance": null,
+    "monster": "elder_sporecap",
+    "pieces": "1"
+   }
+  ],
+  "effect": "",
+  "elite_bonus_chance": 0.03,
+  "icon": "img/items/ironbark_greatsword.png",
+  "id": "ironbark_greatsword",
+  "level": 0,
+  "name": "Ironbark Greatsword",
+  "other": [],
+  "quests": [],
+  "rarity": "Rare",
+  "sells_for": 420,
+  "shops": [],
+  "slot": "weapon",
+  "two_handed": true,
+  "type": "equipment",
+  "weapon": "greatsword",
+  "weight": 120
+ },
+ {
+  "bonus": [
+   "ATK +25",
+   "MATK +20 %",
+   "INT +1"
+  ],
+  "bound": false,
+  "card_slots": 0,
+  "classes": [
+   "arcanist",
+   "cleric"
+  ],
+  "description": "A long willow bough wrapped in living moss. It takes two hands, and gives the spell more room.",
+  "dropped_by": [
+   {
+    "chance": 0.004,
+    "elite_chance": null,
+    "monster": "gildmaw",
+    "pieces": "1"
+   }
+  ],
+  "effect": "",
+  "elite_bonus_chance": null,
+  "icon": "img/items/willowmoss_staff.png",
+  "id": "willowmoss_staff",
+  "level": 11,
+  "name": "Willowmoss Staff",
+  "other": [],
+  "quests": [],
+  "rarity": "Normal",
+  "sells_for": 899,
+  "shops": [
+   {
+    "map": "brightvale",
+    "name": "Weapons & Armor",
+    "price": 1798,
+    "shop": "arms"
+   }
+  ],
+  "slot": "weapon",
+  "two_handed": true,
+  "type": "equipment",
+  "weapon": "staff",
+  "weight": 90
+ },
+ {
+  "bonus": [
+   "ATK +29",
+   "MATK +20 %",
+   "INT +2"
+  ],
+  "bound": false,
+  "card_slots": 2,
+  "classes": [
+   "arcanist"
+  ],
+  "description": "Brook reeds bound round a pale shaft, with two hollows that wait for something to keep.",
+  "dropped_by": [
+   {
+    "chance": 0.004,
+    "elite_chance": 0.01,
+    "monster": "dusk_dewdrop_slime",
+    "pieces": "1"
+   },
+   {
+    "chance": 0.004,
+    "elite_chance": null,
+    "monster": "dripfin",
+    "pieces": "1"
+   }
+  ],
+  "effect": "",
+  "elite_bonus_chance": null,
+  "icon": "img/items/brookreed_staff.png",
+  "id": "brookreed_staff",
+  "level": 16,
+  "name": "Brookreed Staff",
+  "other": [],
+  "quests": [],
+  "rarity": "Normal",
+  "sells_for": 1498,
+  "shops": [],
+  "slot": "weapon",
+  "two_handed": true,
+  "type": "equipment",
+  "weapon": "staff",
+  "weight": 95
+ },
+ {
+  "bonus": [
+   "ATK +33",
+   "MATK +25 %",
+   "Max SP +5 %",
+   "INT +2"
+  ],
+  "bound": false,
+  "card_slots": 0,
+  "classes": [
+   "arcanist"
+  ],
+  "description": "A dark stalk crowned with a cave mushroom that never stops glowing, even in the deepest hollow.",
+  "dropped_by": [
+   {
+    "chance": 0.004,
+    "elite_chance": null,
+    "monster": "hushcap",
+    "pieces": "1"
+   },
+   {
+    "chance": 0.004,
+    "elite_chance": 0.01,
+    "monster": "gloom_sporecap",
+    "pieces": "1"
+   }
+  ],
+  "effect": "",
+  "elite_bonus_chance": null,
+  "icon": "img/items/glowcap_staff.png",
+  "id": "glowcap_staff",
+  "level": 21,
+  "name": "Glowcap Staff",
+  "other": [],
+  "quests": [],
+  "rarity": "Normal",
+  "sells_for": 2172,
+  "shops": [],
+  "slot": "weapon",
+  "two_handed": true,
+  "type": "equipment",
+  "weapon": "staff",
+  "weight": 100
+ },
+ {
+  "bonus": [
+   "ATK +39",
+   "MATK +30 %",
+   "INT +4"
+  ],
+  "bound": false,
+  "card_slots": 1,
+  "classes": [
+   "arcanist"
+  ],
+  "description": "A twist of old root from the deepest bower, its veins still full of a slow, gold light.",
+  "dropped_by": [
+   {
+    "chance": 0.02,
+    "elite_chance": null,
+    "monster": "dewroot_regent",
+    "pieces": "1"
+   }
+  ],
+  "effect": "",
+  "elite_bonus_chance": 0.005,
+  "icon": "img/items/lumenroot_staff.png",
+  "id": "lumenroot_staff",
+  "level": 30,
+  "name": "Lumenroot Staff",
+  "other": [],
+  "quests": [],
+  "rarity": "Rare",
+  "sells_for": 4282,
+  "shops": [],
+  "slot": "weapon",
+  "two_handed": true,
+  "type": "equipment",
+  "weapon": "staff",
+  "weight": 110
+ },
+ {
+  "bonus": [
+   "ATK +72"
+  ],
+  "bound": false,
+  "card_slots": 0,
+  "classes": [
+   "vanguard"
+  ],
+  "description": "A broad blade with an ash-wood grip as long as a forearm. Plain, heavy and honest.",
+  "dropped_by": [
+   {
+    "chance": 0.004,
+    "elite_chance": null,
+    "monster": "gildmaw",
+    "pieces": "1"
+   }
+  ],
+  "effect": "",
+  "elite_bonus_chance": null,
+  "icon": "img/items/ashbough_greatsword.png",
+  "id": "ashbough_greatsword",
+  "level": 11,
+  "name": "Ashbough Greatsword",
+  "other": [],
+  "quests": [],
+  "rarity": "Normal",
+  "sells_for": 899,
+  "shops": [
+   {
+    "map": "brightvale",
+    "name": "Weapons & Armor",
+    "price": 1798,
+    "shop": "arms"
+   }
+  ],
+  "slot": "weapon",
+  "two_handed": true,
+  "type": "equipment",
+  "weapon": "greatsword",
+  "weight": 140
+ },
+ {
+  "bonus": [
+   "ATK +76",
+   "CRIT +5%",
+   "ASPD +5%",
+   "AGI +1",
+   "LUK +2"
+  ],
+  "bound": false,
+  "card_slots": 2,
+  "classes": [
+   "vanguard"
+  ],
+  "description": "A long, thin blade etched with fern fronds. Light for its length, it comes round again quickly.",
+  "dropped_by": [
+   {
+    "chance": 0.004,
+    "elite_chance": null,
+    "monster": "tuftguard",
+    "pieces": "1"
+   },
+   {
+    "chance": 0.004,
+    "elite_chance": 0.01,
+    "monster": "bog_moss_slime",
+    "pieces": "1"
+   }
+  ],
+  "effect": "",
+  "elite_bonus_chance": null,
+  "icon": "img/items/swiftfern_greatsword.png",
+  "id": "swiftfern_greatsword",
+  "level": 18,
+  "name": "Swiftfern Greatsword",
+  "other": [],
+  "quests": [],
+  "rarity": "Normal",
+  "sells_for": 1760,
+  "shops": [],
+  "slot": "weapon",
+  "two_handed": true,
+  "type": "equipment",
+  "weapon": "greatsword",
+  "weight": 110
+ },
+ {
+  "bonus": [
+   "ATK +92"
+  ],
+  "bound": false,
+  "card_slots": 1,
+  "classes": [
+   "vanguard"
+  ],
+  "description": "Charred oak bound in hot iron. The edge stays warm, and moss and root shrink from it.",
+  "dropped_by": [
+   {
+    "chance": 0.004,
+    "elite_chance": null,
+    "monster": "wickmoth",
+    "pieces": "1"
+   },
+   {
+    "chance": 0.004,
+    "elite_chance": 0.01,
+    "monster": "gloom_sporecap",
+    "pieces": "1"
+   }
+  ],
+  "effect": "",
+  "elite_bonus_chance": null,
+  "icon": "img/items/cinderoak_greatsword.png",
+  "id": "cinderoak_greatsword",
+  "level": 24,
+  "name": "Cinderoak Greatsword",
+  "other": [],
+  "quests": [],
+  "rarity": "Normal",
+  "sells_for": 2606,
+  "shops": [],
+  "slot": "weapon",
+  "two_handed": true,
+  "type": "equipment",
+  "weapon": "greatsword",
+  "weight": 150
+ },
+ {
+  "bonus": [
+   "ATK +116",
+   "STR +3"
+  ],
+  "bound": false,
+  "card_slots": 1,
+  "classes": [
+   "vanguard"
+  ],
+  "description": "A slab of mossy stone-hard heartwood with a steel edge. Only the strong swing it twice.",
+  "dropped_by": [
+   {
+    "chance": 0.02,
+    "elite_chance": null,
+    "monster": "dewroot_regent",
+    "pieces": "1"
+   }
+  ],
+  "effect": "",
+  "elite_bonus_chance": null,
+  "icon": "img/items/rockmoss_greatsword.png",
+  "id": "rockmoss_greatsword",
+  "level": 32,
+  "name": "Rockmoss Greatsword",
+  "other": [],
+  "quests": [],
+  "rarity": "Rare",
+  "sells_for": 4676,
+  "shops": [],
+  "slot": "weapon",
+  "two_handed": true,
+  "type": "equipment",
+  "weapon": "greatsword",
+  "weight": 180
+ },
+ {
+  "bonus": [
+   "ATK +34"
+  ],
+  "bound": false,
+  "card_slots": 0,
+  "classes": [],
+  "description": "A pollen-gold flint knife warmed for journeys through earthy thickets.",
+  "dropped_by": [
+   {
+    "chance": 0.005,
+    "elite_chance": null,
+    "monster": "moss_slime",
+    "pieces": "1"
+   },
+   {
+    "chance": 0.005,
+    "elite_chance": null,
+    "monster": "bramblebun",
+    "pieces": "1"
+   }
+  ],
+  "effect": "",
+  "elite_bonus_chance": null,
+  "icon": "img/items/pollenflint_knife.png",
+  "id": "pollenflint_knife",
+  "level": 6,
+  "name": "Pollenflint Knife",
+  "other": [],
+  "quests": [],
+  "rarity": "Normal",
+  "sells_for": 302,
+  "shops": [],
+  "slot": "weapon",
+  "two_handed": false,
+  "type": "equipment",
+  "weapon": "dagger",
+  "weight": 40
+ },
+ {
+  "bonus": [
+   "ATK +46",
+   "Max SP +6"
+  ],
+  "bound": false,
+  "card_slots": 0,
+  "classes": [],
+  "description": "A clover-bound stone mace with a hollow handle that holds a little extra spiritual energy.",
+  "dropped_by": [
+   {
+    "chance": 0.004,
+    "elite_chance": null,
+    "monster": "bramblebun",
+    "pieces": "1"
+   }
+  ],
+  "effect": "",
+  "elite_bonus_chance": null,
+  "icon": "img/items/clovercairn_mace.png",
+  "id": "clovercairn_mace",
+  "level": 8,
+  "name": "Clovercairn Mace",
+  "other": [],
+  "quests": [],
+  "rarity": "Normal",
+  "sells_for": 448,
+  "shops": [
+   {
+    "map": "brightvale",
+    "name": "Weapons & Armor",
+    "price": 896,
+    "shop": "arms"
+   }
+  ],
+  "slot": "weapon",
+  "two_handed": false,
+  "type": "equipment",
+  "weapon": "mace",
+  "weight": 70
+ },
+ {
+  "bonus": [
+   "ATK +56"
+  ],
+  "bound": false,
+  "card_slots": 0,
+  "classes": [
+   "vanguard"
+  ],
+  "description": "A slim sword with a sedge-wrapped hilt and a restless breeze along its edge.",
+  "dropped_by": [
+   {
+    "chance": 0.003,
+    "elite_chance": 0.0075,
+    "monster": "dusk_dewdrop_slime",
+    "pieces": "1"
+   },
+   {
+    "chance": 0.003,
+    "elite_chance": null,
+    "monster": "dripfin",
+    "pieces": "1"
+   }
+  ],
+  "effect": "",
+  "elite_bonus_chance": null,
+  "icon": "img/items/sedgesquall_sword.png",
+  "id": "sedgesquall_sword",
+  "level": 18,
+  "name": "Sedgesquall Sword",
+  "other": [],
+  "quests": [],
+  "rarity": "Normal",
+  "sells_for": 1354,
+  "shops": [],
+  "slot": "weapon",
+  "two_handed": false,
+  "type": "equipment",
+  "weapon": "sword",
+  "weight": 60
+ },
+ {
+  "bonus": [
+   "ATK +66",
+   "HIT +3",
+   "Max HP +24"
+  ],
+  "bound": false,
+  "card_slots": 0,
+  "classes": [
+   "vanguard"
+  ],
+  "description": "A quartz-edged sword whose broad petal-shaped hilt steadies a cautious fighter.",
+  "dropped_by": [
+   {
+    "chance": 0.003,
+    "elite_chance": null,
+    "monster": "bellwisp",
+    "pieces": "1"
+   }
+  ],
+  "effect": "",
+  "elite_bonus_chance": null,
+  "icon": "img/items/quartzpetal_sword.png",
+  "id": "quartzpetal_sword",
+  "level": 26,
+  "name": "Quartzpetal Sword",
+  "other": [],
+  "quests": [],
+  "rarity": "Normal",
+  "sells_for": 2236,
+  "shops": [],
+  "slot": "weapon",
+  "two_handed": false,
+  "type": "equipment",
+  "weapon": "sword",
+  "weight": 60
+ },
+ {
+  "bonus": [
+   "ATK +53",
+   "Max SP +8"
+  ],
+  "bound": false,
+  "card_slots": 0,
+  "classes": [
+   "thornstrider"
+  ],
+  "description": "A pale oatwood bow inlaid with opal for measured, skillful volleys.",
+  "dropped_by": [
+   {
+    "chance": 0.003,
+    "elite_chance": null,
+    "monster": "tuftguard",
+    "pieces": "1"
+   }
+  ],
+  "effect": "",
+  "elite_bonus_chance": null,
+  "icon": "img/items/oatopal_bow.png",
+  "id": "oatopal_bow",
+  "level": 14,
+  "name": "Oatopal Bow",
+  "other": [],
+  "quests": [],
+  "rarity": "Normal",
+  "sells_for": 961,
+  "shops": [
+   {
+    "map": "brightvale",
+    "name": "Weapons & Armor",
+    "price": 1922,
+    "shop": "arms"
+   }
+  ],
+  "slot": "weapon",
+  "two_handed": true,
+  "type": "equipment",
+  "weapon": "bow",
+  "weight": 50
+ },
+ {
+  "bonus": [
+   "ATK +67",
+   "CRIT +2%"
+  ],
+  "bound": false,
+  "card_slots": 0,
+  "classes": [
+   "thornstrider"
+  ],
+  "description": "A juniper bow with sharply aligned grain favored for precise finishing shots.",
+  "dropped_by": [
+   {
+    "chance": 0.003,
+    "elite_chance": null,
+    "monster": "gale_bramblebun",
+    "pieces": "1"
+   }
+  ],
+  "effect": "",
+  "elite_bonus_chance": null,
+  "icon": "img/items/junipergrain_bow.png",
+  "id": "junipergrain_bow",
+  "level": 24,
+  "name": "Junipergrain Bow",
+  "other": [],
+  "quests": [],
+  "rarity": "Normal",
+  "sells_for": 2004,
+  "shops": [],
+  "slot": "weapon",
+  "two_handed": true,
+  "type": "equipment",
+  "weapon": "bow",
+  "weight": 50
+ },
+ {
+  "bonus": [
+   "ATK +20",
+   "MATK +15 %",
+   "Max SP +12"
+  ],
+  "bound": false,
+  "card_slots": 0,
+  "classes": [
+   "arcanist"
+  ],
+  "description": "An orchid-topped pithwood rod that stores a little extra energy for repeated spells.",
+  "dropped_by": [
+   {
+    "chance": 0.0025,
+    "elite_chance": null,
+    "monster": "hushcap",
+    "pieces": "1"
+   }
+  ],
+  "effect": "",
+  "elite_bonus_chance": null,
+  "icon": "img/items/orchidpith_rod.png",
+  "id": "orchidpith_rod",
+  "level": 19,
+  "name": "Orchidpith Rod",
+  "other": [],
+  "quests": [],
+  "rarity": "Normal",
+  "sells_for": 1457,
+  "shops": [
+   {
+    "map": "brightvale",
+    "name": "Weapons & Armor",
+    "price": 2914,
+    "shop": "arms"
+   }
+  ],
+  "slot": "weapon",
+  "two_handed": false,
+  "type": "equipment",
+  "weapon": "rod",
+  "weight": 40
+ },
+ {
+  "bonus": [
+   "ATK +23",
+   "MATK +20 %",
+   "Max HP +24"
+  ],
+  "bound": false,
+  "card_slots": 0,
+  "classes": [
+   "arcanist"
+  ],
+  "description": "A lichen-wrapped rod with a lotus-shaped grip made for frail travelers.",
+  "dropped_by": [
+   {
+    "chance": 0.003,
+    "elite_chance": null,
+    "monster": "rootmantle",
+    "pieces": "1"
+   }
+  ],
+  "effect": "",
+  "elite_bonus_chance": null,
+  "icon": "img/items/lotuslichen_rod.png",
+  "id": "lotuslichen_rod",
+  "level": 27,
+  "name": "Lotuslichen Rod",
+  "other": [],
+  "quests": [],
+  "rarity": "Normal",
+  "sells_for": 2354,
+  "shops": [],
+  "slot": "weapon",
+  "two_handed": false,
+  "type": "equipment",
+  "weapon": "rod",
+  "weight": 40
+ },
+ {
+  "bonus": [
+   "ATK +63",
+   "MDEF +1",
+   "Max SP +8"
+  ],
+  "bound": false,
+  "card_slots": 0,
+  "classes": [
+   "cleric"
+  ],
+  "description": "A chalkstone mace with an acorn-shaped head balanced for prayer between strikes.",
+  "dropped_by": [
+   {
+    "chance": 0.0025,
+    "elite_chance": 0.00625,
+    "monster": "bog_moss_slime",
+    "pieces": "1"
+   }
+  ],
+  "effect": "",
+  "elite_bonus_chance": null,
+  "icon": "img/items/acornchalk_mace.png",
+  "id": "acornchalk_mace",
+  "level": 18,
+  "name": "Acornchalk Mace",
+  "other": [],
+  "quests": [],
+  "rarity": "Normal",
+  "sells_for": 1354,
+  "shops": [
+   {
+    "map": "brightvale",
+    "name": "Weapons & Armor",
+    "price": 2708,
+    "shop": "arms"
+   }
+  ],
+  "slot": "weapon",
+  "two_handed": false,
+  "type": "equipment",
+  "weapon": "mace",
+  "weight": 70
+ },
+ {
+  "bonus": [
+   "ATK +71"
+  ],
+  "bound": false,
+  "card_slots": 0,
+  "classes": [
+   "cleric"
+  ],
+  "description": "A gilded balsamwood mace that bears a steady holy light.",
+  "dropped_by": [
+   {
+    "chance": 0.003,
+    "elite_chance": null,
+    "monster": "rootmantle",
+    "pieces": "1"
+   }
+  ],
+  "effect": "",
+  "elite_bonus_chance": null,
+  "icon": "img/items/balsamgilt_mace.png",
+  "id": "balsamgilt_mace",
+  "level": 24,
+  "name": "Balsamgilt Mace",
+  "other": [],
+  "quests": [],
+  "rarity": "Normal",
+  "sells_for": 2004,
+  "shops": [],
+  "slot": "weapon",
+  "two_handed": false,
+  "type": "equipment",
+  "weapon": "mace",
+  "weight": 70
+ },
+ {
+  "bonus": [
+   "ATK +60",
+   "HIT +4"
+  ],
+  "bound": false,
+  "card_slots": 0,
+  "classes": [
+   "veilrunner"
+  ],
+  "description": "A narrow chert dagger bound in yarrow fibers for steady, accurate cuts.",
+  "dropped_by": [
+   {
+    "chance": 0.003,
+    "elite_chance": 0.0075,
+    "monster": "bog_moss_slime",
+    "pieces": "1"
+   }
+  ],
+  "effect": "",
+  "elite_bonus_chance": null,
+  "icon": "img/items/yarrowchert_dagger.png",
+  "id": "yarrowchert_dagger",
+  "level": 19,
+  "name": "Yarrowchert Dagger",
+  "other": [],
+  "quests": [],
+  "rarity": "Normal",
+  "sells_for": 1457,
+  "shops": [],
+  "slot": "weapon",
+  "two_handed": false,
+  "type": "equipment",
+  "weapon": "dagger",
+  "weight": 40
+ },
+ {
+  "bonus": [
+   "ATK +68"
+  ],
+  "bound": false,
+  "card_slots": 0,
+  "classes": [
+   "veilrunner"
+  ],
+  "description": "An onyx dagger with a myrtle-green grip that dims the light along its edge.",
+  "dropped_by": [
+   {
+    "chance": 0.003,
+    "elite_chance": null,
+    "monster": "bellwisp",
+    "pieces": "1"
+   }
+  ],
+  "effect": "",
+  "elite_bonus_chance": null,
+  "icon": "img/items/myrtleonyx_dagger.png",
+  "id": "myrtleonyx_dagger",
+  "level": 28,
+  "name": "Myrtleonyx Dagger",
+  "other": [],
+  "quests": [],
+  "rarity": "Normal",
+  "sells_for": 2473,
+  "shops": [],
+  "slot": "weapon",
+  "two_handed": false,
+  "type": "equipment",
+  "weapon": "dagger",
+  "weight": 40
+ },
+ {
+  "bonus": [
+   "DEF +4",
+   "VIT +1"
+  ],
+  "bound": false,
+  "card_slots": 1,
+  "classes": [],
+  "description": "A full helm shaped from an Elder Sporecap's cap. It shields the brow and the eyes.",
+  "dropped_by": [
+   {
+    "chance": 0.08,
+    "elite_chance": null,
+    "monster": "gildmaw",
+    "pieces": "1"
+   },
+   {
+    "chance": 0.06,
+    "elite_chance": null,
+    "monster": "elder_sporecap",
+    "pieces": "1"
+   },
+   {
+    "chance": 0.006,
+    "elite_chance": 0.015,
+    "monster": "gloom_sporecap",
+    "pieces": "1"
+   }
+  ],
+  "effect": "",
+  "elite_bonus_chance": 0.04,
+  "icon": "img/items/capshell_helm.png",
+  "id": "capshell_helm",
+  "level": 0,
+  "name": "Capshell Helm",
+  "other": [],
+  "quests": [
+   {
+    "count": 1,
+    "map": "dewleaf_fields",
+    "name": "Elder in the Grove",
+    "quest": "elder_in_the_grove"
+   }
+  ],
+  "rarity": "Rare",
+  "sells_for": 380,
+  "shops": [],
+  "slot": "head_top",
+  "two_handed": false,
+  "type": "equipment",
+  "weapon": "",
+  "weight": 60
+ },
+ {
+  "bonus": [
+   "HIT +3"
+  ],
+  "bound": false,
+  "card_slots": 0,
+  "classes": [],
+  "description": "Round lenses ground from hardened Glimmer Gel. The world looks a little sharper.",
+  "dropped_by": [
+   {
+    "chance": 0.015,
+    "elite_chance": 0.0375,
+    "monster": "dusk_dewdrop_slime",
+    "pieces": "1"
+   },
+   {
+    "chance": 0.01,
+    "elite_chance": null,
+    "monster": "dewdrop_slime",
+    "pieces": "1"
+   }
+  ],
+  "effect": "",
+  "elite_bonus_chance": null,
+  "icon": "img/items/glimmer_specs.png",
+  "id": "glimmer_specs",
+  "level": 0,
+  "name": "Glimmer Specs",
+  "other": [],
+  "quests": [
+   {
+    "count": 1,
+    "map": "dewleaf_fields",
+    "name": "Bog at the Lake",
+    "quest": "bog_at_the_lake"
+   }
+  ],
+  "rarity": "Normal",
+  "sells_for": 90,
+  "shops": [],
+  "slot": "head_mid",
+  "two_handed": false,
+  "type": "equipment",
+  "weapon": "",
+  "weight": 10
+ },
+ {
+  "bonus": [
+   "LUK +1"
+  ],
+  "bound": false,
+  "card_slots": 0,
+  "classes": [],
+  "description": "A four-leaf clover held between the teeth. Said to bring a little luck.",
+  "dropped_by": [
+   {
+    "chance": 0.02,
+    "elite_chance": 0.05,
+    "monster": "bog_moss_slime",
+    "pieces": "1"
+   },
+   {
+    "chance": 0.015,
+    "elite_chance": null,
+    "monster": "moss_slime",
+    "pieces": "1"
+   }
+  ],
+  "effect": "",
+  "elite_bonus_chance": null,
+  "icon": "img/items/clover_sprig.png",
+  "id": "clover_sprig",
+  "level": 0,
+  "name": "Clover Sprig",
+  "other": [],
+  "quests": [],
+  "rarity": "Normal",
+  "sells_for": 30,
+  "shops": [],
+  "slot": "head_low",
+  "two_handed": false,
+  "type": "equipment",
+  "weapon": "",
+  "weight": 1
+ },
+ {
+  "bonus": [
+   "DEF +1"
+  ],
+  "bound": false,
+  "card_slots": 0,
+  "classes": [],
+  "description": "A plain cotton tunic, patched at the elbows. Better than nothing.",
+  "dropped_by": [
+   {
+    "chance": 0.02,
+    "elite_chance": 0.05,
+    "monster": "dusk_dewdrop_slime",
+    "pieces": "1"
+   },
+   {
+    "chance": 0.005,
+    "elite_chance": null,
+    "monster": "dewdrop_slime",
+    "pieces": "1"
+   }
+  ],
+  "effect": "",
+  "elite_bonus_chance": null,
+  "icon": "img/items/cotton_tunic.png",
+  "id": "cotton_tunic",
+  "level": 0,
+  "name": "Cotton Tunic",
+  "other": [
+   "starter"
+  ],
+  "quests": [],
+  "rarity": "Normal",
+  "sells_for": 20,
+  "shops": [
+   {
+    "map": "brightvale",
+    "name": "Weapons & Armor",
+    "price": 40,
+    "shop": "arms"
+   }
+  ],
+  "slot": "armor",
+  "two_handed": false,
+  "type": "equipment",
+  "weapon": "",
+  "weight": 40
+ },
+ {
+  "bonus": [
+   "DEF +4",
+   "Max HP +20"
+  ],
+  "bound": false,
+  "card_slots": 1,
+  "classes": [],
+  "description": "Tanned hide lined with springy moss. It takes a blow and shrugs it off.",
+  "dropped_by": [
+   {
+    "chance": 0.025,
+    "elite_chance": 0.0625,
+    "monster": "gloom_sporecap",
+    "pieces": "1"
+   },
+   {
+    "chance": 0.02,
+    "elite_chance": null,
+    "monster": "sporecap",
+    "pieces": "1"
+   }
+  ],
+  "effect": "",
+  "elite_bonus_chance": null,
+  "icon": "img/items/mosshide_vest.png",
+  "id": "mosshide_vest",
+  "level": 0,
+  "name": "Mosshide Vest",
+  "other": [],
+  "quests": [
+   {
+    "count": 1,
+    "map": "dewleaf_fields",
+    "name": "Dusk Ruin Patrol",
+    "quest": "dusk_ruin_patrol"
+   }
+  ],
+  "rarity": "Normal",
+  "sells_for": 160,
+  "shops": [],
+  "slot": "armor",
+  "two_handed": false,
+  "type": "equipment",
+  "weapon": "",
+  "weight": 80
+ },
+ {
+  "bonus": [
+   "DEF +1",
+   "FLEE +2"
+  ],
+  "bound": false,
+  "card_slots": 1,
+  "classes": [],
+  "description": "A light travelling cape that flutters out of the way of blows.",
+  "dropped_by": [
+   {
+    "chance": 0.025,
+    "elite_chance": 0.0625,
+    "monster": "gloom_sporecap",
+    "pieces": "1"
+   },
+   {
+    "chance": 0.02,
+    "elite_chance": null,
+    "monster": "sporecap",
+    "pieces": "1"
+   }
+  ],
+  "effect": "",
+  "elite_bonus_chance": null,
+  "icon": "img/items/wayfarer_cape.png",
+  "id": "wayfarer_cape",
+  "level": 0,
+  "name": "Wayfarer Cape",
+  "other": [],
+  "quests": [
+   {
+    "count": 1,
+    "map": "dewleaf_fields",
+    "name": "Gloom in the Grove",
+    "quest": "gloom_in_the_grove"
+   },
+   {
+    "count": 1,
+    "map": "brightvale",
+    "name": "Settling In",
+    "quest": "objectives_brightvale"
+   }
+  ],
+  "rarity": "Normal",
+  "sells_for": 120,
+  "shops": [],
+  "slot": "garment",
+  "two_handed": false,
+  "type": "equipment",
+  "weapon": "",
+  "weight": 30
+ },
+ {
+  "bonus": [
+   "FLEE +1"
+  ],
+  "bound": false,
+  "card_slots": 0,
+  "classes": [],
+  "description": "Sandals with thin, well-walked soles. They know the road.",
+  "dropped_by": [
+   {
+    "chance": 0.005,
+    "elite_chance": null,
+    "monster": "dewdrop_slime",
+    "pieces": "1"
+   }
+  ],
+  "effect": "",
+  "elite_bonus_chance": null,
+  "icon": "img/items/worn_sandals.png",
+  "id": "worn_sandals",
+  "level": 0,
+  "name": "Worn Sandals",
+  "other": [
+   "starter"
+  ],
+  "quests": [],
+  "rarity": "Normal",
+  "sells_for": 10,
+  "shops": [
+   {
+    "map": "brightvale",
+    "name": "Weapons & Armor",
+    "price": 20,
+    "shop": "arms"
+   }
+  ],
+  "slot": "shoes",
+  "two_handed": false,
+  "type": "equipment",
+  "weapon": "",
+  "weight": 20
+ },
+ {
+  "bonus": [
+   "DEF +1",
+   "FLEE +1",
+   "AGI +1"
+  ],
+  "bound": false,
+  "card_slots": 1,
+  "classes": [],
+  "description": "Sturdy boots made for long days on the meadow roads.",
+  "dropped_by": [
+   {
+    "chance": 0.015,
+    "elite_chance": 0.0375,
+    "monster": "bog_moss_slime",
+    "pieces": "1"
+   },
+   {
+    "chance": 0.01,
+    "elite_chance": null,
+    "monster": "moss_slime",
+    "pieces": "1"
+   }
+  ],
+  "effect": "",
+  "elite_bonus_chance": null,
+  "icon": "img/items/fieldrunner_boots.png",
+  "id": "fieldrunner_boots",
+  "level": 0,
+  "name": "Fieldrunner Boots",
+  "other": [],
+  "quests": [
+   {
+    "count": 1,
+    "map": "dewleaf_fields",
+    "name": "North Field Round",
+    "quest": "north_field_round"
+   },
+   {
+    "count": 1,
+    "map": "dewleaf_fields",
+    "name": "Meadow Patrol",
+    "quest": "objectives_dewleaf_fields"
+   }
+  ],
+  "rarity": "Normal",
+  "sells_for": 140,
+  "shops": [],
+  "slot": "shoes",
+  "two_handed": false,
+  "type": "equipment",
+  "weapon": "",
+  "weight": 40
+ },
+ {
+  "bonus": [
+   "STR +1"
+  ],
+  "bound": false,
+  "card_slots": 0,
+  "classes": [],
+  "description": "A plain copper ring. Wearing it makes a grip feel firmer.",
+  "dropped_by": [
+   {
+    "chance": 0.015,
+    "elite_chance": null,
+    "monster": "sporecap",
+    "pieces": "1"
+   }
+  ],
+  "effect": "",
+  "elite_bonus_chance": null,
+  "icon": "img/items/copper_band.png",
+  "id": "copper_band",
+  "level": 0,
+  "name": "Copper Band",
+  "other": [],
+  "quests": [
+   {
+    "count": 1,
+    "map": "dewleaf_fields",
+    "name": "Room to Draw",
+    "quest": "room_to_draw"
+   },
+   {
+    "count": 1,
+    "map": "dewleaf_fields",
+    "name": "Meadow Patrol",
+    "quest": "objectives_dewleaf_fields"
+   }
+  ],
+  "rarity": "Normal",
+  "sells_for": 100,
+  "shops": [],
+  "slot": "accessory",
+  "two_handed": false,
+  "type": "equipment",
+  "weapon": "",
+  "weight": 5
+ },
+ {
+  "bonus": [
+   "Max SP +10",
+   "INT +1"
+  ],
+  "bound": false,
+  "card_slots": 1,
+  "classes": [],
+  "description": "A drop of morning dew sealed in glass. It hums softly with magic.",
+  "dropped_by": [
+   {
+    "chance": 0.08,
+    "elite_chance": null,
+    "monster": "gildmaw",
+    "pieces": "1"
+   },
+   {
+    "chance": 0.05,
+    "elite_chance": null,
+    "monster": "elder_sporecap",
+    "pieces": "1"
+   },
+   {
+    "chance": 0.012,
+    "elite_chance": 0.03,
+    "monster": "dusk_dewdrop_slime",
+    "pieces": "1"
+   },
+   {
+    "chance": 0.008,
+    "elite_chance": null,
+    "monster": "dewdrop_slime",
+    "pieces": "1"
+   }
+  ],
+  "effect": "",
+  "elite_bonus_chance": 0.05,
+  "icon": "img/items/dewdrop_charm.png",
+  "id": "dewdrop_charm",
+  "level": 0,
+  "name": "Dewdrop Charm",
+  "other": [],
+  "quests": [
+   {
+    "count": 1,
+    "map": "dewleaf_fields",
+    "name": "Patient Ground",
+    "quest": "patient_ground"
+   }
+  ],
+  "rarity": "Rare",
+  "sells_for": 260,
+  "shops": [],
+  "slot": "accessory",
+  "two_handed": false,
+  "type": "equipment",
+  "weapon": "",
+  "weight": 5
+ },
+ {
+  "bonus": [],
+  "bound": false,
+  "card_slots": 0,
+  "classes": [],
+  "description": "A sky-blue feather that rides the wind. Let it go and it carries you to some open spot on this map. It will not fly in town, nor in a boss's lair.",
+  "dropped_by": [
+   {
+    "chance": 0.04,
+    "elite_chance": 0.04,
+    "monster": "dusk_dewdrop_slime",
+    "pieces": "1"
+   },
+   {
+    "chance": 0.04,
+    "elite_chance": 0.04,
+    "monster": "bog_moss_slime",
+    "pieces": "1"
+   },
+   {
+    "chance": 0.03,
+    "elite_chance": null,
+    "monster": "moss_slime",
+    "pieces": "1"
+   },
+   {
+    "chance": 0.03,
+    "elite_chance": null,
+    "monster": "sporecap",
+    "pieces": "1"
+   }
+  ],
+  "effect": "Takes you to a random spot on this map",
+  "elite_bonus_chance": null,
+  "icon": "img/items/wayfeather.png",
+  "id": "wayfeather",
+  "level": 0,
+  "name": "Wayfeather",
+  "other": [],
+  "quests": [
+   {
+    "count": 1,
+    "map": "brightvale",
+    "name": "Stones and Steps",
+    "quest": "stones_and_steps"
+   },
+   {
+    "count": 1,
+    "map": "dewleaf_fields",
+    "name": "Bridge Practice",
+    "quest": "bridge_practice"
+   },
+   {
+    "count": 1,
+    "map": "dewleaf_fields",
+    "name": "Field Habits",
+    "quest": "field_habits"
+   },
+   {
+    "count": 2,
+    "map": "dewleaf_fields",
+    "name": "River Round",
+    "quest": "river_round"
+   },
+   {
+    "count": 2,
+    "map": "dewleaf_fields",
+    "name": "Bog at the Lake",
+    "quest": "bog_at_the_lake"
+   },
+   {
+    "count": 2,
+    "map": "dewleaf_fields",
+    "name": "Room to Draw",
+    "quest": "room_to_draw"
+   },
+   {
+    "count": 2,
+    "map": "dewleaf_fields",
+    "name": "A Golden Outline",
+    "quest": "a_golden_outline"
+   }
+  ],
+  "rarity": "Normal",
+  "sells_for": 5,
+  "shops": [
+   {
+    "map": "brightvale",
+    "name": "General Store",
+    "price": 10,
+    "shop": "general"
+   }
+  ],
+  "slot": "",
+  "two_handed": false,
+  "type": "consumable",
+  "weapon": "",
+  "weight": 1
+ },
+ {
+  "bonus": [],
+  "bound": false,
+  "card_slots": 0,
+  "classes": [],
+  "description": "A sunset-gold feather from the eaves of Brightvale. It always knows the way home: one breath and you stand in the town square again.",
+  "dropped_by": [
+   {
+    "chance": 0.35,
+    "elite_chance": null,
+    "monster": "dewroot_regent",
+    "pieces": "1"
+   },
+   {
+    "chance": 0.02,
+    "elite_chance": null,
+    "monster": "hushcap",
+    "pieces": "1"
+   },
+   {
+    "chance": 0.015,
+    "elite_chance": 0.015,
+    "monster": "gloom_sporecap",
+    "pieces": "1"
+   },
+   {
+    "chance": 0.01,
+    "elite_chance": null,
+    "monster": "sporecap",
+    "pieces": "1"
+   }
+  ],
+  "effect": "Takes you back to Brightvale",
+  "elite_bonus_chance": null,
+  "icon": "img/items/homeward_feather.png",
+  "id": "homeward_feather",
+  "level": 0,
+  "name": "Homeward Feather",
+  "other": [],
+  "quests": [
+   {
+    "count": 1,
+    "map": "brightvale",
+    "name": "Stones and Steps",
+    "quest": "stones_and_steps"
+   },
+   {
+    "count": 1,
+    "map": "dewleaf_fields",
+    "name": "Elder in the Grove",
+    "quest": "elder_in_the_grove"
+   },
+   {
+    "count": 1,
+    "map": "dewleaf_fields",
+    "name": "Gloom in the Grove",
+    "quest": "gloom_in_the_grove"
+   },
+   {
+    "count": 1,
+    "map": "dewleaf_fields",
+    "name": "Patient Ground",
+    "quest": "patient_ground"
+   }
+  ],
+  "rarity": "Normal",
+  "sells_for": 20,
+  "shops": [
+   {
+    "map": "brightvale",
+    "name": "General Store",
+    "price": 40,
+    "shop": "general"
+   }
+  ],
+  "slot": "",
+  "two_handed": false,
+  "type": "consumable",
+  "weapon": "",
+  "weight": 1
+ },
+ {
+  "bonus": [
+   "ATK +34"
+  ],
+  "bound": false,
+  "card_slots": 1,
+  "classes": [],
+  "description": "A short blade on a pale ashwood grip, forged in Brightvale. It bites a Sporecap deeper than any knife.",
+  "dropped_by": [
+   {
+    "chance": 0.012,
+    "elite_chance": 0.03,
+    "monster": "gloom_sporecap",
+    "pieces": "1"
+   },
+   {
+    "chance": 0.008,
+    "elite_chance": null,
+    "monster": "sporecap",
+    "pieces": "1"
+   }
+  ],
+  "effect": "",
+  "elite_bonus_chance": null,
+  "icon": "img/items/ashwood_shortsword.png",
+  "id": "ashwood_shortsword",
+  "level": 0,
+  "name": "Ashwood Shortsword",
+  "other": [],
+  "quests": [],
+  "rarity": "Normal",
+  "sells_for": 160,
+  "shops": [
+   {
+    "map": "brightvale",
+    "name": "Weapons & Armor",
+    "price": 320,
+    "shop": "arms"
+   }
+  ],
+  "slot": "weapon",
+  "two_handed": false,
+  "type": "equipment",
+  "weapon": "sword",
+  "weight": 60
+ },
+ {
+  "bonus": [
+   "ATK +31"
+  ],
+  "bound": false,
+  "card_slots": 1,
+  "classes": [],
+  "description": "A smooth river stone bound to an oak haft with iron bands. Big monsters feel it all the same.",
+  "dropped_by": [
+   {
+    "chance": 0.01,
+    "elite_chance": 0.025,
+    "monster": "bog_moss_slime",
+    "pieces": "1"
+   },
+   {
+    "chance": 0.006,
+    "elite_chance": null,
+    "monster": "moss_slime",
+    "pieces": "1"
+   }
+  ],
+  "effect": "",
+  "elite_bonus_chance": null,
+  "icon": "img/items/riverstone_mace.png",
+  "id": "riverstone_mace",
+  "level": 0,
+  "name": "Riverstone Mace",
+  "other": [],
+  "quests": [
+   {
+    "count": 1,
+    "map": "dewleaf_fields",
+    "name": "Care on the Road",
+    "quest": "care_on_the_road"
+   }
+  ],
+  "rarity": "Normal",
+  "sells_for": 170,
+  "shops": [
+   {
+    "map": "brightvale",
+    "name": "Weapons & Armor",
+    "price": 340,
+    "shop": "arms"
+   }
+  ],
+  "slot": "weapon",
+  "two_handed": false,
+  "type": "equipment",
+  "weapon": "mace",
+  "weight": 70
+ },
+ {
+  "bonus": [
+   "ATK +46"
+  ],
+  "bound": false,
+  "card_slots": 1,
+  "classes": [],
+  "description": "A gently curved blade of bright Brightvale steel with a gold guard. Light, keen and made to last.",
+  "dropped_by": [
+   {
+    "chance": 0.04,
+    "elite_chance": null,
+    "monster": "elder_sporecap",
+    "pieces": "1"
+   }
+  ],
+  "effect": "",
+  "elite_bonus_chance": null,
+  "icon": "img/items/brightsteel_sabre.png",
+  "id": "brightsteel_sabre",
+  "level": 0,
+  "name": "Brightsteel Sabre",
+  "other": [],
+  "quests": [],
+  "rarity": "Normal",
+  "sells_for": 600,
+  "shops": [
+   {
+    "map": "brightvale",
+    "name": "Weapons & Armor",
+    "price": 1200,
+    "shop": "arms"
+   }
+  ],
+  "slot": "weapon",
+  "two_handed": false,
+  "type": "equipment",
+  "weapon": "sword",
+  "weight": 80
+ },
+ {
+  "bonus": [
+   "DEF +2"
+  ],
+  "bound": false,
+  "card_slots": 0,
+  "classes": [],
+  "description": "Oak planks under an iron rim. Small enough for a beginner's arm, stout enough to stop a slime.",
+  "dropped_by": [
+   {
+    "chance": 0.012,
+    "elite_chance": 0.03,
+    "monster": "bog_moss_slime",
+    "pieces": "1"
+   },
+   {
+    "chance": 0.008,
+    "elite_chance": null,
+    "monster": "moss_slime",
+    "pieces": "1"
+   }
+  ],
+  "effect": "",
+  "elite_bonus_chance": null,
+  "icon": "img/items/oakplank_buckler.png",
+  "id": "oakplank_buckler",
+  "level": 0,
+  "name": "Oakplank Buckler",
+  "other": [],
+  "quests": [
+   {
+    "count": 1,
+    "map": "dewleaf_fields",
+    "name": "Steady Front",
+    "quest": "steady_front"
+   }
+  ],
+  "rarity": "Normal",
+  "sells_for": 60,
+  "shops": [
+   {
+    "map": "brightvale",
+    "name": "Weapons & Armor",
+    "price": 120,
+    "shop": "arms"
+   }
+  ],
+  "slot": "shield",
+  "two_handed": false,
+  "type": "equipment",
+  "weapon": "",
+  "weight": 30
+ },
+ {
+  "bonus": [
+   "DEF +3"
+  ],
+  "bound": false,
+  "card_slots": 0,
+  "classes": [],
+  "description": "Layers of brown cloth quilted in diamonds and stitched tight. It softens a blow.",
+  "dropped_by": [
+   {
+    "chance": 0.015,
+    "elite_chance": 0.0375,
+    "monster": "gloom_sporecap",
+    "pieces": "1"
+   },
+   {
+    "chance": 0.01,
+    "elite_chance": null,
+    "monster": "sporecap",
+    "pieces": "1"
+   }
+  ],
+  "effect": "",
+  "elite_bonus_chance": null,
+  "icon": "img/items/quilted_jerkin.png",
+  "id": "quilted_jerkin",
+  "level": 0,
+  "name": "Quilted Jerkin",
+  "other": [],
+  "quests": [],
+  "rarity": "Normal",
+  "sells_for": 130,
+  "shops": [
+   {
+    "map": "brightvale",
+    "name": "Weapons & Armor",
+    "price": 260,
+    "shop": "arms"
+   }
+  ],
+  "slot": "armor",
+  "two_handed": false,
+  "type": "equipment",
+  "weapon": "",
+  "weight": 60
+ },
+ {
+  "bonus": [
+   "ATK +40"
+  ],
+  "bound": false,
+  "card_slots": 0,
+  "classes": [
+   "vanguard"
+  ],
+  "description": "The guild's arming sword, handed to a new Vanguard at the ceremony on the guild seal. Plain, balanced, made to last.",
+  "dropped_by": [
+   {
+    "chance": 0.005,
+    "elite_chance": null,
+    "monster": "elder_sporecap",
+    "pieces": "1"
+   }
+  ],
+  "effect": "",
+  "elite_bonus_chance": null,
+  "icon": "img/items/vanguard_arming_sword.png",
+  "id": "vanguard_arming_sword",
+  "level": 0,
+  "name": "Vanguard Arming Sword",
+  "other": [
+   "ceremony:vanguard"
+  ],
+  "quests": [],
+  "rarity": "Normal",
+  "sells_for": 100,
+  "shops": [
+   {
+    "map": "brightvale",
+    "name": "Weapons & Armor",
+    "price": 200,
+    "shop": "arms"
+   }
+  ],
+  "slot": "weapon",
+  "two_handed": false,
+  "type": "equipment",
+  "weapon": "sword",
+  "weight": 60
+ },
+ {
+  "bonus": [
+   "DEF +3"
+  ],
+  "bound": false,
+  "card_slots": 0,
+  "classes": [
+   "vanguard"
+  ],
+  "description": "A long red kite shield with a gold rim: the Vanguard's wall between the monsters and everyone else.",
+  "dropped_by": [
+   {
+    "chance": 0.005,
+    "elite_chance": null,
+    "monster": "elder_sporecap",
+    "pieces": "1"
+   }
+  ],
+  "effect": "",
+  "elite_bonus_chance": null,
+  "icon": "img/items/crimson_kite_shield.png",
+  "id": "crimson_kite_shield",
+  "level": 0,
+  "name": "Crimson Kite Shield",
+  "other": [
+   "ceremony:vanguard"
+  ],
+  "quests": [],
+  "rarity": "Normal",
+  "sells_for": 80,
+  "shops": [],
+  "slot": "shield",
+  "two_handed": false,
+  "type": "equipment",
+  "weapon": "",
+  "weight": 70
+ },
+ {
+  "bonus": [
+   "DEF +3",
+   "Max HP +15"
+  ],
+  "bound": false,
+  "card_slots": 0,
+  "classes": [
+   "vanguard"
+  ],
+  "description": "A red tabard over light plate. It carries the guild's colours to the front line.",
+  "dropped_by": [
+   {
+    "chance": 0.005,
+    "elite_chance": null,
+    "monster": "elder_sporecap",
+    "pieces": "1"
+   }
+  ],
+  "effect": "",
+  "elite_bonus_chance": null,
+  "icon": "img/items/vanguard_tabard.png",
+  "id": "vanguard_tabard",
+  "level": 0,
+  "name": "Vanguard Tabard",
+  "other": [
+   "ceremony:vanguard"
+  ],
+  "quests": [],
+  "rarity": "Normal",
+  "sells_for": 80,
+  "shops": [],
+  "slot": "armor",
+  "two_handed": false,
+  "type": "equipment",
+  "weapon": "",
+  "weight": 90
+ },
+ {
+  "bonus": [
+   "DEF +2"
+  ],
+  "bound": false,
+  "card_slots": 0,
+  "classes": [
+   "vanguard"
+  ],
+  "description": "Iron greaves for standing your ground.",
+  "dropped_by": [
+   {
+    "chance": 0.005,
+    "elite_chance": null,
+    "monster": "elder_sporecap",
+    "pieces": "1"
+   }
+  ],
+  "effect": "",
+  "elite_bonus_chance": null,
+  "icon": "img/items/vanguard_greaves.png",
+  "id": "vanguard_greaves",
+  "level": 0,
+  "name": "Vanguard Greaves",
+  "other": [
+   "ceremony:vanguard"
+  ],
+  "quests": [],
+  "rarity": "Normal",
+  "sells_for": 50,
+  "shops": [],
+  "slot": "shoes",
+  "two_handed": false,
+  "type": "equipment",
+  "weapon": "",
+  "weight": 50
+ },
+ {
+  "bonus": [
+   "ATK +32"
+  ],
+  "bound": false,
+  "card_slots": 1,
+  "classes": [
+   "thornstrider"
+  ],
+  "description": "A recurve of seasoned briarwood, strung for a new Thornstrider. It shoots 6 m. Both hands.",
+  "dropped_by": [
+   {
+    "chance": 0.005,
+    "elite_chance": null,
+    "monster": "elder_sporecap",
+    "pieces": "1"
+   }
+  ],
+  "effect": "",
+  "elite_bonus_chance": null,
+  "icon": "img/items/briarwood_recurve.png",
+  "id": "briarwood_recurve",
+  "level": 0,
+  "name": "Briarwood Recurve",
+  "other": [
+   "ceremony:thornstrider"
+  ],
+  "quests": [],
+  "rarity": "Normal",
+  "sells_for": 100,
+  "shops": [
+   {
+    "map": "brightvale",
+    "name": "Weapons & Armor",
+    "price": 200,
+    "shop": "arms"
+   }
+  ],
+  "slot": "weapon",
+  "two_handed": true,
+  "type": "equipment",
+  "weapon": "bow",
+  "weight": 50
+ },
+ {
+  "bonus": [
+   "DEF +2",
+   "FLEE +2"
+  ],
+  "bound": false,
+  "card_slots": 0,
+  "classes": [
+   "thornstrider"
+  ],
+  "description": "A green hooded jerkin of soft leather, quiet in the undergrowth.",
+  "dropped_by": [
+   {
+    "chance": 0.005,
+    "elite_chance": null,
+    "monster": "elder_sporecap",
+    "pieces": "1"
+   }
+  ],
+  "effect": "",
+  "elite_bonus_chance": null,
+  "icon": "img/items/thornstrider_jerkin.png",
+  "id": "thornstrider_jerkin",
+  "level": 0,
+  "name": "Thornstrider Jerkin",
+  "other": [
+   "ceremony:thornstrider"
+  ],
+  "quests": [],
+  "rarity": "Normal",
+  "sells_for": 70,
+  "shops": [],
+  "slot": "armor",
+  "two_handed": false,
+  "type": "equipment",
+  "weapon": "",
+  "weight": 50
+ },
+ {
+  "bonus": [
+   "DEF +1",
+   "FLEE +1"
+  ],
+  "bound": false,
+  "card_slots": 0,
+  "classes": [
+   "thornstrider"
+  ],
+  "description": "Light boots for quick feet.",
+  "dropped_by": [
+   {
+    "chance": 0.005,
+    "elite_chance": null,
+    "monster": "elder_sporecap",
+    "pieces": "1"
+   }
+  ],
+  "effect": "",
+  "elite_bonus_chance": null,
+  "icon": "img/items/thornstrider_boots.png",
+  "id": "thornstrider_boots",
+  "level": 0,
+  "name": "Thornstrider Boots",
+  "other": [
+   "ceremony:thornstrider"
+  ],
+  "quests": [],
+  "rarity": "Normal",
+  "sells_for": 50,
+  "shops": [],
+  "slot": "shoes",
+  "two_handed": false,
+  "type": "equipment",
+  "weapon": "",
+  "weight": 30
+ },
+ {
+  "bonus": [
+   "ATK +15",
+   "MATK +20 %",
+   "INT +1"
+  ],
+  "bound": false,
+  "card_slots": 1,
+  "classes": [
+   "arcanist"
+  ],
+  "description": "A rod crowned with a floating crystal shard. In an Arcanist's hand its swings become bolts.",
+  "dropped_by": [
+   {
+    "chance": 0.005,
+    "elite_chance": null,
+    "monster": "elder_sporecap",
+    "pieces": "1"
+   }
+  ],
+  "effect": "",
+  "elite_bonus_chance": null,
+  "icon": "img/items/shardlight_rod.png",
+  "id": "shardlight_rod",
+  "level": 0,
+  "name": "Shardlight Rod",
+  "other": [
+   "ceremony:arcanist"
+  ],
+  "quests": [],
+  "rarity": "Normal",
+  "sells_for": 100,
+  "shops": [
+   {
+    "map": "brightvale",
+    "name": "Weapons & Armor",
+    "price": 200,
+    "shop": "arms"
+   }
+  ],
+  "slot": "weapon",
+  "two_handed": false,
+  "type": "equipment",
+  "weapon": "rod",
+  "weight": 40
+ },
+ {
+  "bonus": [
+   "DEF +1",
+   "MDEF +3",
+   "Max SP +10"
+  ],
+  "bound": false,
+  "card_slots": 0,
+  "classes": [
+   "arcanist"
+  ],
+  "description": "A violet longcoat with a high gold-clasped collar and runes glowing at the hem.",
+  "dropped_by": [
+   {
+    "chance": 0.005,
+    "elite_chance": null,
+    "monster": "elder_sporecap",
+    "pieces": "1"
+   }
+  ],
+  "effect": "",
+  "elite_bonus_chance": null,
+  "icon": "img/items/arcanist_longcoat.png",
+  "id": "arcanist_longcoat",
+  "level": 0,
+  "name": "Arcanist Longcoat",
+  "other": [
+   "ceremony:arcanist"
+  ],
+  "quests": [],
+  "rarity": "Normal",
+  "sells_for": 70,
+  "shops": [],
+  "slot": "armor",
+  "two_handed": false,
+  "type": "equipment",
+  "weapon": "",
+  "weight": 40
+ },
+ {
+  "bonus": [
+   "DEF +1"
+  ],
+  "bound": false,
+  "card_slots": 0,
+  "classes": [
+   "arcanist"
+  ],
+  "description": "Soft slippers for long nights in the tower.",
+  "dropped_by": [
+   {
+    "chance": 0.005,
+    "elite_chance": null,
+    "monster": "elder_sporecap",
+    "pieces": "1"
+   }
+  ],
+  "effect": "",
+  "elite_bonus_chance": null,
+  "icon": "img/items/arcanist_slippers.png",
+  "id": "arcanist_slippers",
+  "level": 0,
+  "name": "Arcanist Slippers",
+  "other": [
+   "ceremony:arcanist"
+  ],
+  "quests": [],
+  "rarity": "Normal",
+  "sells_for": 40,
+  "shops": [],
+  "slot": "shoes",
+  "two_handed": false,
+  "type": "equipment",
+  "weapon": "",
+  "weight": 20
+ },
+ {
+  "bonus": [
+   "ATK +40"
+  ],
+  "bound": false,
+  "card_slots": 0,
+  "classes": [
+   "cleric"
+  ],
+  "description": "A mace with a sun-disc head, the guild's gift to a new Cleric. It never minds how big the monster is.",
+  "dropped_by": [
+   {
+    "chance": 0.005,
+    "elite_chance": null,
+    "monster": "elder_sporecap",
+    "pieces": "1"
+   }
+  ],
+  "effect": "",
+  "elite_bonus_chance": null,
+  "icon": "img/items/sunleaf_mace.png",
+  "id": "sunleaf_mace",
+  "level": 0,
+  "name": "Sunleaf Mace",
+  "other": [
+   "ceremony:cleric"
+  ],
+  "quests": [],
+  "rarity": "Normal",
+  "sells_for": 100,
+  "shops": [
+   {
+    "map": "brightvale",
+    "name": "Weapons & Armor",
+    "price": 200,
+    "shop": "arms"
+   }
+  ],
+  "slot": "weapon",
+  "two_handed": false,
+  "type": "equipment",
+  "weapon": "mace",
+  "weight": 70
+ },
+ {
+  "bonus": [
+   "DEF +3",
+   "MDEF +2"
+  ],
+  "bound": false,
+  "card_slots": 0,
+  "classes": [
+   "cleric"
+  ],
+  "description": "A white battlecoat over light mail, a gold sash with the sunleaf sign.",
+  "dropped_by": [
+   {
+    "chance": 0.005,
+    "elite_chance": null,
+    "monster": "elder_sporecap",
+    "pieces": "1"
+   }
+  ],
+  "effect": "",
+  "elite_bonus_chance": null,
+  "icon": "img/items/cleric_battlecoat.png",
+  "id": "cleric_battlecoat",
+  "level": 0,
+  "name": "Cleric Battlecoat",
+  "other": [
+   "ceremony:cleric"
+  ],
+  "quests": [],
+  "rarity": "Normal",
+  "sells_for": 70,
+  "shops": [],
+  "slot": "armor",
+  "two_handed": false,
+  "type": "equipment",
+  "weapon": "",
+  "weight": 70
+ },
+ {
+  "bonus": [
+   "DEF +1",
+   "Max SP +5"
+  ],
+  "bound": false,
+  "card_slots": 0,
+  "classes": [
+   "cleric"
+  ],
+  "description": "Sturdy boots for long walks between the wounded.",
+  "dropped_by": [
+   {
+    "chance": 0.005,
+    "elite_chance": null,
+    "monster": "elder_sporecap",
+    "pieces": "1"
+   }
+  ],
+  "effect": "",
+  "elite_bonus_chance": null,
+  "icon": "img/items/cleric_boots.png",
+  "id": "cleric_boots",
+  "level": 0,
+  "name": "Cleric Boots",
+  "other": [
+   "ceremony:cleric"
+  ],
+  "quests": [],
+  "rarity": "Normal",
+  "sells_for": 40,
+  "shops": [],
+  "slot": "shoes",
+  "two_handed": false,
+  "type": "equipment",
+  "weapon": "",
+  "weight": 30
+ },
+ {
+  "bonus": [
+   "ATK +38"
+  ],
+  "bound": false,
+  "card_slots": 0,
+  "classes": [
+   "veilrunner"
+  ],
+  "description": "A light dagger with a wren's-wing guard, handed to a new Veilrunner.",
+  "dropped_by": [
+   {
+    "chance": 0.005,
+    "elite_chance": null,
+    "monster": "elder_sporecap",
+    "pieces": "1"
+   }
+  ],
+  "effect": "",
+  "elite_bonus_chance": null,
+  "icon": "img/items/wrenwing_dagger.png",
+  "id": "wrenwing_dagger",
+  "level": 0,
+  "name": "Wrenwing Dagger",
+  "other": [
+   "ceremony:veilrunner"
+  ],
+  "quests": [],
+  "rarity": "Normal",
+  "sells_for": 100,
+  "shops": [
+   {
+    "map": "brightvale",
+    "name": "Weapons & Armor",
+    "price": 200,
+    "shop": "arms"
+   }
+  ],
+  "slot": "weapon",
+  "two_handed": false,
+  "type": "equipment",
+  "weapon": "dagger",
+  "weight": 40
+ },
+ {
+  "bonus": [
+   "DEF +2",
+   "FLEE +2"
+  ],
+  "bound": false,
+  "card_slots": 0,
+  "classes": [
+   "veilrunner"
+  ],
+  "description": "A fitted slate-grey leather coat with crossed straps. It makes no sound.",
+  "dropped_by": [
+   {
+    "chance": 0.005,
+    "elite_chance": null,
+    "monster": "elder_sporecap",
+    "pieces": "1"
+   }
+  ],
+  "effect": "",
+  "elite_bonus_chance": null,
+  "icon": "img/items/slatehide_coat.png",
+  "id": "slatehide_coat",
+  "level": 0,
+  "name": "Slatehide Coat",
+  "other": [
+   "ceremony:veilrunner"
+  ],
+  "quests": [],
+  "rarity": "Normal",
+  "sells_for": 70,
+  "shops": [],
+  "slot": "armor",
+  "two_handed": false,
+  "type": "equipment",
+  "weapon": "",
+  "weight": 50
+ },
+ {
+  "bonus": [
+   "DEF +1",
+   "FLEE +1"
+  ],
+  "bound": false,
+  "card_slots": 0,
+  "classes": [
+   "veilrunner"
+  ],
+  "description": "Soft boots with felted soles for quiet feet.",
+  "dropped_by": [
+   {
+    "chance": 0.005,
+    "elite_chance": null,
+    "monster": "elder_sporecap",
+    "pieces": "1"
+   }
+  ],
+  "effect": "",
+  "elite_bonus_chance": null,
+  "icon": "img/items/feltstep_boots.png",
+  "id": "feltstep_boots",
+  "level": 0,
+  "name": "Feltstep Boots",
+  "other": [
+   "ceremony:veilrunner"
+  ],
+  "quests": [],
+  "rarity": "Normal",
+  "sells_for": 50,
+  "shops": [],
+  "slot": "shoes",
+  "two_handed": false,
+  "type": "equipment",
+  "weapon": "",
+  "weight": 30
+ },
+ {
+  "bonus": [
+   "ATK +47"
+  ],
+  "bound": false,
+  "card_slots": 0,
+  "classes": [
+   "veilrunner"
+  ],
+  "description": "A slim, sharp-tipped blade with a thistle-head pommel.",
+  "dropped_by": [
+   {
+    "chance": 0.004,
+    "elite_chance": null,
+    "monster": "rootnib",
+    "pieces": "1"
+   }
+  ],
+  "effect": "",
+  "elite_bonus_chance": null,
+  "icon": "img/items/thistlepin_dagger.png",
+  "id": "thistlepin_dagger",
+  "level": 11,
+  "name": "Thistlepin Dagger",
+  "other": [],
+  "quests": [],
+  "rarity": "Normal",
+  "sells_for": 691,
+  "shops": [
+   {
+    "map": "brightvale",
+    "name": "Weapons & Armor",
+    "price": 1382,
+    "shop": "arms"
+   }
+  ],
+  "slot": "weapon",
+  "two_handed": false,
+  "type": "equipment",
+  "weapon": "dagger",
+  "weight": 40
+ },
+ {
+  "bonus": [
+   "ATK +70"
+  ],
+  "bound": false,
+  "card_slots": 0,
+  "classes": [
+   "veilrunner"
+  ],
+  "description": "A bright, fin-curved blade polished until it shows your face.",
+  "dropped_by": [
+   {
+    "chance": 0.004,
+    "elite_chance": 0.01,
+    "monster": "dusk_dewdrop_slime",
+    "pieces": "1"
+   }
+  ],
+  "effect": "",
+  "elite_bonus_chance": null,
+  "icon": "img/items/mirrorfin_dagger.png",
+  "id": "mirrorfin_dagger",
+  "level": 21,
+  "name": "Mirrorfin Dagger",
+  "other": [],
+  "quests": [],
+  "rarity": "Normal",
+  "sells_for": 1671,
+  "shops": [
+   {
+    "map": "brightvale",
+    "name": "Weapons & Armor",
+    "price": 3342,
+    "shop": "arms"
+   }
+  ],
+  "slot": "weapon",
+  "two_handed": false,
+  "type": "equipment",
+  "weapon": "dagger",
+  "weight": 40
+ },
+ {
+  "bonus": [],
+  "bound": false,
+  "card_slots": 0,
+  "classes": [],
+  "description": "A sharp little stone that sits well between two fingers.",
+  "dropped_by": [
+   {
+    "chance": 0.05,
+    "elite_chance": null,
+    "monster": "rootnib",
+    "pieces": "1"
+   },
+   {
+    "chance": 0.03,
+    "elite_chance": null,
+    "monster": "moss_slime",
+    "pieces": "1"
+   }
+  ],
+  "effect": "Crafting material",
+  "elite_bonus_chance": null,
+  "icon": "img/items/flintpip.png",
+  "id": "flintpip",
+  "level": 0,
+  "name": "Flintpip",
+  "other": [],
+  "quests": [],
+  "rarity": "Normal",
+  "sells_for": 1,
+  "shops": [],
+  "slot": "",
+  "two_handed": false,
+  "type": "material",
+  "weapon": "",
+  "weight": 3
+ },
+ {
+  "bonus": [
+   "DEF +1"
+  ],
+  "bound": true,
+  "card_slots": 0,
+  "classes": [],
+  "description": "A plain wooden shield lent for the Vanguard trial. It goes back to the trainer when the trial ends.",
+  "dropped_by": [],
+  "effect": "",
+  "elite_bonus_chance": null,
+  "icon": "img/items/guild_practice_shield.png",
+  "id": "guild_practice_shield",
+  "level": 0,
+  "name": "Guild Practice Shield",
+  "other": [
+   "loan:vanguard"
+  ],
+  "quests": [],
+  "rarity": "Normal",
+  "sells_for": 0,
+  "shops": [],
+  "slot": "shield",
+  "two_handed": false,
+  "type": "equipment",
+  "weapon": "",
+  "weight": 30
+ },
+ {
+  "bonus": [
+   "ATK +20"
+  ],
+  "bound": true,
+  "card_slots": 0,
+  "classes": [],
+  "description": "A plain practice bow lent for the Thornstrider trial; it shoots at the Thornstrider's pace. It goes back to the trainer when the trial ends. Both hands.",
+  "dropped_by": [],
+  "effect": "",
+  "elite_bonus_chance": null,
+  "icon": "img/items/guild_practice_bow.png",
+  "id": "guild_practice_bow",
+  "level": 0,
+  "name": "Guild Practice Bow",
+  "other": [
+   "loan:thornstrider"
+  ],
+  "quests": [],
+  "rarity": "Normal",
+  "sells_for": 0,
+  "shops": [],
+  "slot": "weapon",
+  "two_handed": true,
+  "type": "equipment",
+  "weapon": "bow",
+  "weight": 40
+ },
+ {
+  "bonus": [
+   "ATK +10",
+   "MATK +10 %"
+  ],
+  "bound": true,
+  "card_slots": 0,
+  "classes": [],
+  "description": "A plain practice rod lent for the Arcanist trial: its swings become magic bolts. It goes back to the trainer when the trial ends.",
+  "dropped_by": [],
+  "effect": "",
+  "elite_bonus_chance": null,
+  "icon": "img/items/guild_practice_rod.png",
+  "id": "guild_practice_rod",
+  "level": 0,
+  "name": "Guild Practice Rod",
+  "other": [
+   "loan:arcanist"
+  ],
+  "quests": [],
+  "rarity": "Normal",
+  "sells_for": 0,
+  "shops": [],
+  "slot": "weapon",
+  "two_handed": false,
+  "type": "equipment",
+  "weapon": "rod",
+  "weight": 30
+ },
+ {
+  "bonus": [],
+  "bound": false,
+  "card_slots": 0,
+  "classes": [],
+  "description": "A sliver of ivory light that rings softly when tapped.",
+  "dropped_by": [
+   {
+    "chance": 0.42,
+    "elite_chance": null,
+    "monster": "bellwisp",
+    "pieces": "1"
+   }
+  ],
+  "effect": "Crafting material",
+  "elite_bonus_chance": null,
+  "icon": "img/items/bellglow_shard.png",
+  "id": "bellglow_shard",
+  "level": 0,
+  "name": "Bellglow Shard",
+  "other": [],
+  "quests": [],
+  "rarity": "Normal",
+  "sells_for": 39,
+  "shops": [],
+  "slot": "",
+  "two_handed": false,
+  "type": "material",
+  "weapon": "",
+  "weight": 1
+ },
+ {
+  "bonus": [],
+  "bound": false,
+  "card_slots": 0,
+  "classes": [],
+  "description": "Holds the gentle chime of a Bellwisp.",
+  "dropped_by": [
+   {
+    "chance": 0.0005,
+    "elite_chance": null,
+    "monster": "bellwisp",
+    "pieces": "1"
+   }
+  ],
+  "effect": "Max SP +12%, INT +1",
+  "elite_bonus_chance": null,
+  "icon": "img/items/bellwisp_card.png",
+  "id": "bellwisp_card",
+  "level": 0,
+  "name": "Bellwisp Card",
+  "other": [],
+  "quests": [],
+  "rarity": "Rare",
+  "sells_for": 3672,
+  "shops": [],
+  "slot": "shoes",
+  "two_handed": false,
+  "type": "card",
+  "weapon": "",
+  "weight": 1
+ },
+ {
+  "bonus": [],
+  "bound": false,
+  "card_slots": 0,
+  "classes": [],
+  "description": "A blue petal tonic with a clean, sharp taste. Restores 10% of Max SP.",
+  "dropped_by": [
+   {
+    "chance": 0.08,
+    "elite_chance": null,
+    "monster": "dripfin",
+    "pieces": "1"
+   },
+   {
+    "chance": 0.08,
+    "elite_chance": null,
+    "monster": "gale_bramblebun",
+    "pieces": "1"
+   },
+   {
+    "chance": 0.08,
+    "elite_chance": null,
+    "monster": "rootmantle",
+    "pieces": "1"
+   },
+   {
+    "chance": 0.08,
+    "elite_chance": null,
+    "monster": "bellwisp",
+    "pieces": "1"
+   },
+   {
+    "chance": 0.07,
+    "elite_chance": null,
+    "monster": "reedbeak",
+    "pieces": "1"
+   }
+  ],
+  "effect": "Restores 10% of Max SP",
+  "elite_bonus_chance": null,
+  "icon": "img/items/bluepetal_tonic.png",
+  "id": "bluepetal_tonic",
+  "level": 0,
+  "name": "Bluepetal Tonic",
+  "other": [],
+  "quests": [],
+  "rarity": "Normal",
+  "sells_for": 4,
+  "shops": [],
+  "slot": "",
+  "two_handed": false,
+  "type": "consumable",
+  "weapon": "",
+  "weight": 2
+ },
+ {
+  "bonus": [],
+  "bound": false,
+  "card_slots": 0,
+  "classes": [],
+  "description": "A hard little pod that rattles when shaken. Gardeners say it sprouts anywhere.",
+  "dropped_by": [
+   {
+    "chance": 0.15,
+    "elite_chance": null,
+    "monster": "bramblebun",
+    "pieces": "1"
+   }
+  ],
+  "effect": "Crafting material",
+  "elite_bonus_chance": null,
+  "icon": "img/items/bramble_seedpod.png",
+  "id": "bramble_seedpod",
+  "level": 0,
+  "name": "Bramble Seedpod",
+  "other": [],
+  "quests": [],
+  "rarity": "Normal",
+  "sells_for": 13,
+  "shops": [],
+  "slot": "",
+  "two_handed": false,
+  "type": "material",
+  "weapon": "",
+  "weight": 1
+ },
+ {
+  "bonus": [],
+  "bound": false,
+  "card_slots": 0,
+  "classes": [],
+  "description": "Holds the bouncy spirit of a Bramblebun.",
+  "dropped_by": [
+   {
+    "chance": 0.0005,
+    "elite_chance": null,
+    "monster": "bramblebun",
+    "pieces": "1"
+   }
+  ],
+  "effect": "FLEE +8",
+  "elite_bonus_chance": null,
+  "icon": "img/items/bramblebun_card.png",
+  "id": "bramblebun_card",
+  "level": 0,
+  "name": "Bramblebun Card",
+  "other": [],
+  "quests": [],
+  "rarity": "Rare",
+  "sells_for": 1201,
+  "shops": [],
+  "slot": "shoes",
+  "two_handed": false,
+  "type": "card",
+  "weapon": "",
+  "weight": 1
+ },
+ {
+  "bonus": [],
+  "bound": false,
+  "card_slots": 0,
+  "classes": [],
+  "description": "A springy knot of bramble fluff from a Bramblebun's tail. Soft until you squeeze it.",
+  "dropped_by": [
+   {
+    "chance": 0.42,
+    "elite_chance": null,
+    "monster": "bramblebun",
+    "pieces": "1"
+   }
+  ],
+  "effect": "Crafting material",
+  "elite_bonus_chance": null,
+  "icon": "img/items/brambletuft.png",
+  "id": "brambletuft",
+  "level": 0,
+  "name": "Brambletuft",
+  "other": [],
+  "quests": [],
+  "rarity": "Normal",
+  "sells_for": 13,
+  "shops": [],
+  "slot": "",
+  "two_handed": false,
+  "type": "material",
+  "weapon": "",
+  "weight": 1
+ },
+ {
+  "bonus": [],
+  "bound": false,
+  "card_slots": 0,
+  "classes": [],
+  "description": "A mint-coloured pod that whistles faintly in any breeze.",
+  "dropped_by": [
+   {
+    "chance": 0.12,
+    "elite_chance": null,
+    "monster": "gale_bramblebun",
+    "pieces": "1"
+   }
+  ],
+  "effect": "Crafting material",
+  "elite_bonus_chance": null,
+  "icon": "img/items/breezeseed_pod.png",
+  "id": "breezeseed_pod",
+  "level": 0,
+  "name": "Breezeseed Pod",
+  "other": [],
+  "quests": [],
+  "rarity": "Normal",
+  "sells_for": 33,
+  "shops": [],
+  "slot": "",
+  "two_handed": false,
+  "type": "material",
+  "weapon": "",
+  "weight": 1
+ },
+ {
+  "bonus": [
+   "Max SP +4 %"
+  ],
+  "bound": false,
+  "card_slots": 1,
+  "classes": [],
+  "description": "A charm shaped like a fin, cool as brook water.",
+  "dropped_by": [
+   {
+    "chance": 0.003,
+    "elite_chance": null,
+    "monster": "dripfin",
+    "pieces": "1"
+   }
+  ],
+  "effect": "",
+  "elite_bonus_chance": null,
+  "icon": "img/items/brookfin_charm.png",
+  "id": "brookfin_charm",
+  "level": 16,
+  "name": "Brookfin Charm",
+  "other": [],
+  "quests": [],
+  "rarity": "Normal",
+  "sells_for": 687,
+  "shops": [],
+  "slot": "accessory",
+  "two_handed": false,
+  "type": "equipment",
+  "weapon": "",
+  "weight": 5
+ },
+ {
+  "bonus": [],
+  "bound": false,
+  "card_slots": 0,
+  "classes": [],
+  "description": "A bead of cool dew a Rootnib carries from its burrow.",
+  "dropped_by": [
+   {
+    "chance": 0.14,
+    "elite_chance": null,
+    "monster": "rootnib",
+    "pieces": "1"
+   }
+  ],
+  "effect": "Crafting material",
+  "elite_bonus_chance": null,
+  "icon": "img/items/burrowdew_bead.png",
+  "id": "burrowdew_bead",
+  "level": 0,
+  "name": "Burrowdew Bead",
+  "other": [],
+  "quests": [],
+  "rarity": "Normal",
+  "sells_for": 18,
+  "shops": [],
+  "slot": "",
+  "two_handed": false,
+  "type": "material",
+  "weapon": "",
+  "weight": 1
+ },
+ {
+  "bonus": [],
+  "bound": false,
+  "card_slots": 0,
+  "classes": [],
+  "description": "A loop of fine silk that hums like a tiny bell.",
+  "dropped_by": [
+   {
+    "chance": 0.12,
+    "elite_chance": null,
+    "monster": "bellwisp",
+    "pieces": "1"
+   }
+  ],
+  "effect": "Crafting material",
+  "elite_bonus_chance": null,
+  "icon": "img/items/chimesilk_loop.png",
+  "id": "chimesilk_loop",
+  "level": 0,
+  "name": "Chimesilk Loop",
+  "other": [],
+  "quests": [],
+  "rarity": "Normal",
+  "sells_for": 39,
+  "shops": [],
+  "slot": "",
+  "two_handed": false,
+  "type": "material",
+  "weapon": "",
+  "weight": 1
+ },
+ {
+  "bonus": [],
+  "bound": false,
+  "card_slots": 0,
+  "classes": [],
+  "description": "Rich umber lacquer scraped from the Regent's root crown.",
+  "dropped_by": [
+   {
+    "chance": 0.35,
+    "elite_chance": null,
+    "monster": "dewroot_regent",
+    "pieces": "1"
+   }
+  ],
+  "effect": "Crafting material",
+  "elite_bonus_chance": null,
+  "icon": "img/items/crownroot_lacquer.png",
+  "id": "crownroot_lacquer",
+  "level": 0,
+  "name": "Crownroot Lacquer",
+  "other": [],
+  "quests": [],
+  "rarity": "Normal",
+  "sells_for": 41,
+  "shops": [],
+  "slot": "",
+  "two_handed": false,
+  "type": "material",
+  "weapon": "",
+  "weight": 1
+ },
+ {
+  "bonus": [],
+  "bound": false,
+  "card_slots": 0,
+  "classes": [],
+  "description": "A cool mint draught bottled with morning dew. Restores 15% of Max HP.",
+  "dropped_by": [
+   {
+    "chance": 0.08,
+    "elite_chance": null,
+    "monster": "tuftguard",
+    "pieces": "1"
+   },
+   {
+    "chance": 0.08,
+    "elite_chance": null,
+    "monster": "wickmoth",
+    "pieces": "1"
+   },
+   {
+    "chance": 0.07,
+    "elite_chance": null,
+    "monster": "bramblebun",
+    "pieces": "1"
+   },
+   {
+    "chance": 0.07,
+    "elite_chance": null,
+    "monster": "rootnib",
+    "pieces": "1"
+   }
+  ],
+  "effect": "Restores 15% of Max HP",
+  "elite_bonus_chance": null,
+  "icon": "img/items/dewmint_draught.png",
+  "id": "dewmint_draught",
+  "level": 0,
+  "name": "Dewmint Draught",
+  "other": [],
+  "quests": [],
+  "rarity": "Normal",
+  "sells_for": 15,
+  "shops": [],
+  "slot": "",
+  "two_handed": false,
+  "type": "consumable",
+  "weapon": "",
+  "weight": 3
+ },
+ {
+  "bonus": [],
+  "bound": false,
+  "card_slots": 0,
+  "classes": [],
+  "description": "A long reed-green quill, always a little damp at the tip.",
+  "dropped_by": [
+   {
+    "chance": 0.42,
+    "elite_chance": null,
+    "monster": "reedbeak",
+    "pieces": "1"
+   }
+  ],
+  "effect": "Crafting material",
+  "elite_bonus_chance": null,
+  "icon": "img/items/dewquill.png",
+  "id": "dewquill",
+  "level": 0,
+  "name": "Dewquill",
+  "other": [],
+  "quests": [],
+  "rarity": "Normal",
+  "sells_for": 19,
+  "shops": [],
+  "slot": "",
+  "two_handed": false,
+  "type": "material",
+  "weapon": "",
+  "weight": 1
+ },
+ {
+  "bonus": [],
+  "bound": false,
+  "card_slots": 0,
+  "classes": [],
+  "description": "The glowing core of the Dewroot Regent. Dew beads form on it even in a dry hand.",
+  "dropped_by": [
+   {
+    "chance": 0.8,
+    "elite_chance": null,
+    "monster": "dewroot_regent",
+    "pieces": "1"
+   }
+  ],
+  "effect": "Crafting material",
+  "elite_bonus_chance": null,
+  "icon": "img/items/dewroot_heart.png",
+  "id": "dewroot_heart",
+  "level": 0,
+  "name": "Dewroot Heart",
+  "other": [],
+  "quests": [],
+  "rarity": "Rare",
+  "sells_for": 232,
+  "shops": [],
+  "slot": "",
+  "two_handed": false,
+  "type": "material",
+  "weapon": "",
+  "weight": 2
+ },
+ {
+  "bonus": [],
+  "bound": false,
+  "card_slots": 0,
+  "classes": [],
+  "description": "Holds the deep, slow strength of the Dewroot Regent.",
+  "dropped_by": [
+   {
+    "chance": 0.005,
+    "elite_chance": null,
+    "monster": "dewroot_regent",
+    "pieces": "1"
+   }
+  ],
+  "effect": "Damage vs Boss +15%, Max HP -5%",
+  "elite_bonus_chance": null,
+  "icon": "img/items/dewroot_regent_card.png",
+  "id": "dewroot_regent_card",
+  "level": 0,
+  "name": "Dewroot Regent Card",
+  "other": [],
+  "quests": [],
+  "rarity": "Legendary",
+  "sells_for": 3882,
+  "shops": [],
+  "slot": "weapon",
+  "two_handed": false,
+  "type": "card",
+  "weapon": "",
+  "weight": 1
+ },
+ {
+  "bonus": [],
+  "bound": false,
+  "card_slots": 0,
+  "classes": [],
+  "description": "Holds the calm flow of a Dripfin.",
+  "dropped_by": [
+   {
+    "chance": 0.0005,
+    "elite_chance": null,
+    "monster": "dripfin",
+    "pieces": "1"
+   }
+  ],
+  "effect": "Damage vs Small +10%",
+  "elite_bonus_chance": null,
+  "icon": "img/items/dripfin_card.png",
+  "id": "dripfin_card",
+  "level": 0,
+  "name": "Dripfin Card",
+  "other": [],
+  "quests": [],
+  "rarity": "Rare",
+  "sells_for": 2339,
+  "shops": [],
+  "slot": "weapon",
+  "two_handed": false,
+  "type": "card",
+  "weapon": "",
+  "weight": 1
+ },
+ {
+  "bonus": [],
+  "bound": false,
+  "card_slots": 0,
+  "classes": [],
+  "description": "A pale blue scale that never quite dries.",
+  "dropped_by": [
+   {
+    "chance": 0.44,
+    "elite_chance": null,
+    "monster": "dripfin",
+    "pieces": "1"
+   }
+  ],
+  "effect": "Crafting material",
+  "elite_bonus_chance": null,
+  "icon": "img/items/dripscale_flake.png",
+  "id": "dripscale_flake",
+  "level": 0,
+  "name": "Dripscale Flake",
+  "other": [],
+  "quests": [],
+  "rarity": "Normal",
+  "sells_for": 25,
+  "shops": [],
+  "slot": "",
+  "two_handed": false,
+  "type": "material",
+  "weapon": "",
+  "weight": 1
+ },
+ {
+  "bonus": [],
+  "bound": false,
+  "card_slots": 0,
+  "classes": [],
+  "description": "A small pin with a warm amber glow, like a lantern wick.",
+  "dropped_by": [
+   {
+    "chance": 0.003,
+    "elite_chance": null,
+    "monster": "wickmoth",
+    "pieces": "1"
+   }
+  ],
+  "effect": "Fire-element damage dealt +3%",
+  "elite_bonus_chance": null,
+  "icon": "img/items/emberwick_pin.png",
+  "id": "emberwick_pin",
+  "level": 22,
+  "name": "Emberwick Pin",
+  "other": [],
+  "quests": [],
+  "rarity": "Normal",
+  "sells_for": 1060,
+  "shops": [],
+  "slot": "accessory",
+  "two_handed": false,
+  "type": "equipment",
+  "weapon": "",
+  "weight": 5
+ },
+ {
+  "bonus": [],
+  "bound": false,
+  "card_slots": 0,
+  "classes": [],
+  "description": "Holds the quick wind of a Gale Bramblebun.",
+  "dropped_by": [
+   {
+    "chance": 0.0005,
+    "elite_chance": null,
+    "monster": "gale_bramblebun",
+    "pieces": "1"
+   }
+  ],
+  "effect": "CRIT +6",
+  "elite_bonus_chance": null,
+  "icon": "img/items/gale_bramblebun_card.png",
+  "id": "gale_bramblebun_card",
+  "level": 0,
+  "name": "Gale Bramblebun Card",
+  "other": [],
+  "quests": [],
+  "rarity": "Rare",
+  "sells_for": 3134,
+  "shops": [],
+  "slot": "accessory",
+  "two_handed": false,
+  "type": "card",
+  "weapon": "",
+  "weight": 1
+ },
+ {
+  "bonus": [
+   "DEF +3"
+  ],
+  "bound": false,
+  "card_slots": 1,
+  "classes": [],
+  "description": "A pale green wrap woven from wind-combed grass.",
+  "dropped_by": [
+   {
+    "chance": 0.0025,
+    "elite_chance": null,
+    "monster": "gale_bramblebun",
+    "pieces": "1"
+   }
+  ],
+  "effect": "AGI +3%",
+  "elite_bonus_chance": null,
+  "icon": "img/items/galegrass_wrap.png",
+  "id": "galegrass_wrap",
+  "level": 23,
+  "name": "Galegrass Wrap",
+  "other": [],
+  "quests": [],
+  "rarity": "Normal",
+  "sells_for": 1126,
+  "shops": [],
+  "slot": "garment",
+  "two_handed": false,
+  "type": "equipment",
+  "weapon": "",
+  "weight": 30
+ },
+ {
+  "bonus": [],
+  "bound": false,
+  "card_slots": 0,
+  "classes": [],
+  "description": "A tight green knot from deep inside a Tuftguard. It feels warm in the hand.",
+  "dropped_by": [
+   {
+    "chance": 0.12,
+    "elite_chance": null,
+    "monster": "tuftguard",
+    "pieces": "1"
+   }
+  ],
+  "effect": "Crafting material",
+  "elite_bonus_chance": null,
+  "icon": "img/items/grassheart_knot.png",
+  "id": "grassheart_knot",
+  "level": 0,
+  "name": "Grassheart Knot",
+  "other": [],
+  "quests": [],
+  "rarity": "Normal",
+  "sells_for": 26,
+  "shops": [],
+  "slot": "",
+  "two_handed": false,
+  "type": "material",
+  "weapon": "",
+  "weight": 1
+ },
+ {
+  "bonus": [
+   "DEF +13",
+   "DEF +6 %",
+   "Max HP +72",
+   "Max HP +3 %"
+  ],
+  "bound": false,
+  "card_slots": 1,
+  "classes": [],
+  "description": "A cuirass shaped from the Regent's own shell, crested with roots.",
+  "dropped_by": [
+   {
+    "chance": 0.01,
+    "elite_chance": null,
+    "monster": "dewroot_regent",
+    "pieces": "1"
+   }
+  ],
+  "effect": "",
+  "elite_bonus_chance": null,
+  "icon": "img/items/grovecrest_cuirass.png",
+  "id": "grovecrest_cuirass",
+  "level": 30,
+  "name": "Grovecrest Cuirass",
+  "other": [],
+  "quests": [],
+  "rarity": "Normal",
+  "sells_for": 1617,
+  "shops": [],
+  "slot": "armor",
+  "two_handed": false,
+  "type": "equipment",
+  "weapon": "",
+  "weight": 100
+ },
+ {
+  "bonus": [],
+  "bound": false,
+  "card_slots": 0,
+  "classes": [],
+  "description": "Holds the quiet hush of a Hushcap.",
+  "dropped_by": [
+   {
+    "chance": 0.0005,
+    "elite_chance": null,
+    "monster": "hushcap",
+    "pieces": "1"
+   }
+  ],
+  "effect": "MATK +6, Max SP -5%",
+  "elite_bonus_chance": null,
+  "icon": "img/items/hushcap_card.png",
+  "id": "hushcap_card",
+  "level": 0,
+  "name": "Hushcap Card",
+  "other": [],
+  "quests": [],
+  "rarity": "Rare",
+  "sells_for": 2800,
+  "shops": [],
+  "slot": "head_top",
+  "two_handed": false,
+  "type": "card",
+  "weapon": "",
+  "weight": 1
+ },
+ {
+  "bonus": [
+   "DEF +3"
+  ],
+  "bound": false,
+  "card_slots": 1,
+  "classes": [],
+  "description": "A folded mantle of lavender cloth that muffles every step.",
+  "dropped_by": [
+   {
+    "chance": 0.003,
+    "elite_chance": null,
+    "monster": "hushcap",
+    "pieces": "1"
+   }
+  ],
+  "effect": "MDEF +5%",
+  "elite_bonus_chance": null,
+  "icon": "img/items/hushfold_mantle.png",
+  "id": "hushfold_mantle",
+  "level": 20,
+  "name": "Hushfold Mantle",
+  "other": [],
+  "quests": [],
+  "rarity": "Normal",
+  "sells_for": 931,
+  "shops": [],
+  "slot": "garment",
+  "two_handed": false,
+  "type": "equipment",
+  "weapon": "",
+  "weight": 30
+ },
+ {
+  "bonus": [],
+  "bound": false,
+  "card_slots": 0,
+  "classes": [],
+  "description": "Lavender fibre from under a Hushcap's cap. Sounds go quiet around it.",
+  "dropped_by": [
+   {
+    "chance": 0.42,
+    "elite_chance": null,
+    "monster": "hushcap",
+    "pieces": "1"
+   }
+  ],
+  "effect": "Crafting material",
+  "elite_bonus_chance": null,
+  "icon": "img/items/hushveil_fiber.png",
+  "id": "hushveil_fiber",
+  "level": 0,
+  "name": "Hushveil Fiber",
+  "other": [],
+  "quests": [],
+  "rarity": "Normal",
+  "sells_for": 29,
+  "shops": [],
+  "slot": "",
+  "two_handed": false,
+  "type": "material",
+  "weapon": "",
+  "weight": 1
+ },
+ {
+  "bonus": [
+   "DEF +7",
+   "DEF +5 %"
+  ],
+  "bound": false,
+  "card_slots": 1,
+  "classes": [],
+  "description": "A broad shield of knotted grain wood, grown rather than carved.",
+  "dropped_by": [
+   {
+    "chance": 0.003,
+    "elite_chance": null,
+    "monster": "tuftguard",
+    "pieces": "1"
+   }
+  ],
+  "effect": "",
+  "elite_bonus_chance": null,
+  "icon": "img/items/knotgrain_shield.png",
+  "id": "knotgrain_shield",
+  "level": 17,
+  "name": "Knotgrain Shield",
+  "other": [],
+  "quests": [],
+  "rarity": "Normal",
+  "sells_for": 746,
+  "shops": [],
+  "slot": "shield",
+  "two_handed": false,
+  "type": "equipment",
+  "weapon": "",
+  "weight": 40
+ },
+ {
+  "bonus": [],
+  "bound": false,
+  "card_slots": 0,
+  "classes": [],
+  "description": "Fuzzy gold floss that keeps a faint glow for days.",
+  "dropped_by": [
+   {
+    "chance": 0.12,
+    "elite_chance": null,
+    "monster": "wickmoth",
+    "pieces": "1"
+   }
+  ],
+  "effect": "Crafting material",
+  "elite_bonus_chance": null,
+  "icon": "img/items/lampfloss.png",
+  "id": "lampfloss",
+  "level": 0,
+  "name": "Lampfloss",
+  "other": [],
+  "quests": [],
+  "rarity": "Normal",
+  "sells_for": 32,
+  "shops": [],
+  "slot": "",
+  "two_handed": false,
+  "type": "material",
+  "weapon": "",
+  "weight": 1
+ },
+ {
+  "bonus": [],
+  "bound": false,
+  "card_slots": 0,
+  "classes": [],
+  "description": "A tiny bell seal on a cord. Its chime steadies a healer's hands.",
+  "dropped_by": [
+   {
+    "chance": 0.0025,
+    "elite_chance": null,
+    "monster": "bellwisp",
+    "pieces": "1"
+   }
+  ],
+  "effect": "Healing power +3%",
+  "elite_bonus_chance": null,
+  "icon": "img/items/little_chime_seal.png",
+  "id": "little_chime_seal",
+  "level": 28,
+  "name": "Little Chime Seal",
+  "other": [],
+  "quests": [],
+  "rarity": "Normal",
+  "sells_for": 1472,
+  "shops": [],
+  "slot": "accessory",
+  "two_handed": false,
+  "type": "equipment",
+  "weapon": "",
+  "weight": 5
+ },
+ {
+  "bonus": [],
+  "bound": false,
+  "card_slots": 0,
+  "classes": [],
+  "description": "Thick olive bark from a Rootmantle's back, layered like roof tiles.",
+  "dropped_by": [
+   {
+    "chance": 0.45,
+    "elite_chance": null,
+    "monster": "rootmantle",
+    "pieces": "1"
+   }
+  ],
+  "effect": "Crafting material",
+  "elite_bonus_chance": null,
+  "icon": "img/items/mantleroot_bark.png",
+  "id": "mantleroot_bark",
+  "level": 0,
+  "name": "Mantleroot Bark",
+  "other": [],
+  "quests": [],
+  "rarity": "Normal",
+  "sells_for": 39,
+  "shops": [],
+  "slot": "",
+  "two_handed": false,
+  "type": "material",
+  "weapon": "",
+  "weight": 1
+ },
+ {
+  "bonus": [],
+  "bound": false,
+  "card_slots": 0,
+  "classes": [],
+  "description": "A pearl that glows the colour of a cave pool.",
+  "dropped_by": [
+   {
+    "chance": 0.12,
+    "elite_chance": null,
+    "monster": "dripfin",
+    "pieces": "1"
+   }
+  ],
+  "effect": "Crafting material",
+  "elite_bonus_chance": null,
+  "icon": "img/items/poolglint_pearl.png",
+  "id": "poolglint_pearl",
+  "level": 0,
+  "name": "Poolglint Pearl",
+  "other": [],
+  "quests": [],
+  "rarity": "Normal",
+  "sells_for": 25,
+  "shops": [],
+  "slot": "",
+  "two_handed": false,
+  "type": "material",
+  "weapon": "",
+  "weight": 1
+ },
+ {
+  "bonus": [],
+  "bound": false,
+  "card_slots": 0,
+  "classes": [],
+  "description": "Smooth, plum-dark satin woven from sleeping spores.",
+  "dropped_by": [
+   {
+    "chance": 0.12,
+    "elite_chance": null,
+    "monster": "hushcap",
+    "pieces": "1"
+   }
+  ],
+  "effect": "Crafting material",
+  "elite_bonus_chance": null,
+  "icon": "img/items/quietspore_satin.png",
+  "id": "quietspore_satin",
+  "level": 0,
+  "name": "Quietspore Satin",
+  "other": [],
+  "quests": [],
+  "rarity": "Normal",
+  "sells_for": 29,
+  "shops": [],
+  "slot": "",
+  "two_handed": false,
+  "type": "material",
+  "weapon": "",
+  "weight": 1
+ },
+ {
+  "bonus": [],
+  "bound": false,
+  "card_slots": 0,
+  "classes": [],
+  "description": "Holds the patient aim of a Reedbeak.",
+  "dropped_by": [
+   {
+    "chance": 0.0005,
+    "elite_chance": null,
+    "monster": "reedbeak",
+    "pieces": "1"
+   }
+  ],
+  "effect": "HIT +10",
+  "elite_bonus_chance": null,
+  "icon": "img/items/reedbeak_card.png",
+  "id": "reedbeak_card",
+  "level": 0,
+  "name": "Reedbeak Card",
+  "other": [],
+  "quests": [],
+  "rarity": "Rare",
+  "sells_for": 1854,
+  "shops": [],
+  "slot": "weapon",
+  "two_handed": false,
+  "type": "card",
+  "weapon": "",
+  "weight": 1
+ },
+ {
+  "bonus": [],
+  "bound": false,
+  "card_slots": 0,
+  "classes": [],
+  "description": "A small pearl grown in the reeds where a Reedbeak nests. It smells of rain.",
+  "dropped_by": [
+   {
+    "chance": 0.12,
+    "elite_chance": null,
+    "monster": "reedbeak",
+    "pieces": "1"
+   }
+  ],
+  "effect": "Crafting material",
+  "elite_bonus_chance": null,
+  "icon": "img/items/reedpearl.png",
+  "id": "reedpearl",
+  "level": 0,
+  "name": "Reedpearl",
+  "other": [],
+  "quests": [],
+  "rarity": "Normal",
+  "sells_for": 19,
+  "shops": [],
+  "slot": "",
+  "two_handed": false,
+  "type": "material",
+  "weapon": "",
+  "weight": 1
+ },
+ {
+  "bonus": [
+   "ATK +49"
+  ],
+  "bound": false,
+  "card_slots": 1,
+  "classes": [
+   "thornstrider"
+  ],
+  "description": "A supple bow strung with twisted reed fibre. It sings on the draw.",
+  "dropped_by": [
+   {
+    "chance": 0.003,
+    "elite_chance": null,
+    "monster": "reedbeak",
+    "pieces": "1"
+   }
+  ],
+  "effect": "ATK +5%",
+  "elite_bonus_chance": null,
+  "icon": "img/items/reedstring_bow.png",
+  "id": "reedstring_bow",
+  "level": 12,
+  "name": "Reedstring Bow",
+  "other": [],
+  "quests": [],
+  "rarity": "Normal",
+  "sells_for": 778,
+  "shops": [],
+  "slot": "weapon",
+  "two_handed": true,
+  "type": "equipment",
+  "weapon": "bow",
+  "weight": 50
+ },
+ {
+  "bonus": [
+   "DEF +3 %",
+   "Max HP +5 %"
+  ],
+  "bound": false,
+  "card_slots": 1,
+  "classes": [],
+  "description": "A charm of living root bound with dew-gold thread. It feels steady and calm.",
+  "dropped_by": [
+   {
+    "chance": 0.015,
+    "elite_chance": null,
+    "monster": "dewroot_regent",
+    "pieces": "1"
+   }
+  ],
+  "effect": "",
+  "elite_bonus_chance": null,
+  "icon": "img/items/rootbound_charm.png",
+  "id": "rootbound_charm",
+  "level": 30,
+  "name": "Rootbound Charm",
+  "other": [],
+  "quests": [],
+  "rarity": "Normal",
+  "sells_for": 1617,
+  "shops": [],
+  "slot": "accessory",
+  "two_handed": false,
+  "type": "equipment",
+  "weapon": "",
+  "weight": 5
+ },
+ {
+  "bonus": [],
+  "bound": false,
+  "card_slots": 0,
+  "classes": [],
+  "description": "Holds the patient guard of a Rootmantle.",
+  "dropped_by": [
+   {
+    "chance": 0.0005,
+    "elite_chance": null,
+    "monster": "rootmantle",
+    "pieces": "1"
+   }
+  ],
+  "effect": "Max HP +12%, FLEE -4",
+  "elite_bonus_chance": null,
+  "icon": "img/items/rootmantle_card.png",
+  "id": "rootmantle_card",
+  "level": 0,
+  "name": "Rootmantle Card",
+  "other": [],
+  "quests": [],
+  "rarity": "Rare",
+  "sells_for": 3672,
+  "shops": [],
+  "slot": "armor",
+  "two_handed": false,
+  "type": "card",
+  "weapon": "",
+  "weight": 1
+ },
+ {
+  "bonus": [],
+  "bound": false,
+  "card_slots": 0,
+  "classes": [],
+  "description": "Holds the stubborn dig of a Rootnib.",
+  "dropped_by": [
+   {
+    "chance": 0.0005,
+    "elite_chance": null,
+    "monster": "rootnib",
+    "pieces": "1"
+   }
+  ],
+  "effect": "Damage vs Beast +15%",
+  "elite_bonus_chance": null,
+  "icon": "img/items/rootnib_card.png",
+  "id": "rootnib_card",
+  "level": 0,
+  "name": "Rootnib Card",
+  "other": [],
+  "quests": [],
+  "rarity": "Rare",
+  "sells_for": 1729,
+  "shops": [],
+  "slot": "weapon",
+  "two_handed": false,
+  "type": "card",
+  "weapon": "",
+  "weight": 1
+ },
+ {
+  "bonus": [
+   "DEF +13",
+   "DEF +5 %",
+   "Max HP +72"
+  ],
+  "bound": false,
+  "card_slots": 1,
+  "classes": [],
+  "description": "A vest of woven roots and leaf plates, heavy but sure.",
+  "dropped_by": [
+   {
+    "chance": 0.0025,
+    "elite_chance": null,
+    "monster": "rootmantle",
+    "pieces": "1"
+   }
+  ],
+  "effect": "",
+  "elite_bonus_chance": null,
+  "icon": "img/items/rootweave_vest.png",
+  "id": "rootweave_vest",
+  "level": 28,
+  "name": "Rootweave Vest",
+  "other": [],
+  "quests": [],
+  "rarity": "Normal",
+  "sells_for": 1472,
+  "shops": [],
+  "slot": "armor",
+  "two_handed": false,
+  "type": "equipment",
+  "weapon": "",
+  "weight": 60
+ },
+ {
+  "bonus": [],
+  "bound": false,
+  "card_slots": 0,
+  "classes": [],
+  "description": "A curled whisker as tough as root fibre. Tailors use it for strong seams.",
+  "dropped_by": [
+   {
+    "chance": 0.45,
+    "elite_chance": null,
+    "monster": "rootnib",
+    "pieces": "1"
+   }
+  ],
+  "effect": "Crafting material",
+  "elite_bonus_chance": null,
+  "icon": "img/items/rootwhisker_thread.png",
+  "id": "rootwhisker_thread",
+  "level": 0,
+  "name": "Rootwhisker Thread",
+  "other": [],
+  "quests": [],
+  "rarity": "Normal",
+  "sells_for": 18,
+  "shops": [],
+  "slot": "",
+  "two_handed": false,
+  "type": "material",
+  "weapon": "",
+  "weight": 1
+ },
+ {
+  "bonus": [],
+  "bound": false,
+  "card_slots": 0,
+  "classes": [],
+  "description": "A lace of dark leaves that looks like evening light.",
+  "dropped_by": [
+   {
+    "chance": 0.12,
+    "elite_chance": null,
+    "monster": "rootmantle",
+    "pieces": "1"
+   }
+  ],
+  "effect": "Crafting material",
+  "elite_bonus_chance": null,
+  "icon": "img/items/shadowleaf_lace.png",
+  "id": "shadowleaf_lace",
+  "level": 0,
+  "name": "Shadowleaf Lace",
+  "other": [],
+  "quests": [],
+  "rarity": "Normal",
+  "sells_for": 39,
+  "shops": [],
+  "slot": "",
+  "two_handed": false,
+  "type": "material",
+  "weapon": "",
+  "weight": 1
+ },
+ {
+  "bonus": [
+   "DEF +2"
+  ],
+  "bound": false,
+  "card_slots": 1,
+  "classes": [],
+  "description": "Light boots laced with soft thistle cord. They make a long walk feel shorter.",
+  "dropped_by": [
+   {
+    "chance": 0.003,
+    "elite_chance": null,
+    "monster": "bramblebun",
+    "pieces": "1"
+   }
+  ],
+  "effect": "Movement speed +2%",
+  "elite_bonus_chance": null,
+  "icon": "img/items/thistlelace_boots.png",
+  "id": "thistlelace_boots",
+  "level": 7,
+  "name": "Thistlelace Boots",
+  "other": [],
+  "quests": [],
+  "rarity": "Normal",
+  "sells_for": 223,
+  "shops": [],
+  "slot": "shoes",
+  "two_handed": false,
+  "type": "equipment",
+  "weapon": "",
+  "weight": 30
+ },
+ {
+  "bonus": [],
+  "bound": false,
+  "card_slots": 0,
+  "classes": [],
+  "description": "A plate of honey-brown bark with grass still growing on its edge.",
+  "dropped_by": [
+   {
+    "chance": 0.45,
+    "elite_chance": null,
+    "monster": "tuftguard",
+    "pieces": "1"
+   }
+  ],
+  "effect": "Crafting material",
+  "elite_bonus_chance": null,
+  "icon": "img/items/tuftbark_plate.png",
+  "id": "tuftbark_plate",
+  "level": 0,
+  "name": "Tuftbark Plate",
+  "other": [],
+  "quests": [],
+  "rarity": "Normal",
+  "sells_for": 26,
+  "shops": [],
+  "slot": "",
+  "two_handed": false,
+  "type": "material",
+  "weapon": "",
+  "weight": 1
+ },
+ {
+  "bonus": [],
+  "bound": false,
+  "card_slots": 0,
+  "classes": [],
+  "description": "Holds the sturdy stance of a Tuftguard.",
+  "dropped_by": [
+   {
+    "chance": 0.0005,
+    "elite_chance": null,
+    "monster": "tuftguard",
+    "pieces": "1"
+   }
+  ],
+  "effect": "Damage vs Plant +12%",
+  "elite_bonus_chance": null,
+  "icon": "img/items/tuftguard_card.png",
+  "id": "tuftguard_card",
+  "level": 0,
+  "name": "Tuftguard Card",
+  "other": [],
+  "quests": [],
+  "rarity": "Rare",
+  "sells_for": 2456,
+  "shops": [],
+  "slot": "weapon",
+  "two_handed": false,
+  "type": "card",
+  "weapon": "",
+  "weight": 1
+ },
+ {
+  "bonus": [
+   "DEF +5",
+   "DEF +4 %"
+  ],
+  "bound": false,
+  "card_slots": 1,
+  "classes": [],
+  "description": "A snug hood knitted from root thread, made for low tunnels.",
+  "dropped_by": [
+   {
+    "chance": 0.003,
+    "elite_chance": null,
+    "monster": "rootnib",
+    "pieces": "1"
+   }
+  ],
+  "effect": "",
+  "elite_bonus_chance": null,
+  "icon": "img/items/tunnelknit_hood.png",
+  "id": "tunnelknit_hood",
+  "level": 11,
+  "name": "Tunnelknit Hood",
+  "other": [],
+  "quests": [],
+  "rarity": "Normal",
+  "sells_for": 412,
+  "shops": [],
+  "slot": "head_top",
+  "two_handed": false,
+  "type": "equipment",
+  "weapon": "",
+  "weight": 20
+ },
+ {
+  "bonus": [],
+  "bound": false,
+  "card_slots": 0,
+  "classes": [],
+  "description": "Warm amber dust shaken from a Wickmoth's wings.",
+  "dropped_by": [
+   {
+    "chance": 0.42,
+    "elite_chance": null,
+    "monster": "wickmoth",
+    "pieces": "1"
+   }
+  ],
+  "effect": "Crafting material",
+  "elite_bonus_chance": null,
+  "icon": "img/items/wickdust.png",
+  "id": "wickdust",
+  "level": 0,
+  "name": "Wickdust",
+  "other": [],
+  "quests": [],
+  "rarity": "Normal",
+  "sells_for": 32,
+  "shops": [],
+  "slot": "",
+  "two_handed": false,
+  "type": "material",
+  "weapon": "",
+  "weight": 1
+ },
+ {
+  "bonus": [],
+  "bound": false,
+  "card_slots": 0,
+  "classes": [],
+  "description": "Holds the warm glow of a Wickmoth.",
+  "dropped_by": [
+   {
+    "chance": 0.005,
+    "elite_chance": null,
+    "monster": "dewroot_regent",
+    "pieces": "1"
+   },
+   {
+    "chance": 0.0005,
+    "elite_chance": null,
+    "monster": "wickmoth",
+    "pieces": "1"
+   }
+  ],
+  "effect": "ASPD +5%, Max SP -5%",
+  "elite_bonus_chance": null,
+  "icon": "img/items/wickmoth_card.png",
+  "id": "wickmoth_card",
+  "level": 0,
+  "name": "Wickmoth Card",
+  "other": [],
+  "quests": [],
+  "rarity": "Rare",
+  "sells_for": 3023,
+  "shops": [],
+  "slot": "accessory",
+  "two_handed": false,
+  "type": "card",
+  "weapon": "",
+  "weight": 1
+ },
+ {
+  "bonus": [],
+  "bound": false,
+  "card_slots": 0,
+  "classes": [],
+  "description": "Pale fibre that drifts upward when you let it go.",
+  "dropped_by": [
+   {
+    "chance": 0.4,
+    "elite_chance": null,
+    "monster": "gale_bramblebun",
+    "pieces": "1"
+   }
+  ],
+  "effect": "Crafting material",
+  "elite_bonus_chance": null,
+  "icon": "img/items/windtuft_fiber.png",
+  "id": "windtuft_fiber",
+  "level": 0,
+  "name": "Windtuft Fiber",
+  "other": [],
+  "quests": [],
+  "rarity": "Normal",
+  "sells_for": 33,
+  "shops": [],
+  "slot": "",
+  "two_handed": false,
+  "type": "material",
+  "weapon": "",
+  "weight": 1
+ },
+ {
+  "bonus": [],
+  "bound": false,
+  "card_slots": 0,
+  "classes": [],
+  "description": "Spring water drawn where the Dewleaf brooks run clearest. A long swallow washes out poison and clears clouded eyes.",
+  "dropped_by": [
+   {
+    "chance": 0.03,
+    "elite_chance": null,
+    "monster": "dripfin",
+    "pieces": "1"
+   },
+   {
+    "chance": 0.03,
+    "elite_chance": null,
+    "monster": "hushcap",
+    "pieces": "1"
+   },
+   {
+    "chance": 0.03,
+    "elite_chance": null,
+    "monster": "wickmoth",
+    "pieces": "1"
+   },
+   {
+    "chance": 0.03,
+    "elite_chance": null,
+    "monster": "rootmantle",
+    "pieces": "1"
+   }
+  ],
+  "effect": "Cures Poison and Blind",
+  "elite_bonus_chance": null,
+  "icon": "img/items/brightwater_draught.png",
+  "id": "brightwater_draught",
+  "level": 0,
+  "name": "Brightwater Draught",
+  "other": [],
+  "quests": [],
+  "rarity": "Normal",
+  "sells_for": 12,
+  "shops": [
+   {
+    "map": "brightvale",
+    "name": "General Store",
+    "price": 24,
+    "shop": "general"
+   }
+  ],
+  "slot": "",
+  "two_handed": false,
+  "type": "consumable",
+  "weapon": "",
+  "weight": 4
+ },
+ {
+  "bonus": [],
+  "bound": false,
+  "card_slots": 0,
+  "classes": [],
+  "description": "Its head is packed with glowing cinder dust that bursts on impact.",
+  "dropped_by": [],
+  "effect": "",
+  "elite_bonus_chance": null,
+  "icon": "img/items/ember_arrow.png",
+  "id": "ember_arrow",
+  "level": 0,
+  "name": "Ember Arrow",
+  "other": [],
+  "quests": [],
+  "rarity": "Normal",
+  "sells_for": 0,
+  "shops": [
+   {
+    "map": "brightvale",
+    "name": "Arrows",
+    "price": 0,
+    "shop": "fletcher"
+   }
+  ],
+  "slot": "ammo",
+  "two_handed": false,
+  "type": "equipment",
+  "weapon": "",
+  "weight": 1
+ },
+ {
+  "bonus": [],
+  "bound": false,
+  "card_slots": 0,
+  "classes": [],
+  "description": "Frost creeps along the shaft; the tip is a sliver of clear ice that never melts.",
+  "dropped_by": [],
+  "effect": "",
+  "elite_bonus_chance": null,
+  "icon": "img/items/rime_arrow.png",
+  "id": "rime_arrow",
+  "level": 0,
+  "name": "Rime Arrow",
+  "other": [],
+  "quests": [],
+  "rarity": "Normal",
+  "sells_for": 0,
+  "shops": [
+   {
+    "map": "brightvale",
+    "name": "Arrows",
+    "price": 0,
+    "shop": "fletcher"
+   }
+  ],
+  "slot": "ammo",
+  "two_handed": false,
+  "type": "equipment",
+  "weapon": "",
+  "weight": 1
+ },
+ {
+  "bonus": [],
+  "bound": false,
+  "card_slots": 0,
+  "classes": [],
+  "description": "Fletched with wind-cut feathers that hum as the arrow flies.",
+  "dropped_by": [],
+  "effect": "",
+  "elite_bonus_chance": null,
+  "icon": "img/items/breeze_arrow.png",
+  "id": "breeze_arrow",
+  "level": 0,
+  "name": "Breeze Arrow",
+  "other": [],
+  "quests": [],
+  "rarity": "Normal",
+  "sells_for": 0,
+  "shops": [
+   {
+    "map": "brightvale",
+    "name": "Arrows",
+    "price": 0,
+    "shop": "fletcher"
+   }
+  ],
+  "slot": "ammo",
+  "two_handed": false,
+  "type": "equipment",
+  "weapon": "",
+  "weight": 1
+ },
+ {
+  "bonus": [],
+  "bound": false,
+  "card_slots": 0,
+  "classes": [],
+  "description": "A heavy head of packed field stone, bound with root fibre.",
+  "dropped_by": [],
+  "effect": "",
+  "elite_bonus_chance": null,
+  "icon": "img/items/loam_arrow.png",
+  "id": "loam_arrow",
+  "level": 0,
+  "name": "Loam Arrow",
+  "other": [],
+  "quests": [],
+  "rarity": "Normal",
+  "sells_for": 0,
+  "shops": [
+   {
+    "map": "brightvale",
+    "name": "Arrows",
+    "price": 0,
+    "shop": "fletcher"
+   }
+  ],
+  "slot": "ammo",
+  "two_handed": false,
+  "type": "equipment",
+  "weapon": "",
+  "weight": 1
+ },
+ {
+  "bonus": [],
+  "bound": false,
+  "card_slots": 0,
+  "classes": [],
+  "description": "A pale bright head that catches the light even at dusk.",
+  "dropped_by": [],
+  "effect": "",
+  "elite_bonus_chance": null,
+  "icon": "img/items/sunsilver_arrow.png",
+  "id": "sunsilver_arrow",
+  "level": 0,
+  "name": "Sunsilver Arrow",
+  "other": [],
+  "quests": [],
+  "rarity": "Normal",
+  "sells_for": 1,
+  "shops": [
+   {
+    "map": "brightvale",
+    "name": "Arrows",
+    "price": 2,
+    "shop": "fletcher"
+   }
+  ],
+  "slot": "ammo",
+  "two_handed": false,
+  "type": "equipment",
+  "weapon": "",
+  "weight": 1
+ },
+ {
+  "bonus": [],
+  "bound": false,
+  "card_slots": 0,
+  "classes": [],
+  "description": "A pitted head dipped in a sickly green sap. Handle with care.",
+  "dropped_by": [],
+  "effect": "",
+  "elite_bonus_chance": null,
+  "icon": "img/items/blight_arrow.png",
+  "id": "blight_arrow",
+  "level": 0,
+  "name": "Blight Arrow",
+  "other": [],
+  "quests": [],
+  "rarity": "Normal",
+  "sells_for": 0,
+  "shops": [
+   {
+    "map": "brightvale",
+    "name": "Arrows",
+    "price": 0,
+    "shop": "fletcher"
+   }
+  ],
+  "slot": "ammo",
+  "two_handed": false,
+  "type": "equipment",
+  "weapon": "",
+  "weight": 1
+ },
+ {
+  "bonus": [],
+  "bound": false,
+  "card_slots": 0,
+  "classes": [],
+  "description": "Its dark head drinks the light around it.",
+  "dropped_by": [],
+  "effect": "",
+  "elite_bonus_chance": null,
+  "icon": "img/items/dusk_arrow.png",
+  "id": "dusk_arrow",
+  "level": 0,
+  "name": "Dusk Arrow",
+  "other": [],
+  "quests": [],
+  "rarity": "Normal",
+  "sells_for": 1,
+  "shops": [
+   {
+    "map": "brightvale",
+    "name": "Arrows",
+    "price": 2,
+    "shop": "fletcher"
+   }
+  ],
+  "slot": "ammo",
+  "two_handed": false,
+  "type": "equipment",
+  "weapon": "",
+  "weight": 1
+ },
+ {
+  "bonus": [],
+  "bound": false,
+  "card_slots": 0,
+  "classes": [],
+  "description": "A thin, ghostly shaft that seems to flicker in and out of sight.",
+  "dropped_by": [],
+  "effect": "",
+  "elite_bonus_chance": null,
+  "icon": "img/items/wraith_arrow.png",
+  "id": "wraith_arrow",
+  "level": 0,
+  "name": "Wraith Arrow",
+  "other": [],
+  "quests": [],
+  "rarity": "Normal",
+  "sells_for": 1,
+  "shops": [
+   {
+    "map": "brightvale",
+    "name": "Arrows",
+    "price": 2,
+    "shop": "fletcher"
+   }
+  ],
+  "slot": "ammo",
+  "two_handed": false,
+  "type": "equipment",
+  "weapon": "",
+  "weight": 1
+ },
+ {
+  "bonus": [],
+  "bound": false,
+  "card_slots": 0,
+  "classes": [],
+  "description": "A grin of gold with teeth, still counting its luck. LUK +2.",
+  "dropped_by": [
+   {
+    "chance": 0.0005,
+    "elite_chance": null,
+    "monster": "gildmaw",
+    "pieces": "1"
+   }
+  ],
+  "effect": "LUK +2",
+  "elite_bonus_chance": null,
+  "icon": "img/items/gildmaw_card.png",
+  "id": "gildmaw_card",
+  "level": 0,
+  "name": "Gildmaw Card",
+  "other": [],
+  "quests": [],
+  "rarity": "Rare",
+  "sells_for": 1200,
+  "shops": [],
+  "slot": "accessory",
+  "two_handed": false,
+  "type": "card",
+  "weapon": "",
+  "weight": 1
+ },
+ {
+  "bonus": [
+   "ATK +17"
+  ],
+  "bound": false,
+  "card_slots": 0,
+  "classes": [],
+  "description": "A short practice blade with a leaf stamped beside the grip.",
+  "dropped_by": [
+   {
+    "chance": 0.005,
+    "elite_chance": null,
+    "monster": "dewdrop_slime",
+    "pieces": "1"
+   }
+  ],
+  "effect": "",
+  "elite_bonus_chance": null,
+  "icon": "img/items/sprigsteel_sword.png",
+  "id": "sprigsteel_sword",
+  "level": 1,
+  "name": "Sprigsteel Sword",
+  "other": [],
+  "quests": [],
+  "rarity": "Normal",
+  "sells_for": 26,
+  "shops": [
+   {
+    "map": "brightvale",
+    "name": "Weapons & Armor",
+    "price": 52,
+    "shop": "arms"
+   }
+  ],
+  "slot": "weapon",
+  "two_handed": false,
+  "type": "equipment",
+  "weapon": "sword",
+  "weight": 60
+ },
+ {
+  "bonus": [
+   "ATK +17"
+  ],
+  "bound": false,
+  "card_slots": 0,
+  "classes": [],
+  "description": "A simple bow with a loop of green cord tied around the handle.",
+  "dropped_by": [
+   {
+    "chance": 0.005,
+    "elite_chance": null,
+    "monster": "dewdrop_slime",
+    "pieces": "1"
+   }
+  ],
+  "effect": "",
+  "elite_bonus_chance": null,
+  "icon": "img/items/reedloop_bow.png",
+  "id": "reedloop_bow",
+  "level": 1,
+  "name": "Reedloop Bow",
+  "other": [],
+  "quests": [],
+  "rarity": "Normal",
+  "sells_for": 26,
+  "shops": [
+   {
+    "map": "brightvale",
+    "name": "Weapons & Armor",
+    "price": 52,
+    "shop": "arms"
+   }
+  ],
+  "slot": "weapon",
+  "two_handed": true,
+  "type": "equipment",
+  "weapon": "bow",
+  "weight": 50
+ },
+ {
+  "bonus": [
+   "ATK +6",
+   "MATK +10 %"
+  ],
+  "bound": false,
+  "card_slots": 0,
+  "classes": [],
+  "description": "A small rod with a dew-shaped bead, polished by many careful hands.",
+  "dropped_by": [
+   {
+    "chance": 0.005,
+    "elite_chance": null,
+    "monster": "moss_slime",
+    "pieces": "1"
+   }
+  ],
+  "effect": "",
+  "elite_bonus_chance": null,
+  "icon": "img/items/dewbud_rod.png",
+  "id": "dewbud_rod",
+  "level": 1,
+  "name": "Dewbud Rod",
+  "other": [],
+  "quests": [],
+  "rarity": "Normal",
+  "sells_for": 26,
+  "shops": [
+   {
+    "map": "brightvale",
+    "name": "Weapons & Armor",
+    "price": 52,
+    "shop": "arms"
+   }
+  ],
+  "slot": "weapon",
+  "two_handed": false,
+  "type": "equipment",
+  "weapon": "rod",
+  "weight": 40
+ },
+ {
+  "bonus": [
+   "ATK +18"
+  ],
+  "bound": false,
+  "card_slots": 0,
+  "classes": [],
+  "description": "A rounded practice mace with a smooth grip and a stubborn little knot.",
+  "dropped_by": [
+   {
+    "chance": 0.005,
+    "elite_chance": null,
+    "monster": "moss_slime",
+    "pieces": "1"
+   }
+  ],
+  "effect": "",
+  "elite_bonus_chance": null,
+  "icon": "img/items/brookknob_mace.png",
+  "id": "brookknob_mace",
+  "level": 1,
+  "name": "Brookknob Mace",
+  "other": [],
+  "quests": [],
+  "rarity": "Normal",
+  "sells_for": 26,
+  "shops": [
+   {
+    "map": "brightvale",
+    "name": "Weapons & Armor",
+    "price": 52,
+    "shop": "arms"
+   }
+  ],
+  "slot": "weapon",
+  "two_handed": false,
+  "type": "equipment",
+  "weapon": "mace",
+  "weight": 70
+ },
+ {
+  "bonus": [
+   "ATK +47",
+   "STR +1"
+  ],
+  "bound": false,
+  "card_slots": 0,
+  "classes": [
+   "vanguard"
+  ],
+  "description": "A balanced blade whose guard curls like a quiet stream.",
+  "dropped_by": [
+   {
+    "chance": 0.004,
+    "elite_chance": null,
+    "monster": "reedbeak",
+    "pieces": "1"
+   }
+  ],
+  "effect": "",
+  "elite_bonus_chance": null,
+  "icon": "img/items/rillguard_sword.png",
+  "id": "rillguard_sword",
+  "level": 11,
+  "name": "Rillguard Sword",
+  "other": [],
+  "quests": [],
+  "rarity": "Normal",
+  "sells_for": 691,
+  "shops": [
+   {
+    "map": "brightvale",
+    "name": "Weapons & Armor",
+    "price": 1382,
+    "shop": "arms"
+   }
+  ],
+  "slot": "weapon",
+  "two_handed": false,
+  "type": "equipment",
+  "weapon": "sword",
+  "weight": 60
+ },
+ {
+  "bonus": [
+   "ATK +47",
+   "DEX +1"
+  ],
+  "bound": false,
+  "card_slots": 0,
+  "classes": [
+   "thornstrider"
+  ],
+  "description": "Its curled tips resemble young fern leaves after rain.",
+  "dropped_by": [
+   {
+    "chance": 0.004,
+    "elite_chance": null,
+    "monster": "rootnib",
+    "pieces": "1"
+   }
+  ],
+  "effect": "",
+  "elite_bonus_chance": null,
+  "icon": "img/items/fernbend_bow.png",
+  "id": "fernbend_bow",
+  "level": 11,
+  "name": "Fernbend Bow",
+  "other": [],
+  "quests": [],
+  "rarity": "Normal",
+  "sells_for": 691,
+  "shops": [
+   {
+    "map": "brightvale",
+    "name": "Weapons & Armor",
+    "price": 1382,
+    "shop": "arms"
+   }
+  ],
+  "slot": "weapon",
+  "two_handed": true,
+  "type": "equipment",
+  "weapon": "bow",
+  "weight": 50
+ },
+ {
+  "bonus": [
+   "ATK +17",
+   "MATK +15 %",
+   "INT +1"
+  ],
+  "bound": false,
+  "card_slots": 0,
+  "classes": [
+   "arcanist"
+  ],
+  "description": "A tidy reedwood rod with a pale bead tucked inside a carved cage.",
+  "dropped_by": [
+   {
+    "chance": 0.004,
+    "elite_chance": null,
+    "monster": "reedbeak",
+    "pieces": "1"
+   }
+  ],
+  "effect": "",
+  "elite_bonus_chance": null,
+  "icon": "img/items/lanternreed_rod.png",
+  "id": "lanternreed_rod",
+  "level": 11,
+  "name": "Lanternreed Rod",
+  "other": [],
+  "quests": [],
+  "rarity": "Normal",
+  "sells_for": 691,
+  "shops": [
+   {
+    "map": "brightvale",
+    "name": "Weapons & Armor",
+    "price": 1382,
+    "shop": "arms"
+   }
+  ],
+  "slot": "weapon",
+  "two_handed": false,
+  "type": "equipment",
+  "weapon": "rod",
+  "weight": 40
+ },
+ {
+  "bonus": [
+   "ATK +50",
+   "VIT +1"
+  ],
+  "bound": false,
+  "card_slots": 0,
+  "classes": [
+   "cleric"
+  ],
+  "description": "A compact mace with a warm-colored stone and a well-wrapped handle.",
+  "dropped_by": [
+   {
+    "chance": 0.004,
+    "elite_chance": null,
+    "monster": "bramblebun",
+    "pieces": "1"
+   }
+  ],
+  "effect": "",
+  "elite_bonus_chance": null,
+  "icon": "img/items/hearthpebble_mace.png",
+  "id": "hearthpebble_mace",
+  "level": 11,
+  "name": "Hearthpebble Mace",
+  "other": [],
+  "quests": [],
+  "rarity": "Normal",
+  "sells_for": 691,
+  "shops": [
+   {
+    "map": "brightvale",
+    "name": "Weapons & Armor",
+    "price": 1382,
+    "shop": "arms"
+   }
+  ],
+  "slot": "weapon",
+  "two_handed": false,
+  "type": "equipment",
+  "weapon": "mace",
+  "weight": 70
+ },
+ {
+  "bonus": [
+   "ATK +56",
+   "STR +2"
+  ],
+  "bound": false,
+  "card_slots": 0,
+  "classes": [
+   "vanguard"
+  ],
+  "description": "Fine petal marks run along a sturdy, neatly finished blade.",
+  "dropped_by": [
+   {
+    "chance": 0.003,
+    "elite_chance": null,
+    "monster": "tuftguard",
+    "pieces": "1"
+   }
+  ],
+  "effect": "",
+  "elite_bonus_chance": null,
+  "icon": "img/items/ridgebloom_sword.png",
+  "id": "ridgebloom_sword",
+  "level": 16,
+  "name": "Ridgebloom Sword",
+  "other": [],
+  "quests": [],
+  "rarity": "Normal",
+  "sells_for": 1153,
+  "shops": [
+   {
+    "map": "brightvale",
+    "name": "Weapons & Armor",
+    "price": 2306,
+    "shop": "arms"
+   }
+  ],
+  "slot": "weapon",
+  "two_handed": false,
+  "type": "equipment",
+  "weapon": "sword",
+  "weight": 60
+ },
+ {
+  "bonus": [
+   "ATK +56",
+   "DEX +2"
+  ],
+  "bound": false,
+  "card_slots": 0,
+  "classes": [
+   "thornstrider"
+  ],
+  "description": "Dark wood and silver thread give this bow a quiet, rainwashed look.",
+  "dropped_by": [
+   {
+    "chance": 0.003,
+    "elite_chance": null,
+    "monster": "dripfin",
+    "pieces": "1"
+   }
+  ],
+  "effect": "",
+  "elite_bonus_chance": null,
+  "icon": "img/items/rainbranch_bow.png",
+  "id": "rainbranch_bow",
+  "level": 16,
+  "name": "Rainbranch Bow",
+  "other": [],
+  "quests": [],
+  "rarity": "Normal",
+  "sells_for": 1153,
+  "shops": [
+   {
+    "map": "brightvale",
+    "name": "Weapons & Armor",
+    "price": 2306,
+    "shop": "arms"
+   }
+  ],
+  "slot": "weapon",
+  "two_handed": true,
+  "type": "equipment",
+  "weapon": "bow",
+  "weight": 50
+ },
+ {
+  "bonus": [
+   "ATK +20",
+   "MATK +15 %",
+   "INT +2"
+  ],
+  "bound": false,
+  "card_slots": 0,
+  "classes": [
+   "arcanist"
+  ],
+  "description": "Cloudy lines curl through the wood like mist above a meadow.",
+  "dropped_by": [
+   {
+    "chance": 0.003,
+    "elite_chance": null,
+    "monster": "dripfin",
+    "pieces": "1"
+   }
+  ],
+  "effect": "",
+  "elite_bonus_chance": null,
+  "icon": "img/items/mistgrain_rod.png",
+  "id": "mistgrain_rod",
+  "level": 16,
+  "name": "Mistgrain Rod",
+  "other": [],
+  "quests": [],
+  "rarity": "Normal",
+  "sells_for": 1153,
+  "shops": [
+   {
+    "map": "brightvale",
+    "name": "Weapons & Armor",
+    "price": 2306,
+    "shop": "arms"
+   }
+  ],
+  "slot": "weapon",
+  "two_handed": false,
+  "type": "equipment",
+  "weapon": "rod",
+  "weight": 40
+ },
+ {
+  "bonus": [
+   "ATK +59",
+   "VIT +2"
+  ],
+  "bound": false,
+  "card_slots": 0,
+  "classes": [
+   "cleric"
+  ],
+  "description": "A sunrise-colored stone sits above a plain, practical grip.",
+  "dropped_by": [
+   {
+    "chance": 0.003,
+    "elite_chance": 0.0075,
+    "monster": "dusk_dewdrop_slime",
+    "pieces": "1"
+   }
+  ],
+  "effect": "",
+  "elite_bonus_chance": null,
+  "icon": "img/items/dawnpebble_mace.png",
+  "id": "dawnpebble_mace",
+  "level": 16,
+  "name": "Dawnpebble Mace",
+  "other": [],
+  "quests": [],
+  "rarity": "Normal",
+  "sells_for": 1153,
+  "shops": [
+   {
+    "map": "brightvale",
+    "name": "Weapons & Armor",
+    "price": 2306,
+    "shop": "arms"
+   }
+  ],
+  "slot": "weapon",
+  "two_handed": false,
+  "type": "equipment",
+  "weapon": "mace",
+  "weight": 70
+ },
+ {
+  "bonus": [
+   "ATK +63",
+   "STR +3"
+  ],
+  "bound": false,
+  "card_slots": 1,
+  "classes": [
+   "vanguard"
+  ],
+  "description": "A bright blade with branching lines worked carefully into its guard.",
+  "dropped_by": [
+   {
+    "chance": 0.004,
+    "elite_chance": 0.01,
+    "monster": "gloom_sporecap",
+    "pieces": "1"
+   }
+  ],
+  "effect": "",
+  "elite_bonus_chance": null,
+  "icon": "img/items/glintroot_sword.png",
+  "id": "glintroot_sword",
+  "level": 21,
+  "name": "Glintroot Sword",
+  "other": [],
+  "quests": [],
+  "rarity": "Normal",
+  "sells_for": 1671,
+  "shops": [
+   {
+    "map": "brightvale",
+    "name": "Weapons & Armor",
+    "price": 3342,
+    "shop": "arms"
+   }
+  ],
+  "slot": "weapon",
+  "two_handed": false,
+  "type": "equipment",
+  "weapon": "sword",
+  "weight": 60
+ },
+ {
+  "bonus": [
+   "ATK +63",
+   "DEX +3"
+  ],
+  "bound": false,
+  "card_slots": 1,
+  "classes": [
+   "thornstrider"
+  ],
+  "description": "Pale wood bends around a dark grip, with silver knots at either end.",
+  "dropped_by": [
+   {
+    "chance": 0.004,
+    "elite_chance": 0.01,
+    "monster": "bog_moss_slime",
+    "pieces": "1"
+   }
+  ],
+  "effect": "",
+  "elite_bonus_chance": null,
+  "icon": "img/items/silverfen_bow.png",
+  "id": "silverfen_bow",
+  "level": 21,
+  "name": "Silverfen Bow",
+  "other": [],
+  "quests": [],
+  "rarity": "Normal",
+  "sells_for": 1671,
+  "shops": [
+   {
+    "map": "brightvale",
+    "name": "Weapons & Armor",
+    "price": 3342,
+    "shop": "arms"
+   }
+  ],
+  "slot": "weapon",
+  "two_handed": true,
+  "type": "equipment",
+  "weapon": "bow",
+  "weight": 50
+ },
+ {
+  "bonus": [
+   "ATK +22",
+   "MATK +15 %",
+   "INT +3"
+  ],
+  "bound": false,
+  "card_slots": 1,
+  "classes": [
+   "arcanist"
+  ],
+  "description": "A clear bead rests in a ring of wood, like a dewdrop that forgot to fall.",
+  "dropped_by": [
+   {
+    "chance": 0.004,
+    "elite_chance": 0.01,
+    "monster": "dusk_dewdrop_slime",
+    "pieces": "1"
+   }
+  ],
+  "effect": "",
+  "elite_bonus_chance": null,
+  "icon": "img/items/dewglass_rod.png",
+  "id": "dewglass_rod",
+  "level": 21,
+  "name": "Dewglass Rod",
+  "other": [],
+  "quests": [],
+  "rarity": "Normal",
+  "sells_for": 1671,
+  "shops": [
+   {
+    "map": "brightvale",
+    "name": "Weapons & Armor",
+    "price": 3342,
+    "shop": "arms"
+   }
+  ],
+  "slot": "weapon",
+  "two_handed": false,
+  "type": "equipment",
+  "weapon": "rod",
+  "weight": 40
+ },
+ {
+  "bonus": [
+   "ATK +67",
+   "VIT +3"
+  ],
+  "bound": false,
+  "card_slots": 1,
+  "classes": [
+   "cleric"
+  ],
+  "description": "Golden lines cross its stone head like sunlight on a shallow stream.",
+  "dropped_by": [
+   {
+    "chance": 0.004,
+    "elite_chance": 0.01,
+    "monster": "gloom_sporecap",
+    "pieces": "1"
+   }
+  ],
+  "effect": "",
+  "elite_bonus_chance": null,
+  "icon": "img/items/sunvein_mace.png",
+  "id": "sunvein_mace",
+  "level": 21,
+  "name": "Sunvein Mace",
+  "other": [],
+  "quests": [],
+  "rarity": "Normal",
+  "sells_for": 1671,
+  "shops": [
+   {
+    "map": "brightvale",
+    "name": "Weapons & Armor",
+    "price": 3342,
+    "shop": "arms"
+   }
+  ],
+  "slot": "weapon",
+  "two_handed": false,
+  "type": "equipment",
+  "weapon": "mace",
+  "weight": 70
+ },
+ {
+  "bonus": [
+   "ATK +56",
+   "AGI +2"
+  ],
+  "bound": false,
+  "card_slots": 0,
+  "classes": [
+   "veilrunner"
+  ],
+  "description": "A narrow leaf-shaped blade with a dark seed set neatly into its pommel.",
+  "dropped_by": [
+   {
+    "chance": 0.003,
+    "elite_chance": 0.0075,
+    "monster": "dusk_dewdrop_slime",
+    "pieces": "1"
+   }
+  ],
+  "effect": "",
+  "elite_bonus_chance": null,
+  "icon": "img/items/veilseed_dagger.png",
+  "id": "veilseed_dagger",
+  "level": 16,
+  "name": "Veilseed Dagger",
+  "other": [],
+  "quests": [],
+  "rarity": "Normal",
+  "sells_for": 1153,
+  "shops": [
+   {
+    "map": "brightvale",
+    "name": "Weapons & Armor",
+    "price": 2306,
+    "shop": "arms"
+   }
+  ],
+  "slot": "weapon",
+  "two_handed": false,
+  "type": "equipment",
+  "weapon": "dagger",
+  "weight": 40
+ },
+ {
+  "bonus": [
+   "DEF +5",
+   "MDEF +2",
+   "Max HP +12"
+  ],
+  "bound": false,
+  "card_slots": 0,
+  "classes": [],
+  "description": "Woven reeds cover a firm wooden frame, with room for a small travel badge.",
+  "dropped_by": [],
+  "effect": "",
+  "elite_bonus_chance": null,
+  "icon": "img/items/reedbound_shield.png",
+  "id": "reedbound_shield",
+  "level": 11,
+  "name": "Reedbound Shield",
+  "other": [],
+  "quests": [],
+  "rarity": "Normal",
+  "sells_for": 412,
+  "shops": [
+   {
+    "map": "brightvale",
+    "name": "Weapons & Armor",
+    "price": 824,
+    "shop": "arms"
+   }
+  ],
+  "slot": "shield",
+  "two_handed": false,
+  "type": "equipment",
+  "weapon": "",
+  "weight": 40
+ },
+ {
+  "bonus": [
+   "DEF +4",
+   "Max HP +23"
+  ],
+  "bound": false,
+  "card_slots": 0,
+  "classes": [],
+  "description": "Plain cloth, strong seams, and a little green patch over the heart.",
+  "dropped_by": [],
+  "effect": "",
+  "elite_bonus_chance": null,
+  "icon": "img/items/sproutcloth_vest.png",
+  "id": "sproutcloth_vest",
+  "level": 6,
+  "name": "Sproutcloth Vest",
+  "other": [],
+  "quests": [],
+  "rarity": "Normal",
+  "sells_for": 180,
+  "shops": [
+   {
+    "map": "brightvale",
+    "name": "Weapons & Armor",
+    "price": 360,
+    "shop": "arms"
+   }
+  ],
+  "slot": "armor",
+  "two_handed": false,
+  "type": "equipment",
+  "weapon": "",
+  "weight": 40
+ },
+ {
+  "bonus": [
+   "DEF +7",
+   "MDEF +6",
+   "Max SP +33",
+   "INT +2"
+  ],
+  "bound": false,
+  "card_slots": 1,
+  "classes": [],
+  "description": "A soft hood whose dark stitching catches the last light.",
+  "dropped_by": [
+   {
+    "chance": 0.06,
+    "elite_chance": null,
+    "monster": "gildmaw",
+    "pieces": "1"
+   },
+   {
+    "chance": 0.003,
+    "elite_chance": 0.0075,
+    "monster": "dusk_dewdrop_slime",
+    "pieces": "1"
+   }
+  ],
+  "effect": "",
+  "elite_bonus_chance": null,
+  "icon": "img/items/duskpetal_hood.png",
+  "id": "duskpetal_hood",
+  "level": 16,
+  "name": "Duskpetal Hood",
+  "other": [],
+  "quests": [],
+  "rarity": "Rare",
+  "sells_for": 832,
+  "shops": [],
+  "slot": "head_top",
+  "two_handed": false,
+  "type": "equipment",
+  "weapon": "",
+  "weight": 20
+ },
+ {
+  "bonus": [
+   "DEF +2",
+   "MDEF +2",
+   "Max SP +7"
+  ],
+  "bound": false,
+  "card_slots": 0,
+  "classes": [],
+  "description": "A light cape with deep folds and a hem sewn for long days on the road.",
+  "dropped_by": [],
+  "effect": "",
+  "elite_bonus_chance": null,
+  "icon": "img/items/breezefold_cape.png",
+  "id": "breezefold_cape",
+  "level": 16,
+  "name": "Breezefold Cape",
+  "other": [],
+  "quests": [],
+  "rarity": "Normal",
+  "sells_for": 687,
+  "shops": [
+   {
+    "map": "brightvale",
+    "name": "Weapons & Armor",
+    "price": 1374,
+    "shop": "arms"
+   }
+  ],
+  "slot": "garment",
+  "two_handed": false,
+  "type": "equipment",
+  "weapon": "",
+  "weight": 30
+ },
+ {
+  "bonus": [
+   "DEF +2",
+   "Max HP +15",
+   "AGI +1"
+  ],
+  "bound": false,
+  "card_slots": 0,
+  "classes": [],
+  "description": "Neat rows of stitching keep these soft shoes looking ready for a walk.",
+  "dropped_by": [],
+  "effect": "",
+  "elite_bonus_chance": null,
+  "icon": "img/items/trailstitch_shoes.png",
+  "id": "trailstitch_shoes",
+  "level": 6,
+  "name": "Trailstitch Shoes",
+  "other": [],
+  "quests": [],
+  "rarity": "Normal",
+  "sells_for": 180,
+  "shops": [
+   {
+    "map": "brightvale",
+    "name": "Weapons & Armor",
+    "price": 360,
+    "shop": "arms"
+   }
+  ],
+  "slot": "shoes",
+  "two_handed": false,
+  "type": "equipment",
+  "weapon": "",
+  "weight": 20
+ },
+ {
+  "bonus": [
+   "ATK +6",
+   "MATK +6"
+  ],
+  "bound": false,
+  "card_slots": 0,
+  "classes": [],
+  "description": "A small seed rests beneath a polished glint in this simple band.",
+  "dropped_by": [],
+  "effect": "",
+  "elite_bonus_chance": null,
+  "icon": "img/items/glintseed_ring.png",
+  "id": "glintseed_ring",
+  "level": 21,
+  "name": "Glintseed Ring",
+  "other": [],
+  "quests": [],
+  "rarity": "Normal",
+  "sells_for": 995,
+  "shops": [
+   {
+    "map": "brightvale",
+    "name": "Weapons & Armor",
+    "price": 1990,
+    "shop": "arms"
+   }
+  ],
+  "slot": "accessory",
+  "two_handed": false,
+  "type": "equipment",
+  "weapon": "",
+  "weight": 5
+ },
+ {
+  "bonus": [
+   "MDEF +4",
+   "Max HP +63",
+   "Max SP +21"
+  ],
+  "bound": false,
+  "card_slots": 0,
+  "classes": [],
+  "description": "A smooth stone in a woven loop, pleasant to hold while planning the next trip.",
+  "dropped_by": [],
+  "effect": "",
+  "elite_bonus_chance": null,
+  "icon": "img/items/calmstone_charm.png",
+  "id": "calmstone_charm",
+  "level": 21,
+  "name": "Calmstone Charm",
+  "other": [],
+  "quests": [],
+  "rarity": "Normal",
+  "sells_for": 995,
+  "shops": [
+   {
+    "map": "brightvale",
+    "name": "Weapons & Armor",
+    "price": 1990,
+    "shop": "arms"
+   }
+  ],
+  "slot": "accessory",
+  "two_handed": false,
+  "type": "equipment",
+  "weapon": "",
+  "weight": 5
+ },
+ {
+  "bonus": [
+   "DEF +5",
+   "Max HP +40",
+   "VIT +2"
+  ],
+  "bound": false,
+  "card_slots": 0,
+  "classes": [],
+  "description": "A rounded helm with a jaunty mushroom crest and an almost serious expression.",
+  "dropped_by": [
+   {
+    "chance": 0.06,
+    "elite_chance": null,
+    "monster": "gildmaw",
+    "pieces": "1"
+   },
+   {
+    "chance": 0.03,
+    "elite_chance": null,
+    "monster": "elder_sporecap",
+    "pieces": "1"
+   }
+  ],
+  "effect": "",
+  "elite_bonus_chance": null,
+  "icon": "img/items/sporecrest_helm.png",
+  "id": "sporecrest_helm",
+  "level": 11,
+  "name": "Sporecrest Helm",
+  "other": [],
+  "quests": [],
+  "rarity": "Rare",
+  "sells_for": 499,
+  "shops": [],
+  "slot": "head_top",
+  "two_handed": false,
+  "type": "equipment",
+  "weapon": "",
+  "weight": 50
+ },
+ {
+  "bonus": [
+   "DEF +4",
+   "Max HP +35",
+   "AGI +4",
+   "VIT +3"
+  ],
+  "bound": false,
+  "card_slots": 1,
+  "classes": [],
+  "description": "Gold stitches trace the soles. Someone clearly expected a very long walk.",
+  "dropped_by": [
+   {
+    "chance": 0.03,
+    "elite_chance": null,
+    "monster": "gildmaw",
+    "pieces": "1"
+   }
+  ],
+  "effect": "",
+  "elite_bonus_chance": 0.015,
+  "icon": "img/items/crownspring_boots.png",
+  "id": "crownspring_boots",
+  "level": 21,
+  "name": "Crownspring Boots",
+  "other": [],
+  "quests": [],
+  "rarity": "Epic",
+  "sells_for": 1205,
+  "shops": [],
+  "slot": "shoes",
+  "two_handed": false,
+  "type": "equipment",
+  "weapon": "",
+  "weight": 40
+ },
+ {
+  "bonus": [],
+  "bound": false,
+  "card_slots": 0,
+  "classes": [],
+  "description": "Cool, springy gel that holds a smooth coating on metal.",
+  "dropped_by": [
+   {
+    "chance": 0.2,
+    "elite_chance": 0.2,
+    "monster": "dusk_dewdrop_slime",
+    "pieces": "1"
+   }
+  ],
+  "effect": "Crafting material",
+  "elite_bonus_chance": null,
+  "icon": "img/items/dusk_gel.png",
+  "id": "dusk_gel",
+  "level": 0,
+  "name": "Dusk Gel",
+  "other": [],
+  "quests": [],
+  "rarity": "Normal",
+  "sells_for": 30,
+  "shops": [],
+  "slot": "",
+  "two_handed": false,
+  "type": "material",
+  "weapon": "",
+  "weight": 1
+ },
+ {
+  "bonus": [],
+  "bound": false,
+  "card_slots": 0,
+  "classes": [],
+  "description": "A small bead of dense gel, firm enough to keep its shape.",
+  "dropped_by": [
+   {
+    "chance": 0.05,
+    "elite_chance": 0.05,
+    "monster": "dusk_dewdrop_slime",
+    "pieces": "1"
+   }
+  ],
+  "effect": "Crafting material",
+  "elite_bonus_chance": null,
+  "icon": "img/items/dusk_bead.png",
+  "id": "dusk_bead",
+  "level": 0,
+  "name": "Dusk Bead",
+  "other": [],
+  "quests": [],
+  "rarity": "Normal",
+  "sells_for": 30,
+  "shops": [],
+  "slot": "",
+  "two_handed": false,
+  "type": "material",
+  "weapon": "",
+  "weight": 1
+ },
+ {
+  "bonus": [],
+  "bound": false,
+  "card_slots": 0,
+  "classes": [],
+  "description": "Tough moss fibres that stay springy after a long soak.",
+  "dropped_by": [
+   {
+    "chance": 0.2,
+    "elite_chance": 0.2,
+    "monster": "bog_moss_slime",
+    "pieces": "1"
+   }
+  ],
+  "effect": "Crafting material",
+  "elite_bonus_chance": null,
+  "icon": "img/items/bog_fibre.png",
+  "id": "bog_fibre",
+  "level": 0,
+  "name": "Bog Fibre",
+  "other": [],
+  "quests": [],
+  "rarity": "Normal",
+  "sells_for": 36,
+  "shops": [],
+  "slot": "",
+  "two_handed": false,
+  "type": "material",
+  "weapon": "",
+  "weight": 1
+ },
+ {
+  "bonus": [],
+  "bound": false,
+  "card_slots": 0,
+  "classes": [],
+  "description": "Sticky resin caught between wet strands of moss.",
+  "dropped_by": [
+   {
+    "chance": 0.05,
+    "elite_chance": 0.05,
+    "monster": "bog_moss_slime",
+    "pieces": "1"
+   }
+  ],
+  "effect": "Crafting material",
+  "elite_bonus_chance": null,
+  "icon": "img/items/bog_resin.png",
+  "id": "bog_resin",
+  "level": 0,
+  "name": "Bog Resin",
+  "other": [],
+  "quests": [],
+  "rarity": "Normal",
+  "sells_for": 36,
+  "shops": [],
+  "slot": "",
+  "two_handed": false,
+  "type": "material",
+  "weapon": "",
+  "weight": 1
+ },
+ {
+  "bonus": [],
+  "bound": false,
+  "card_slots": 0,
+  "classes": [],
+  "description": "Fine, dark powder gathered beneath a broad mushroom cap.",
+  "dropped_by": [
+   {
+    "chance": 0.2,
+    "elite_chance": 0.2,
+    "monster": "gloom_sporecap",
+    "pieces": "1"
+   }
+  ],
+  "effect": "Crafting material",
+  "elite_bonus_chance": null,
+  "icon": "img/items/gloom_powder.png",
+  "id": "gloom_powder",
+  "level": 0,
+  "name": "Gloom Powder",
+  "other": [],
+  "quests": [],
+  "rarity": "Normal",
+  "sells_for": 43,
+  "shops": [],
+  "slot": "",
+  "two_handed": false,
+  "type": "material",
+  "weapon": "",
+  "weight": 1
+ },
+ {
+  "bonus": [],
+  "bound": false,
+  "card_slots": 0,
+  "classes": [],
+  "description": "Soft wax with a faint woodland scent and a clean, glossy finish.",
+  "dropped_by": [
+   {
+    "chance": 0.05,
+    "elite_chance": 0.05,
+    "monster": "gloom_sporecap",
+    "pieces": "1"
+   }
+  ],
+  "effect": "Crafting material",
+  "elite_bonus_chance": null,
+  "icon": "img/items/gloom_wax.png",
+  "id": "gloom_wax",
+  "level": 0,
+  "name": "Gloom Wax",
+  "other": [],
+  "quests": [],
+  "rarity": "Normal",
+  "sells_for": 43,
+  "shops": [],
+  "slot": "",
+  "two_handed": false,
+  "type": "material",
+  "weapon": "",
+  "weight": 1
+ },
+ {
+  "bonus": [],
+  "bound": false,
+  "card_slots": 0,
+  "classes": [],
+  "description": "Bright, weighty grains left among the spoils of a formidable foe.",
+  "dropped_by": [],
+  "effect": "Crafting material",
+  "elite_bonus_chance": 0.1,
+  "icon": "img/items/gilded_grit.png",
+  "id": "gilded_grit",
+  "level": 0,
+  "name": "Gilded Grit",
+  "other": [],
+  "quests": [],
+  "rarity": "Rare",
+  "sells_for": 154,
+  "shops": [],
+  "slot": "",
+  "two_handed": false,
+  "type": "material",
+  "weapon": "",
+  "weight": 1
+ },
+ {
+  "bonus": [],
+  "bound": false,
+  "card_slots": 0,
+  "classes": [],
+  "description": "A fine, luminous strand that keeps its shape when tightly wound.",
+  "dropped_by": [],
+  "effect": "Crafting material",
+  "elite_bonus_chance": 0.1,
+  "icon": "img/items/lucent_thread.png",
+  "id": "lucent_thread",
+  "level": 0,
+  "name": "Lucent Thread",
+  "other": [],
+  "quests": [],
+  "rarity": "Rare",
+  "sells_for": 154,
+  "shops": [],
+  "slot": "",
+  "two_handed": false,
+  "type": "material",
+  "weapon": "",
+  "weight": 1
+ },
+ {
+  "bonus": [],
+  "bound": false,
+  "card_slots": 0,
+  "classes": [],
+  "description": "A quiet patch of green that helps you hold your ground.",
+  "dropped_by": [
+   {
+    "chance": 0.0005,
+    "elite_chance": null,
+    "monster": "moss_slime",
+    "pieces": "1"
+   }
+  ],
+  "effect": "DEF +5, VIT +2",
+  "elite_bonus_chance": null,
+  "icon": "img/items/moss_slime_card.png",
+  "id": "moss_slime_card",
+  "level": 0,
+  "name": "Moss Slime Card",
+  "other": [],
+  "quests": [],
+  "rarity": "Rare",
+  "sells_for": 606,
+  "shops": [],
+  "slot": "shield",
+  "two_handed": false,
+  "type": "card",
+  "weapon": "",
+  "weight": 1
+ },
+ {
+  "bonus": [],
+  "bound": false,
+  "card_slots": 0,
+  "classes": [],
+  "description": "A little woodland mischief tucked beneath your heels.",
+  "dropped_by": [
+   {
+    "chance": 0.005,
+    "elite_chance": null,
+    "monster": "elder_sporecap",
+    "pieces": "1"
+   }
+  ],
+  "effect": "AGI +2, Max HP +8%",
+  "elite_bonus_chance": null,
+  "icon": "img/items/sporeling_card.png",
+  "id": "sporeling_card",
+  "level": 0,
+  "name": "Sporeling Card",
+  "other": [],
+  "quests": [],
+  "rarity": "Rare",
+  "sells_for": 765,
+  "shops": [],
+  "slot": "shoes",
+  "two_handed": false,
+  "type": "card",
+  "weapon": "",
+  "weight": 1
+ },
+ {
+  "bonus": [],
+  "bound": false,
+  "card_slots": 0,
+  "classes": [],
+  "description": "A thoughtful little cap, always full of ideas and spores.",
+  "dropped_by": [
+   {
+    "chance": 0.0005,
+    "elite_chance": null,
+    "monster": "sporecap",
+    "pieces": "1"
+   }
+  ],
+  "effect": "INT +2, DEX +2",
+  "elite_bonus_chance": null,
+  "icon": "img/items/sporecap_card.png",
+  "id": "sporecap_card",
+  "level": 0,
+  "name": "Sporecap Card",
+  "other": [],
+  "quests": [],
+  "rarity": "Rare",
+  "sells_for": 915,
+  "shops": [],
+  "slot": "head_top",
+  "two_handed": false,
+  "type": "card",
+  "weapon": "",
+  "weight": 1
+ },
+ {
+  "bonus": [],
+  "bound": false,
+  "card_slots": 0,
+  "classes": [],
+  "description": "A dim shimmer settles along your weapon.",
+  "dropped_by": [
+   {
+    "chance": 0.0005,
+    "elite_chance": 0.0015,
+    "monster": "dusk_dewdrop_slime",
+    "pieces": "1"
+   }
+  ],
+  "effect": "Damage vs Medium +10%",
+  "elite_bonus_chance": null,
+  "icon": "img/items/dusk_dewdrop_slime_card.png",
+  "id": "dusk_dewdrop_slime_card",
+  "level": 0,
+  "name": "Dusk Slime Card",
+  "other": [],
+  "quests": [],
+  "rarity": "Rare",
+  "sells_for": 2220,
+  "shops": [],
+  "slot": "weapon",
+  "two_handed": false,
+  "type": "card",
+  "weapon": "",
+  "weight": 1
+ },
+ {
+  "bonus": [],
+  "bound": false,
+  "card_slots": 0,
+  "classes": [],
+  "description": "Stubborn moss that refuses to yield.",
+  "dropped_by": [
+   {
+    "chance": 0.0005,
+    "elite_chance": 0.0015,
+    "monster": "bog_moss_slime",
+    "pieces": "1"
+   }
+  ],
+  "effect": "Max HP +8%, Max SP +8%",
+  "elite_bonus_chance": null,
+  "icon": "img/items/bog_moss_slime_card.png",
+  "id": "bog_moss_slime_card",
+  "level": 0,
+  "name": "Bog Moss Slime Card",
+  "other": [],
+  "quests": [],
+  "rarity": "Rare",
+  "sells_for": 2686,
+  "shops": [],
+  "slot": "armor",
+  "two_handed": false,
+  "type": "card",
+  "weapon": "",
+  "weight": 1
+ },
+ {
+  "bonus": [],
+  "bound": false,
+  "card_slots": 0,
+  "classes": [],
+  "description": "A quiet spark of woodland mischief.",
+  "dropped_by": [
+   {
+    "chance": 0.0005,
+    "elite_chance": 0.0015,
+    "monster": "gloom_sporecap",
+    "pieces": "1"
+   }
+  ],
+  "effect": "ATK +8",
+  "elite_bonus_chance": null,
+  "icon": "img/items/gloom_sporecap_card.png",
+  "id": "gloom_sporecap_card",
+  "level": 0,
+  "name": "Gloom Sporecap Card",
+  "other": [],
+  "quests": [],
+  "rarity": "Rare",
+  "sells_for": 3133,
+  "shops": [],
+  "slot": "accessory",
+  "two_handed": false,
+  "type": "card",
+  "weapon": "",
+  "weight": 1
+ },
+ {
+  "bonus": [],
+  "bound": false,
+  "card_slots": 0,
+  "classes": [],
+  "description": "A cool sip for a tired mind. Restores SP when used.",
+  "dropped_by": [],
+  "effect": "Restores 30 SP",
+  "elite_bonus_chance": null,
+  "icon": "img/items/focus_tonic.png",
+  "id": "focus_tonic",
+  "level": 0,
+  "name": "Focus Tonic",
+  "other": [],
+  "quests": [],
+  "rarity": "Normal",
+  "sells_for": 14,
+  "shops": [
+   {
+    "map": "brightvale",
+    "name": "General Store",
+    "price": 28,
+    "shop": "general"
+   }
+  ],
+  "slot": "",
+  "two_handed": false,
+  "type": "consumable",
+  "weapon": "",
+  "weight": 2
+ },
+ {
+  "bonus": [],
+  "bound": false,
+  "card_slots": 0,
+  "classes": [],
+  "description": "A concentrated tonic for demanding spells. Restores more SP than Focus Tonic.",
+  "dropped_by": [
+   {
+    "chance": 0.4,
+    "elite_chance": null,
+    "monster": "gildmaw",
+    "pieces": "1"
+   }
+  ],
+  "effect": "Restores 90 SP",
+  "elite_bonus_chance": null,
+  "icon": "img/items/deep_focus_tonic.png",
+  "id": "deep_focus_tonic",
+  "level": 0,
+  "name": "Deep Focus Tonic",
+  "other": [],
+  "quests": [],
+  "rarity": "Normal",
+  "sells_for": 40,
+  "shops": [
+   {
+    "map": "brightvale",
+    "name": "General Store",
+    "price": 80,
+    "shop": "general"
+   }
+  ],
+  "slot": "",
+  "two_handed": false,
+  "type": "consumable",
+  "weapon": "",
+  "weight": 2
+ },
+ {
+  "bonus": [],
+  "bound": false,
+  "card_slots": 0,
+  "classes": [],
+  "description": "A rich herbal tonic prepared for rough journeys. Restores HP when used.",
+  "dropped_by": [
+   {
+    "chance": 0.6,
+    "elite_chance": null,
+    "monster": "gildmaw",
+    "pieces": "1"
+   }
+  ],
+  "effect": "Restores 180 HP",
+  "elite_bonus_chance": null,
+  "icon": "img/items/heartroot_tonic.png",
+  "id": "heartroot_tonic",
+  "level": 0,
+  "name": "Heartroot Tonic",
+  "other": [],
+  "quests": [],
+  "rarity": "Normal",
+  "sells_for": 44,
+  "shops": [
+   {
+    "map": "brightvale",
+    "name": "General Store",
+    "price": 88,
+    "shop": "general"
+   }
+  ],
+  "slot": "",
+  "two_handed": false,
+  "type": "consumable",
+  "weapon": "",
+  "weight": 3
+ },
+ {
+  "bonus": [],
+  "bound": false,
+  "card_slots": 0,
+  "classes": [],
+  "description": "A brisk herbal sip that clears poison when used.",
+  "dropped_by": [
+   {
+    "chance": 0.04,
+    "elite_chance": null,
+    "monster": "sporecap",
+    "pieces": "1"
+   }
+  ],
+  "effect": "Cures Poison",
+  "elite_bonus_chance": null,
+  "icon": "img/items/clearleaf_sip.png",
+  "id": "clearleaf_sip",
+  "level": 0,
+  "name": "Clearleaf Sip",
+  "other": [],
+  "quests": [],
+  "rarity": "Normal",
+  "sells_for": 30,
+  "shops": [],
+  "slot": "",
+  "two_handed": false,
+  "type": "consumable",
+  "weapon": "",
+  "weight": 2
+ }
+]

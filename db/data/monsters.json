@@ -1,0 +1,2792 @@
+[
+ {
+  "atk": [
+   7,
+   10
+  ],
+  "base_exp": 14,
+  "boss": false,
+  "card": "dewdrop_slime_card",
+  "coins": 0,
+  "def": 0,
+  "drops": [
+   {
+    "chance": 0.7,
+    "item": "glimmer_gel",
+    "pieces": "1"
+   },
+   {
+    "chance": 0.06,
+    "item": "red_herb",
+    "pieces": "1"
+   },
+   {
+    "chance": 0.04,
+    "item": "dewbell_tonic",
+    "pieces": "1"
+   },
+   {
+    "chance": 0.0005,
+    "item": "dewdrop_slime_card",
+    "pieces": "1"
+   },
+   {
+    "chance": 0.01,
+    "item": "glimmer_specs",
+    "pieces": "1"
+   },
+   {
+    "chance": 0.008,
+    "item": "dewdrop_charm",
+    "pieces": "1"
+   },
+   {
+    "chance": 0.005,
+    "item": "training_knife",
+    "pieces": "1"
+   },
+   {
+    "chance": 0.005,
+    "item": "cotton_tunic",
+    "pieces": "1"
+   },
+   {
+    "chance": 0.005,
+    "item": "worn_sandals",
+    "pieces": "1"
+   },
+   {
+    "chance": 0.005,
+    "item": "sprigsteel_sword",
+    "pieces": "1"
+   },
+   {
+    "chance": 0.005,
+    "item": "reedloop_bow",
+    "pieces": "1"
+   }
+  ],
+  "element": "Water",
+  "element_level": 1,
+  "hp": 50,
+  "id": "dewdrop_slime",
+  "job_exp": 9,
+  "level": 1,
+  "mdef": 5,
+  "mvp": false,
+  "name": "Dewdrop Slime",
+  "race": "Formless",
+  "size": "Small",
+  "sprite": "img/monsters/dewdrop_slime.png",
+  "stats": {
+   "agi": 1,
+   "dex": 6,
+   "int": 0,
+   "luk": 5,
+   "str": 1,
+   "vit": 1
+  },
+  "summoned_by": "",
+  "thumb": "img/monsters/dewdrop_slime.png",
+  "variant_of": "",
+  "where": [
+   {
+    "map": "dewleaf_fields",
+    "zones": [
+     {
+      "count": 8,
+      "zone": "Dewleaf Crossing"
+     },
+     {
+      "count": 5,
+      "zone": "Lakeside Rest"
+     },
+     {
+      "count": 3,
+      "zone": "Sunlit Meadow"
+     },
+     {
+      "count": 2,
+      "zone": "East Trail"
+     },
+     {
+      "count": 2,
+      "zone": "Glimmer Lake"
+     },
+     {
+      "count": 2,
+      "zone": "Meadow Lookout"
+     },
+     {
+      "count": 2,
+      "zone": "North Fields"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "atk": [
+   9,
+   12
+  ],
+  "base_exp": 22,
+  "boss": false,
+  "card": "moss_slime_card",
+  "coins": 0,
+  "def": 2,
+  "drops": [
+   {
+    "chance": 0.75,
+    "item": "glimmer_gel",
+    "pieces": "1"
+   },
+   {
+    "chance": 0.1,
+    "item": "red_herb",
+    "pieces": "1"
+   },
+   {
+    "chance": 0.45,
+    "item": "moss_tuft",
+    "pieces": "1"
+   },
+   {
+    "chance": 0.05,
+    "item": "dewbell_tonic",
+    "pieces": "1"
+   },
+   {
+    "chance": 0.015,
+    "item": "mossweave_cap",
+    "pieces": "1"
+   },
+   {
+    "chance": 0.008,
+    "item": "thornwood_dagger",
+    "pieces": "1"
+   },
+   {
+    "chance": 0.015,
+    "item": "clover_sprig",
+    "pieces": "1"
+   },
+   {
+    "chance": 0.01,
+    "item": "fieldrunner_boots",
+    "pieces": "1"
+   },
+   {
+    "chance": 0.03,
+    "item": "wayfeather",
+    "pieces": "1"
+   },
+   {
+    "chance": 0.006,
+    "item": "riverstone_mace",
+    "pieces": "1"
+   },
+   {
+    "chance": 0.008,
+    "item": "oakplank_buckler",
+    "pieces": "1"
+   },
+   {
+    "chance": 0.0005,
+    "item": "moss_slime_card",
+    "pieces": "1"
+   },
+   {
+    "chance": 0.005,
+    "item": "pollenflint_knife",
+    "pieces": "1"
+   },
+   {
+    "chance": 0.03,
+    "item": "flintpip",
+    "pieces": "1"
+   },
+   {
+    "chance": 0.005,
+    "item": "brookknob_mace",
+    "pieces": "1"
+   },
+   {
+    "chance": 0.005,
+    "item": "dewbud_rod",
+    "pieces": "1"
+   }
+  ],
+  "element": "Earth",
+  "element_level": 1,
+  "hp": 80,
+  "id": "moss_slime",
+  "job_exp": 14,
+  "level": 3,
+  "mdef": 5,
+  "mvp": false,
+  "name": "Moss Slime",
+  "race": "Plant",
+  "size": "Small",
+  "sprite": "img/monsters/moss_slime.png",
+  "stats": {
+   "agi": 3,
+   "dex": 10,
+   "int": 0,
+   "luk": 5,
+   "str": 3,
+   "vit": 5
+  },
+  "summoned_by": "",
+  "thumb": "img/monsters/moss_slime.png",
+  "variant_of": "",
+  "where": [
+   {
+    "map": "dewleaf_fields",
+    "zones": [
+     {
+      "count": 7,
+      "zone": "Mossy Hollow"
+     },
+     {
+      "count": 4,
+      "zone": "Ruin Camp"
+     },
+     {
+      "count": 4,
+      "zone": "Wayfarer Camp"
+     },
+     {
+      "count": 2,
+      "zone": "Glimmer Lake"
+     },
+     {
+      "count": 2,
+      "zone": "Meadow Lookout"
+     },
+     {
+      "count": 2,
+      "zone": "Old Ruins"
+     },
+     {
+      "count": 2,
+      "zone": "Sporecap Grove"
+     },
+     {
+      "count": 1,
+      "zone": "Dewleaf Crossing"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "atk": [
+   12,
+   16
+  ],
+  "base_exp": 32,
+  "boss": false,
+  "card": "sporecap_card",
+  "coins": 0,
+  "def": 0,
+  "drops": [
+   {
+    "chance": 0.55,
+    "item": "spore_puff",
+    "pieces": "1"
+   },
+   {
+    "chance": 0.15,
+    "item": "red_herb",
+    "pieces": "1"
+   },
+   {
+    "chance": 0.3,
+    "item": "sporecap_shard",
+    "pieces": "1"
+   },
+   {
+    "chance": 0.03,
+    "item": "heartbloom",
+    "pieces": "1"
+   },
+   {
+    "chance": 0.012,
+    "item": "thornwood_dagger",
+    "pieces": "1"
+   },
+   {
+    "chance": 0.02,
+    "item": "mosshide_vest",
+    "pieces": "1"
+   },
+   {
+    "chance": 0.02,
+    "item": "wayfarer_cape",
+    "pieces": "1"
+   },
+   {
+    "chance": 0.015,
+    "item": "copper_band",
+    "pieces": "1"
+   },
+   {
+    "chance": 0.03,
+    "item": "wayfeather",
+    "pieces": "1"
+   },
+   {
+    "chance": 0.01,
+    "item": "homeward_feather",
+    "pieces": "1"
+   },
+   {
+    "chance": 0.008,
+    "item": "ashwood_shortsword",
+    "pieces": "1"
+   },
+   {
+    "chance": 0.01,
+    "item": "quilted_jerkin",
+    "pieces": "1"
+   },
+   {
+    "chance": 0.0005,
+    "item": "sporecap_card",
+    "pieces": "1"
+   },
+   {
+    "chance": 0.04,
+    "item": "clearleaf_sip",
+    "pieces": "1"
+   }
+  ],
+  "element": "Poison",
+  "element_level": 1,
+  "hp": 105,
+  "id": "sporecap",
+  "job_exp": 20,
+  "level": 5,
+  "mdef": 10,
+  "mvp": false,
+  "name": "Sporecap",
+  "race": "Plant",
+  "size": "Medium",
+  "sprite": "img/monsters/sporecap.png",
+  "stats": {
+   "agi": 6,
+   "dex": 16,
+   "int": 1,
+   "luk": 5,
+   "str": 1,
+   "vit": 4
+  },
+  "summoned_by": "",
+  "thumb": "img/monsters/sporecap.png",
+  "variant_of": "",
+  "where": [
+   {
+    "map": "dewleaf_fields",
+    "zones": [
+     {
+      "count": 6,
+      "zone": "Mossy Hollow"
+     },
+     {
+      "count": 6,
+      "zone": "Sporecap Grove"
+     },
+     {
+      "count": 3,
+      "zone": "Old Shrine"
+     },
+     {
+      "count": 2,
+      "zone": "Dewleaf Crossing"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "atk": [
+   24,
+   31
+  ],
+  "base_exp": 260,
+  "boss": true,
+  "card": "elder_sporecap_card",
+  "coins": 0,
+  "def": 10,
+  "drops": [
+   {
+    "chance": 1.0,
+    "item": "spore_puff",
+    "pieces": "1"
+   },
+   {
+    "chance": 0.8,
+    "item": "sporecap_shard",
+    "pieces": "1"
+   },
+   {
+    "chance": 0.6,
+    "item": "elder_spore_core",
+    "pieces": "1"
+   },
+   {
+    "chance": 0.45,
+    "item": "heartbloom",
+    "pieces": "1"
+   },
+   {
+    "chance": 0.08,
+    "item": "capshell_buckler",
+    "pieces": "1"
+   },
+   {
+    "chance": 0.005,
+    "item": "elder_sporecap_card",
+    "pieces": "1"
+   },
+   {
+    "chance": 0.05,
+    "item": "ironbark_greatsword",
+    "pieces": "1"
+   },
+   {
+    "chance": 0.06,
+    "item": "capshell_helm",
+    "pieces": "1"
+   },
+   {
+    "chance": 0.05,
+    "item": "dewdrop_charm",
+    "pieces": "1"
+   },
+   {
+    "chance": 0.04,
+    "item": "brightsteel_sabre",
+    "pieces": "1"
+   },
+   {
+    "chance": 0.005,
+    "item": "vanguard_arming_sword",
+    "pieces": "1"
+   },
+   {
+    "chance": 0.005,
+    "item": "crimson_kite_shield",
+    "pieces": "1"
+   },
+   {
+    "chance": 0.005,
+    "item": "vanguard_tabard",
+    "pieces": "1"
+   },
+   {
+    "chance": 0.005,
+    "item": "vanguard_greaves",
+    "pieces": "1"
+   },
+   {
+    "chance": 0.005,
+    "item": "briarwood_recurve",
+    "pieces": "1"
+   },
+   {
+    "chance": 0.005,
+    "item": "thornstrider_jerkin",
+    "pieces": "1"
+   },
+   {
+    "chance": 0.005,
+    "item": "thornstrider_boots",
+    "pieces": "1"
+   },
+   {
+    "chance": 0.005,
+    "item": "shardlight_rod",
+    "pieces": "1"
+   },
+   {
+    "chance": 0.005,
+    "item": "arcanist_longcoat",
+    "pieces": "1"
+   },
+   {
+    "chance": 0.005,
+    "item": "arcanist_slippers",
+    "pieces": "1"
+   },
+   {
+    "chance": 0.005,
+    "item": "sunleaf_mace",
+    "pieces": "1"
+   },
+   {
+    "chance": 0.005,
+    "item": "cleric_battlecoat",
+    "pieces": "1"
+   },
+   {
+    "chance": 0.005,
+    "item": "cleric_boots",
+    "pieces": "1"
+   },
+   {
+    "chance": 0.03,
+    "item": "sporecrest_helm",
+    "pieces": "1"
+   },
+   {
+    "chance": 0.005,
+    "item": "sporeling_card",
+    "pieces": "1"
+   },
+   {
+    "chance": 0.005,
+    "item": "wrenwing_dagger",
+    "pieces": "1"
+   },
+   {
+    "chance": 0.005,
+    "item": "slatehide_coat",
+    "pieces": "1"
+   },
+   {
+    "chance": 0.005,
+    "item": "feltstep_boots",
+    "pieces": "1"
+   }
+  ],
+  "element": "Poison",
+  "element_level": 2,
+  "hp": 1200,
+  "id": "elder_sporecap",
+  "job_exp": 170,
+  "level": 9,
+  "mdef": 10,
+  "mvp": false,
+  "name": "Elder Sporecap",
+  "race": "Plant",
+  "size": "Large",
+  "sprite": "img/monsters/elder_sporecap.png",
+  "stats": {
+   "agi": 8,
+   "dex": 26,
+   "int": 10,
+   "luk": 10,
+   "str": 20,
+   "vit": 5
+  },
+  "summoned_by": "",
+  "thumb": "img/monsters/elder_sporecap.thumb.png",
+  "variant_of": "",
+  "where": [
+   {
+    "map": "dewleaf_fields",
+    "zones": [
+     {
+      "count": 1,
+      "zone": "Sporecap Grove"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "atk": [
+   27,
+   34
+  ],
+  "base_exp": 85,
+  "boss": false,
+  "card": "rootnib_card",
+  "coins": 0,
+  "def": 9,
+  "drops": [
+   {
+    "chance": 0.45,
+    "item": "rootwhisker_thread",
+    "pieces": "1"
+   },
+   {
+    "chance": 0.14,
+    "item": "burrowdew_bead",
+    "pieces": "1"
+   },
+   {
+    "chance": 0.07,
+    "item": "dewmint_draught",
+    "pieces": "1"
+   },
+   {
+    "chance": 0.003,
+    "item": "tunnelknit_hood",
+    "pieces": "1"
+   },
+   {
+    "chance": 0.0005,
+    "item": "rootnib_card",
+    "pieces": "1"
+   },
+   {
+    "chance": 0.05,
+    "item": "flintpip",
+    "pieces": "1"
+   },
+   {
+    "chance": 0.004,
+    "item": "thistlepin_dagger",
+    "pieces": "1"
+   },
+   {
+    "chance": 0.004,
+    "item": "fernbend_bow",
+    "pieces": "1"
+   }
+  ],
+  "element": "Earth",
+  "element_level": 1,
+  "hp": 267,
+  "id": "rootnib",
+  "job_exp": 52,
+  "level": 11,
+  "mdef": 10,
+  "mvp": false,
+  "name": "Rootnib",
+  "race": "Beast",
+  "size": "Small",
+  "sprite": "img/monsters/rootnib.png",
+  "stats": {
+   "agi": 9,
+   "dex": 20,
+   "int": 4,
+   "luk": 6,
+   "str": 8,
+   "vit": 7
+  },
+  "summoned_by": "",
+  "thumb": "img/monsters/rootnib.png",
+  "variant_of": "",
+  "where": [
+   {
+    "map": "rootglow_hollow_f1",
+    "zones": [
+     {
+      "count": 13,
+      "zone": "Rootthread Loop"
+     },
+     {
+      "count": 8,
+      "zone": "Rootgate Landing"
+     },
+     {
+      "count": 5,
+      "zone": "Ambercap Gallery"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "atk": [
+   43,
+   54
+  ],
+  "base_exp": 145,
+  "boss": false,
+  "card": "dripfin_card",
+  "coins": 0,
+  "def": 8,
+  "drops": [
+   {
+    "chance": 0.44,
+    "item": "dripscale_flake",
+    "pieces": "1"
+   },
+   {
+    "chance": 0.12,
+    "item": "poolglint_pearl",
+    "pieces": "1"
+   },
+   {
+    "chance": 0.08,
+    "item": "bluepetal_tonic",
+    "pieces": "1"
+   },
+   {
+    "chance": 0.003,
+    "item": "brookfin_charm",
+    "pieces": "1"
+   },
+   {
+    "chance": 0.0005,
+    "item": "dripfin_card",
+    "pieces": "1"
+   },
+   {
+    "chance": 0.03,
+    "item": "brightwater_draught",
+    "pieces": "1"
+   },
+   {
+    "chance": 0.004,
+    "item": "brookreed_staff",
+    "pieces": "1"
+   },
+   {
+    "chance": 0.003,
+    "item": "sedgesquall_sword",
+    "pieces": "1"
+   },
+   {
+    "chance": 0.003,
+    "item": "rainbranch_bow",
+    "pieces": "1"
+   },
+   {
+    "chance": 0.003,
+    "item": "mistgrain_rod",
+    "pieces": "1"
+   }
+  ],
+  "element": "Water",
+  "element_level": 1,
+  "hp": 449,
+  "id": "dripfin",
+  "job_exp": 89,
+  "level": 16,
+  "mdef": 20,
+  "mvp": false,
+  "name": "Dripfin",
+  "race": "Fish",
+  "size": "Small",
+  "sprite": "img/monsters/dripfin.png",
+  "stats": {
+   "agi": 13,
+   "dex": 30,
+   "int": 6,
+   "luk": 8,
+   "str": 6,
+   "vit": 10
+  },
+  "summoned_by": "",
+  "thumb": "img/monsters/dripfin.png",
+  "variant_of": "",
+  "where": [
+   {
+    "map": "rootglow_hollow_f1",
+    "zones": [
+     {
+      "count": 13,
+      "zone": "Dripstone Bank"
+     },
+     {
+      "count": 10,
+      "zone": "Glowpool Bend"
+     },
+     {
+      "count": 10,
+      "zone": "Waterfall Shelf"
+     },
+     {
+      "count": 5,
+      "zone": "Ambercap Gallery"
+     }
+    ]
+   },
+   {
+    "map": "rootglow_hollow_f2",
+    "zones": [
+     {
+      "count": 16,
+      "zone": "Stillwater Loop"
+     },
+     {
+      "count": 5,
+      "zone": "Rootbridge Hall"
+     },
+     {
+      "count": 3,
+      "zone": "Driftroot Landing"
+     },
+     {
+      "count": 2,
+      "zone": "Mufflecap Garden"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "atk": [
+   59,
+   72
+  ],
+  "base_exp": 200,
+  "boss": false,
+  "card": "hushcap_card",
+  "coins": 0,
+  "def": 10,
+  "drops": [
+   {
+    "chance": 0.42,
+    "item": "hushveil_fiber",
+    "pieces": "1"
+   },
+   {
+    "chance": 0.12,
+    "item": "quietspore_satin",
+    "pieces": "1"
+   },
+   {
+    "chance": 0.02,
+    "item": "homeward_feather",
+    "pieces": "1"
+   },
+   {
+    "chance": 0.003,
+    "item": "hushfold_mantle",
+    "pieces": "1"
+   },
+   {
+    "chance": 0.0005,
+    "item": "hushcap_card",
+    "pieces": "1"
+   },
+   {
+    "chance": 0.03,
+    "item": "brightwater_draught",
+    "pieces": "1"
+   },
+   {
+    "chance": 0.004,
+    "item": "glowcap_staff",
+    "pieces": "1"
+   },
+   {
+    "chance": 0.0025,
+    "item": "orchidpith_rod",
+    "pieces": "1"
+   }
+  ],
+  "element": "Ghost",
+  "element_level": 1,
+  "hp": 619,
+  "id": "hushcap",
+  "job_exp": 123,
+  "level": 20,
+  "mdef": 28,
+  "mvp": false,
+  "name": "Hushcap",
+  "race": "Plant",
+  "size": "Medium",
+  "sprite": "img/monsters/hushcap.png",
+  "stats": {
+   "agi": 13,
+   "dex": 36,
+   "int": 12,
+   "luk": 10,
+   "str": 7,
+   "vit": 12
+  },
+  "summoned_by": "",
+  "thumb": "img/monsters/hushcap.thumb.png",
+  "variant_of": "",
+  "where": [
+   {
+    "map": "rootglow_hollow_f2",
+    "zones": [
+     {
+      "count": 13,
+      "zone": "Hushed Descent"
+     },
+     {
+      "count": 13,
+      "zone": "Mufflecap Garden"
+     },
+     {
+      "count": 10,
+      "zone": "Quietcap Walk"
+     },
+     {
+      "count": 2,
+      "zone": "Rootbridge Hall"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "atk": [
+   67,
+   82
+  ],
+  "base_exp": 231,
+  "boss": false,
+  "card": "wickmoth_card",
+  "coins": 0,
+  "def": 10,
+  "drops": [
+   {
+    "chance": 0.42,
+    "item": "wickdust",
+    "pieces": "1"
+   },
+   {
+    "chance": 0.12,
+    "item": "lampfloss",
+    "pieces": "1"
+   },
+   {
+    "chance": 0.08,
+    "item": "dewmint_draught",
+    "pieces": "1"
+   },
+   {
+    "chance": 0.003,
+    "item": "emberwick_pin",
+    "pieces": "1"
+   },
+   {
+    "chance": 0.0005,
+    "item": "wickmoth_card",
+    "pieces": "1"
+   },
+   {
+    "chance": 0.03,
+    "item": "brightwater_draught",
+    "pieces": "1"
+   },
+   {
+    "chance": 0.004,
+    "item": "cinderoak_greatsword",
+    "pieces": "1"
+   }
+  ],
+  "element": "Fire",
+  "element_level": 1,
+  "hp": 712,
+  "id": "wickmoth",
+  "job_exp": 141,
+  "level": 22,
+  "mdef": 22,
+  "mvp": false,
+  "name": "Wickmoth",
+  "race": "Insect",
+  "size": "Small",
+  "sprite": "img/monsters/wickmoth.png",
+  "stats": {
+   "agi": 18,
+   "dex": 35,
+   "int": 9,
+   "luk": 11,
+   "str": 16,
+   "vit": 13
+  },
+  "summoned_by": "dewroot_regent",
+  "thumb": "img/monsters/wickmoth.png",
+  "variant_of": "",
+  "where": [
+   {
+    "map": "rootglow_hollow_f3",
+    "zones": [
+     {
+      "count": 15,
+      "zone": "Wicklight Grove"
+     },
+     {
+      "count": 6,
+      "zone": "Deepglow Landing"
+     },
+     {
+      "count": 5,
+      "zone": "Lanternroot Walk"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "atk": [
+   95,
+   115
+  ],
+  "base_exp": 330,
+  "boss": false,
+  "card": "rootmantle_card",
+  "coins": 0,
+  "def": 29,
+  "drops": [
+   {
+    "chance": 0.45,
+    "item": "mantleroot_bark",
+    "pieces": "1"
+   },
+   {
+    "chance": 0.12,
+    "item": "shadowleaf_lace",
+    "pieces": "1"
+   },
+   {
+    "chance": 0.08,
+    "item": "bluepetal_tonic",
+    "pieces": "1"
+   },
+   {
+    "chance": 0.0025,
+    "item": "rootweave_vest",
+    "pieces": "1"
+   },
+   {
+    "chance": 0.0005,
+    "item": "rootmantle_card",
+    "pieces": "1"
+   },
+   {
+    "chance": 0.03,
+    "item": "brightwater_draught",
+    "pieces": "1"
+   },
+   {
+    "chance": 0.003,
+    "item": "lotuslichen_rod",
+    "pieces": "1"
+   },
+   {
+    "chance": 0.003,
+    "item": "balsamgilt_mace",
+    "pieces": "1"
+   }
+  ],
+  "element": "Shadow",
+  "element_level": 1,
+  "hp": 1015,
+  "id": "rootmantle",
+  "job_exp": 202,
+  "level": 28,
+  "mdef": 22,
+  "mvp": false,
+  "name": "Rootmantle",
+  "race": "Plant",
+  "size": "Medium",
+  "sprite": "img/monsters/rootmantle.png",
+  "stats": {
+   "agi": 18,
+   "dex": 44,
+   "int": 17,
+   "luk": 14,
+   "str": 20,
+   "vit": 25
+  },
+  "summoned_by": "",
+  "thumb": "img/monsters/rootmantle.thumb.png",
+  "variant_of": "",
+  "where": [
+   {
+    "map": "rootglow_hollow_f3",
+    "zones": [
+     {
+      "count": 8,
+      "zone": "Rootmantle Loop"
+     },
+     {
+      "count": 6,
+      "zone": "Mantlefoot Hall"
+     },
+     {
+      "count": 3,
+      "zone": "Lanternroot Walk"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "atk": [
+   189,
+   229
+  ],
+  "base_exp": 9125,
+  "boss": true,
+  "card": "dewroot_regent_card",
+  "coins": 0,
+  "def": 36,
+  "drops": [
+   {
+    "chance": 0.8,
+    "item": "dewroot_heart",
+    "pieces": "1"
+   },
+   {
+    "chance": 0.35,
+    "item": "crownroot_lacquer",
+    "pieces": "1"
+   },
+   {
+    "chance": 0.35,
+    "item": "homeward_feather",
+    "pieces": "1"
+   },
+   {
+    "chance": 0.015,
+    "item": "rootbound_charm",
+    "pieces": "1"
+   },
+   {
+    "chance": 0.01,
+    "item": "grovecrest_cuirass",
+    "pieces": "1"
+   },
+   {
+    "chance": 0.005,
+    "item": "dewroot_regent_card",
+    "pieces": "1"
+   },
+   {
+    "chance": 0.005,
+    "item": "wickmoth_card",
+    "pieces": "1"
+   },
+   {
+    "chance": 0.02,
+    "item": "lumenroot_staff",
+    "pieces": "1"
+   },
+   {
+    "chance": 0.02,
+    "item": "rockmoss_greatsword",
+    "pieces": "1"
+   }
+  ],
+  "element": "Earth",
+  "element_level": 2,
+  "hp": 50580,
+  "id": "dewroot_regent",
+  "job_exp": 5600,
+  "level": 30,
+  "mdef": 34,
+  "mvp": true,
+  "name": "Dewroot Regent",
+  "race": "Plant",
+  "size": "Large",
+  "sprite": "img/monsters/dewroot_regent.png",
+  "stats": {
+   "agi": 19,
+   "dex": 56,
+   "int": 18,
+   "luk": 22,
+   "str": 43,
+   "vit": 54
+  },
+  "summoned_by": "",
+  "thumb": "img/monsters/dewroot_regent.thumb.png",
+  "variant_of": "",
+  "where": [
+   {
+    "map": "rootglow_hollow_f3",
+    "zones": [
+     {
+      "count": 1,
+      "zone": "Regent Bower"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "atk": [
+   16,
+   21
+  ],
+  "base_exp": 47,
+  "boss": false,
+  "card": "bramblebun_card",
+  "coins": 0,
+  "def": 4,
+  "drops": [
+   {
+    "chance": 0.42,
+    "item": "brambletuft",
+    "pieces": "1"
+   },
+   {
+    "chance": 0.15,
+    "item": "bramble_seedpod",
+    "pieces": "1"
+   },
+   {
+    "chance": 0.07,
+    "item": "dewmint_draught",
+    "pieces": "1"
+   },
+   {
+    "chance": 0.003,
+    "item": "thistlelace_boots",
+    "pieces": "1"
+   },
+   {
+    "chance": 0.0005,
+    "item": "bramblebun_card",
+    "pieces": "1"
+   },
+   {
+    "chance": 0.005,
+    "item": "pollenflint_knife",
+    "pieces": "1"
+   },
+   {
+    "chance": 0.004,
+    "item": "clovercairn_mace",
+    "pieces": "1"
+   },
+   {
+    "chance": 0.004,
+    "item": "hearthpebble_mace",
+    "pieces": "1"
+   }
+  ],
+  "element": "Earth",
+  "element_level": 1,
+  "hp": 151,
+  "id": "bramblebun",
+  "job_exp": 29,
+  "level": 7,
+  "mdef": 8,
+  "mvp": false,
+  "name": "Bramblebun",
+  "race": "Beast",
+  "size": "Small",
+  "sprite": "img/monsters/bramblebun.png",
+  "stats": {
+   "agi": 7,
+   "dex": 14,
+   "int": 3,
+   "luk": 4,
+   "str": 5,
+   "vit": 4
+  },
+  "summoned_by": "",
+  "thumb": "img/monsters/bramblebun.png",
+  "variant_of": "",
+  "where": [
+   {
+    "map": "bramblebrook_woods",
+    "zones": [
+     {
+      "count": 13,
+      "zone": "Brookentry Green"
+     },
+     {
+      "count": 5,
+      "zone": "Thornrun Loop"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "atk": [
+   30,
+   37
+  ],
+  "base_exp": 96,
+  "boss": false,
+  "card": "reedbeak_card",
+  "coins": 0,
+  "def": 6,
+  "drops": [
+   {
+    "chance": 0.42,
+    "item": "dewquill",
+    "pieces": "1"
+   },
+   {
+    "chance": 0.12,
+    "item": "reedpearl",
+    "pieces": "1"
+   },
+   {
+    "chance": 0.07,
+    "item": "bluepetal_tonic",
+    "pieces": "1"
+   },
+   {
+    "chance": 0.003,
+    "item": "reedstring_bow",
+    "pieces": "1"
+   },
+   {
+    "chance": 0.0005,
+    "item": "reedbeak_card",
+    "pieces": "1"
+   },
+   {
+    "chance": 0.004,
+    "item": "rillguard_sword",
+    "pieces": "1"
+   },
+   {
+    "chance": 0.004,
+    "item": "lanternreed_rod",
+    "pieces": "1"
+   }
+  ],
+  "element": "Water",
+  "element_level": 1,
+  "hp": 301,
+  "id": "reedbeak",
+  "job_exp": 59,
+  "level": 12,
+  "mdef": 14,
+  "mvp": false,
+  "name": "Reedbeak",
+  "race": "Beast",
+  "size": "Medium",
+  "sprite": "img/monsters/reedbeak.png",
+  "stats": {
+   "agi": 10,
+   "dex": 24,
+   "int": 5,
+   "luk": 6,
+   "str": 4,
+   "vit": 7
+  },
+  "summoned_by": "",
+  "thumb": "img/monsters/reedbeak.thumb.png",
+  "variant_of": "",
+  "where": [
+   {
+    "map": "bramblebrook_woods",
+    "zones": [
+     {
+      "count": 11,
+      "zone": "Reedbank Run"
+     },
+     {
+      "count": 5,
+      "zone": "Thornrun Loop"
+     },
+     {
+      "count": 2,
+      "zone": "Tuftbank Hollow"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "atk": [
+   47,
+   58
+  ],
+  "base_exp": 158,
+  "boss": false,
+  "card": "tuftguard_card",
+  "coins": 0,
+  "def": 18,
+  "drops": [
+   {
+    "chance": 0.45,
+    "item": "tuftbark_plate",
+    "pieces": "1"
+   },
+   {
+    "chance": 0.12,
+    "item": "grassheart_knot",
+    "pieces": "1"
+   },
+   {
+    "chance": 0.08,
+    "item": "dewmint_draught",
+    "pieces": "1"
+   },
+   {
+    "chance": 0.003,
+    "item": "knotgrain_shield",
+    "pieces": "1"
+   },
+   {
+    "chance": 0.0005,
+    "item": "tuftguard_card",
+    "pieces": "1"
+   },
+   {
+    "chance": 0.004,
+    "item": "swiftfern_greatsword",
+    "pieces": "1"
+   },
+   {
+    "chance": 0.003,
+    "item": "oatopal_bow",
+    "pieces": "1"
+   },
+   {
+    "chance": 0.003,
+    "item": "ridgebloom_sword",
+    "pieces": "1"
+   }
+  ],
+  "element": "Earth",
+  "element_level": 1,
+  "hp": 490,
+  "id": "tuftguard",
+  "job_exp": 97,
+  "level": 17,
+  "mdef": 14,
+  "mvp": false,
+  "name": "Tuftguard",
+  "race": "Plant",
+  "size": "Medium",
+  "sprite": "img/monsters/tuftguard.png",
+  "stats": {
+   "agi": 11,
+   "dex": 28,
+   "int": 7,
+   "luk": 9,
+   "str": 12,
+   "vit": 15
+  },
+  "summoned_by": "",
+  "thumb": "img/monsters/tuftguard.thumb.png",
+  "variant_of": "",
+  "where": [
+   {
+    "map": "bramblebrook_woods",
+    "zones": [
+     {
+      "count": 10,
+      "zone": "Canopy Turn"
+     },
+     {
+      "count": 10,
+      "zone": "Tuftbank Hollow"
+     },
+     {
+      "count": 3,
+      "zone": "Fernring Clearing"
+     },
+     {
+      "count": 2,
+      "zone": "Bellshade Glade"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "atk": [
+   71,
+   87
+  ],
+  "base_exp": 246,
+  "boss": false,
+  "card": "gale_bramblebun_card",
+  "coins": 0,
+  "def": 12,
+  "drops": [
+   {
+    "chance": 0.4,
+    "item": "windtuft_fiber",
+    "pieces": "1"
+   },
+   {
+    "chance": 0.12,
+    "item": "breezeseed_pod",
+    "pieces": "1"
+   },
+   {
+    "chance": 0.08,
+    "item": "bluepetal_tonic",
+    "pieces": "1"
+   },
+   {
+    "chance": 0.0025,
+    "item": "galegrass_wrap",
+    "pieces": "1"
+   },
+   {
+    "chance": 0.0005,
+    "item": "gale_bramblebun_card",
+    "pieces": "1"
+   },
+   {
+    "chance": 0.003,
+    "item": "junipergrain_bow",
+    "pieces": "1"
+   }
+  ],
+  "element": "Wind",
+  "element_level": 1,
+  "hp": 759,
+  "id": "gale_bramblebun",
+  "job_exp": 151,
+  "level": 23,
+  "mdef": 22,
+  "mvp": false,
+  "name": "Gale Bramblebun",
+  "race": "Beast",
+  "size": "Small",
+  "sprite": "img/monsters/gale_bramblebun.png",
+  "stats": {
+   "agi": 23,
+   "dex": 37,
+   "int": 9,
+   "luk": 11,
+   "str": 17,
+   "vit": 14
+  },
+  "summoned_by": "",
+  "thumb": "img/monsters/gale_bramblebun.png",
+  "variant_of": "bramblebun",
+  "where": [
+   {
+    "map": "bramblebrook_woods",
+    "zones": [
+     {
+      "count": 13,
+      "zone": "Gale Shelf"
+     },
+     {
+      "count": 8,
+      "zone": "Fernring Clearing"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "atk": [
+   95,
+   115
+  ],
+  "base_exp": 330,
+  "boss": false,
+  "card": "bellwisp_card",
+  "coins": 0,
+  "def": 12,
+  "drops": [
+   {
+    "chance": 0.42,
+    "item": "bellglow_shard",
+    "pieces": "1"
+   },
+   {
+    "chance": 0.12,
+    "item": "chimesilk_loop",
+    "pieces": "1"
+   },
+   {
+    "chance": 0.08,
+    "item": "bluepetal_tonic",
+    "pieces": "1"
+   },
+   {
+    "chance": 0.0025,
+    "item": "little_chime_seal",
+    "pieces": "1"
+   },
+   {
+    "chance": 0.0005,
+    "item": "bellwisp_card",
+    "pieces": "1"
+   },
+   {
+    "chance": 0.003,
+    "item": "quartzpetal_sword",
+    "pieces": "1"
+   },
+   {
+    "chance": 0.003,
+    "item": "myrtleonyx_dagger",
+    "pieces": "1"
+   }
+  ],
+  "element": "Holy",
+  "element_level": 1,
+  "hp": 1015,
+  "id": "bellwisp",
+  "job_exp": 202,
+  "level": 28,
+  "mdef": 34,
+  "mvp": false,
+  "name": "Bellwisp",
+  "race": "Celestial",
+  "size": "Small",
+  "sprite": "img/monsters/bellwisp.png",
+  "stats": {
+   "agi": 22,
+   "dex": 48,
+   "int": 17,
+   "luk": 14,
+   "str": 10,
+   "vit": 17
+  },
+  "summoned_by": "",
+  "thumb": "img/monsters/bellwisp.png",
+  "variant_of": "",
+  "where": [
+   {
+    "map": "bramblebrook_woods",
+    "zones": [
+     {
+      "count": 13,
+      "zone": "Bellshade Glade"
+     },
+     {
+      "count": 5,
+      "zone": "Fernring Clearing"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "atk": [
+   26,
+   33
+  ],
+  "base_exp": 70,
+  "boss": false,
+  "card": "dusk_dewdrop_slime_card",
+  "coins": 0,
+  "def": 2,
+  "drops": [
+   {
+    "chance": 0.8,
+    "item": "glimmer_gel",
+    "pieces": "1"
+   },
+   {
+    "chance": 0.12,
+    "item": "red_herb",
+    "pieces": "1"
+   },
+   {
+    "chance": 0.08,
+    "item": "dewbell_tonic",
+    "pieces": "1"
+   },
+   {
+    "chance": 0.0005,
+    "item": "dewdrop_slime_card",
+    "pieces": "1"
+   },
+   {
+    "chance": 0.015,
+    "item": "glimmer_specs",
+    "pieces": "1"
+   },
+   {
+    "chance": 0.012,
+    "item": "dewdrop_charm",
+    "pieces": "1"
+   },
+   {
+    "chance": 0.02,
+    "item": "cotton_tunic",
+    "pieces": "1"
+   },
+   {
+    "chance": 0.04,
+    "item": "wayfeather",
+    "pieces": "1"
+   },
+   {
+    "chance": 0.2,
+    "item": "dusk_gel",
+    "pieces": "1"
+   },
+   {
+    "chance": 0.05,
+    "item": "dusk_bead",
+    "pieces": "1"
+   },
+   {
+    "chance": 0.0005,
+    "item": "dusk_dewdrop_slime_card",
+    "pieces": "1"
+   },
+   {
+    "chance": 0.004,
+    "item": "dewglass_rod",
+    "pieces": "1"
+   },
+   {
+    "chance": 0.003,
+    "item": "duskpetal_hood",
+    "pieces": "1"
+   },
+   {
+    "chance": 0.004,
+    "item": "brookreed_staff",
+    "pieces": "1"
+   },
+   {
+    "chance": 0.003,
+    "item": "sedgesquall_sword",
+    "pieces": "1"
+   },
+   {
+    "chance": 0.004,
+    "item": "mirrorfin_dagger",
+    "pieces": "1"
+   },
+   {
+    "chance": 0.003,
+    "item": "dawnpebble_mace",
+    "pieces": "1"
+   },
+   {
+    "chance": 0.003,
+    "item": "veilseed_dagger",
+    "pieces": "1"
+   }
+  ],
+  "element": "Water",
+  "element_level": 1,
+  "elite": {
+   "drops": [
+    {
+     "chance": 0.8,
+     "item": "glimmer_gel",
+     "pieces": "1"
+    },
+    {
+     "chance": 0.12,
+     "item": "red_herb",
+     "pieces": "1"
+    },
+    {
+     "chance": 0.08,
+     "item": "dewbell_tonic",
+     "pieces": "1"
+    },
+    {
+     "chance": 0.0015,
+     "item": "dewdrop_slime_card",
+     "pieces": "1"
+    },
+    {
+     "chance": 0.0375,
+     "item": "glimmer_specs",
+     "pieces": "1"
+    },
+    {
+     "chance": 0.03,
+     "item": "dewdrop_charm",
+     "pieces": "1"
+    },
+    {
+     "chance": 0.05,
+     "item": "cotton_tunic",
+     "pieces": "1"
+    },
+    {
+     "chance": 0.04,
+     "item": "wayfeather",
+     "pieces": "1"
+    },
+    {
+     "chance": 0.2,
+     "item": "dusk_gel",
+     "pieces": "1"
+    },
+    {
+     "chance": 0.05,
+     "item": "dusk_bead",
+     "pieces": "1"
+    },
+    {
+     "chance": 0.0015,
+     "item": "dusk_dewdrop_slime_card",
+     "pieces": "1"
+    },
+    {
+     "chance": 0.01,
+     "item": "dewglass_rod",
+     "pieces": "1"
+    },
+    {
+     "chance": 0.0075,
+     "item": "duskpetal_hood",
+     "pieces": "1"
+    },
+    {
+     "chance": 0.01,
+     "item": "brookreed_staff",
+     "pieces": "1"
+    },
+    {
+     "chance": 0.0075,
+     "item": "sedgesquall_sword",
+     "pieces": "1"
+    },
+    {
+     "chance": 0.01,
+     "item": "mirrorfin_dagger",
+     "pieces": "1"
+    },
+    {
+     "chance": 0.0075,
+     "item": "dawnpebble_mace",
+     "pieces": "1"
+    },
+    {
+     "chance": 0.0075,
+     "item": "veilseed_dagger",
+     "pieces": "1"
+    },
+    {
+     "bonus": true,
+     "chance": 1.0,
+     "item": "crownstone",
+     "pieces": "1"
+    },
+    {
+     "bonus": true,
+     "chance": 0.6,
+     "item": "red_herb",
+     "pieces": "1"
+    },
+    {
+     "bonus": true,
+     "chance": 0.05,
+     "item": "dewdrop_charm",
+     "pieces": "1"
+    },
+    {
+     "bonus": true,
+     "chance": 0.04,
+     "item": "capshell_helm",
+     "pieces": "1"
+    },
+    {
+     "bonus": true,
+     "chance": 0.03,
+     "item": "ironbark_greatsword",
+     "pieces": "1"
+    },
+    {
+     "bonus": true,
+     "chance": 0.015,
+     "item": "capshell_buckler",
+     "pieces": "1"
+    },
+    {
+     "bonus": true,
+     "chance": 0.1,
+     "item": "gilded_grit",
+     "pieces": "1"
+    },
+    {
+     "bonus": true,
+     "chance": 0.1,
+     "item": "lucent_thread",
+     "pieces": "1"
+    },
+    {
+     "bonus": true,
+     "chance": 0.015,
+     "item": "crownspring_boots",
+     "pieces": "1"
+    },
+    {
+     "bonus": true,
+     "chance": 0.005,
+     "item": "lumenroot_staff",
+     "pieces": "1"
+    }
+   ],
+   "form": {
+    "atk_max": 41,
+    "atk_min": 33,
+    "base_exp": 245,
+    "defense": 7,
+    "job_exp": 161,
+    "level": 18,
+    "max_hp": 960,
+    "name": "Elite Dusk Dewdrop Slime"
+   },
+   "traits": [
+    "armored",
+    "swift"
+   ],
+   "zones": [
+    {
+     "chance": 0.02,
+     "map": "dewleaf_verge",
+     "monsters": [
+      "dusk_dewdrop_slime"
+     ],
+     "zone": "Ruins Beyond"
+    },
+    {
+     "chance": 0.02,
+     "map": "dewleaf_verge",
+     "monsters": [
+      "dusk_dewdrop_slime"
+     ],
+     "zone": "Tumbled Arch Walk"
+    }
+   ]
+  },
+  "hp": 320,
+  "id": "dusk_dewdrop_slime",
+  "job_exp": 46,
+  "level": 15,
+  "mdef": 10,
+  "mvp": false,
+  "name": "Dusk Dewdrop Slime",
+  "race": "Formless",
+  "size": "Small",
+  "sprite": "img/monsters/dusk_dewdrop_slime.png",
+  "stats": {
+   "agi": 12,
+   "dex": 24,
+   "int": 6,
+   "luk": 10,
+   "str": 10,
+   "vit": 8
+  },
+  "summoned_by": "",
+  "thumb": "img/monsters/dusk_dewdrop_slime.png",
+  "variant_of": "dewdrop_slime",
+  "where": [
+   {
+    "map": "dewleaf_verge",
+    "zones": [
+     {
+      "count": 10,
+      "zone": "Ruins Beyond"
+     },
+     {
+      "count": 10,
+      "zone": "Tumbled Arch Walk"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "atk": [
+   33,
+   42
+  ],
+  "base_exp": 105,
+  "boss": false,
+  "card": "bog_moss_slime_card",
+  "coins": 0,
+  "def": 6,
+  "drops": [
+   {
+    "chance": 0.6,
+    "item": "moss_tuft",
+    "pieces": "1"
+   },
+   {
+    "chance": 0.4,
+    "item": "glimmer_gel",
+    "pieces": "1"
+   },
+   {
+    "chance": 0.12,
+    "item": "red_herb",
+    "pieces": "1"
+   },
+   {
+    "chance": 0.06,
+    "item": "dewbell_tonic",
+    "pieces": "1"
+   },
+   {
+    "chance": 0.02,
+    "item": "clover_sprig",
+    "pieces": "1"
+   },
+   {
+    "chance": 0.015,
+    "item": "fieldrunner_boots",
+    "pieces": "1"
+   },
+   {
+    "chance": 0.012,
+    "item": "oakplank_buckler",
+    "pieces": "1"
+   },
+   {
+    "chance": 0.01,
+    "item": "riverstone_mace",
+    "pieces": "1"
+   },
+   {
+    "chance": 0.04,
+    "item": "wayfeather",
+    "pieces": "1"
+   },
+   {
+    "chance": 0.2,
+    "item": "bog_fibre",
+    "pieces": "1"
+   },
+   {
+    "chance": 0.05,
+    "item": "bog_resin",
+    "pieces": "1"
+   },
+   {
+    "chance": 0.0005,
+    "item": "bog_moss_slime_card",
+    "pieces": "1"
+   },
+   {
+    "chance": 0.004,
+    "item": "silverfen_bow",
+    "pieces": "1"
+   },
+   {
+    "chance": 0.004,
+    "item": "swiftfern_greatsword",
+    "pieces": "1"
+   },
+   {
+    "chance": 0.003,
+    "item": "yarrowchert_dagger",
+    "pieces": "1"
+   },
+   {
+    "chance": 0.0025,
+    "item": "acornchalk_mace",
+    "pieces": "1"
+   }
+  ],
+  "element": "Earth",
+  "element_level": 1,
+  "elite": {
+   "drops": [
+    {
+     "chance": 0.6,
+     "item": "moss_tuft",
+     "pieces": "1"
+    },
+    {
+     "chance": 0.4,
+     "item": "glimmer_gel",
+     "pieces": "1"
+    },
+    {
+     "chance": 0.12,
+     "item": "red_herb",
+     "pieces": "1"
+    },
+    {
+     "chance": 0.06,
+     "item": "dewbell_tonic",
+     "pieces": "1"
+    },
+    {
+     "chance": 0.05,
+     "item": "clover_sprig",
+     "pieces": "1"
+    },
+    {
+     "chance": 0.0375,
+     "item": "fieldrunner_boots",
+     "pieces": "1"
+    },
+    {
+     "chance": 0.03,
+     "item": "oakplank_buckler",
+     "pieces": "1"
+    },
+    {
+     "chance": 0.025,
+     "item": "riverstone_mace",
+     "pieces": "1"
+    },
+    {
+     "chance": 0.04,
+     "item": "wayfeather",
+     "pieces": "1"
+    },
+    {
+     "chance": 0.2,
+     "item": "bog_fibre",
+     "pieces": "1"
+    },
+    {
+     "chance": 0.05,
+     "item": "bog_resin",
+     "pieces": "1"
+    },
+    {
+     "chance": 0.0015,
+     "item": "bog_moss_slime_card",
+     "pieces": "1"
+    },
+    {
+     "chance": 0.01,
+     "item": "silverfen_bow",
+     "pieces": "1"
+    },
+    {
+     "chance": 0.01,
+     "item": "swiftfern_greatsword",
+     "pieces": "1"
+    },
+    {
+     "chance": 0.0075,
+     "item": "yarrowchert_dagger",
+     "pieces": "1"
+    },
+    {
+     "chance": 0.00625,
+     "item": "acornchalk_mace",
+     "pieces": "1"
+    },
+    {
+     "bonus": true,
+     "chance": 1.0,
+     "item": "crownstone",
+     "pieces": "1"
+    },
+    {
+     "bonus": true,
+     "chance": 0.6,
+     "item": "red_herb",
+     "pieces": "1"
+    },
+    {
+     "bonus": true,
+     "chance": 0.05,
+     "item": "dewdrop_charm",
+     "pieces": "1"
+    },
+    {
+     "bonus": true,
+     "chance": 0.04,
+     "item": "capshell_helm",
+     "pieces": "1"
+    },
+    {
+     "bonus": true,
+     "chance": 0.03,
+     "item": "ironbark_greatsword",
+     "pieces": "1"
+    },
+    {
+     "bonus": true,
+     "chance": 0.015,
+     "item": "capshell_buckler",
+     "pieces": "1"
+    },
+    {
+     "bonus": true,
+     "chance": 0.1,
+     "item": "gilded_grit",
+     "pieces": "1"
+    },
+    {
+     "bonus": true,
+     "chance": 0.1,
+     "item": "lucent_thread",
+     "pieces": "1"
+    },
+    {
+     "bonus": true,
+     "chance": 0.015,
+     "item": "crownspring_boots",
+     "pieces": "1"
+    },
+    {
+     "bonus": true,
+     "chance": 0.005,
+     "item": "lumenroot_staff",
+     "pieces": "1"
+    }
+   ],
+   "form": {
+    "atk_max": 53,
+    "atk_min": 41,
+    "base_exp": 368,
+    "defense": 11,
+    "job_exp": 238,
+    "level": 22,
+    "max_hp": 1440,
+    "name": "Elite Bog Moss Slime"
+   },
+   "traits": [
+    "armored",
+    "swift",
+    "sporeburst"
+   ],
+   "zones": [
+    {
+     "chance": 0.02,
+     "map": "dewleaf_verge",
+     "monsters": [
+      "bog_moss_slime"
+     ],
+     "zone": "Outer Glimmer Shore"
+    },
+    {
+     "chance": 0.02,
+     "map": "dewleaf_verge",
+     "monsters": [
+      "bog_moss_slime",
+      "gloom_sporecap"
+     ],
+     "zone": "Reedshade Inlet"
+    },
+    {
+     "chance": 0.02,
+     "map": "dewleaf_verge",
+     "monsters": [
+      "gloom_sporecap",
+      "bog_moss_slime"
+     ],
+     "zone": "Violetbloom Clearing"
+    }
+   ]
+  },
+  "hp": 480,
+  "id": "bog_moss_slime",
+  "job_exp": 68,
+  "level": 19,
+  "mdef": 8,
+  "mvp": false,
+  "name": "Bog Moss Slime",
+  "race": "Plant",
+  "size": "Small",
+  "sprite": "img/monsters/bog_moss_slime.png",
+  "stats": {
+   "agi": 14,
+   "dex": 30,
+   "int": 4,
+   "luk": 8,
+   "str": 16,
+   "vit": 14
+  },
+  "summoned_by": "",
+  "thumb": "img/monsters/bog_moss_slime.png",
+  "variant_of": "moss_slime",
+  "where": [
+   {
+    "map": "dewleaf_verge",
+    "zones": [
+     {
+      "count": 13,
+      "zone": "Outer Glimmer Shore"
+     },
+     {
+      "count": 5,
+      "zone": "Reedshade Inlet"
+     },
+     {
+      "count": 5,
+      "zone": "Violetbloom Clearing"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "atk": [
+   40,
+   51
+  ],
+  "base_exp": 150,
+  "boss": false,
+  "card": "gloom_sporecap_card",
+  "coins": 0,
+  "def": 4,
+  "drops": [
+   {
+    "chance": 0.6,
+    "item": "spore_puff",
+    "pieces": "1"
+   },
+   {
+    "chance": 0.45,
+    "item": "sporecap_shard",
+    "pieces": "1"
+   },
+   {
+    "chance": 0.05,
+    "item": "heartbloom",
+    "pieces": "1"
+   },
+   {
+    "chance": 0.15,
+    "item": "red_herb",
+    "pieces": "1"
+   },
+   {
+    "chance": 0.025,
+    "item": "mosshide_vest",
+    "pieces": "1"
+   },
+   {
+    "chance": 0.025,
+    "item": "wayfarer_cape",
+    "pieces": "1"
+   },
+   {
+    "chance": 0.015,
+    "item": "quilted_jerkin",
+    "pieces": "1"
+   },
+   {
+    "chance": 0.012,
+    "item": "ashwood_shortsword",
+    "pieces": "1"
+   },
+   {
+    "chance": 0.006,
+    "item": "capshell_helm",
+    "pieces": "1"
+   },
+   {
+    "chance": 0.015,
+    "item": "homeward_feather",
+    "pieces": "1"
+   },
+   {
+    "chance": 0.2,
+    "item": "gloom_powder",
+    "pieces": "1"
+   },
+   {
+    "chance": 0.05,
+    "item": "gloom_wax",
+    "pieces": "1"
+   },
+   {
+    "chance": 0.0005,
+    "item": "gloom_sporecap_card",
+    "pieces": "1"
+   },
+   {
+    "chance": 0.004,
+    "item": "glintroot_sword",
+    "pieces": "1"
+   },
+   {
+    "chance": 0.004,
+    "item": "sunvein_mace",
+    "pieces": "1"
+   },
+   {
+    "chance": 0.004,
+    "item": "glowcap_staff",
+    "pieces": "1"
+   },
+   {
+    "chance": 0.004,
+    "item": "cinderoak_greatsword",
+    "pieces": "1"
+   }
+  ],
+  "element": "Poison",
+  "element_level": 1,
+  "elite": {
+   "drops": [
+    {
+     "chance": 0.6,
+     "item": "spore_puff",
+     "pieces": "1"
+    },
+    {
+     "chance": 0.45,
+     "item": "sporecap_shard",
+     "pieces": "1"
+    },
+    {
+     "chance": 0.05,
+     "item": "heartbloom",
+     "pieces": "1"
+    },
+    {
+     "chance": 0.15,
+     "item": "red_herb",
+     "pieces": "1"
+    },
+    {
+     "chance": 0.0625,
+     "item": "mosshide_vest",
+     "pieces": "1"
+    },
+    {
+     "chance": 0.0625,
+     "item": "wayfarer_cape",
+     "pieces": "1"
+    },
+    {
+     "chance": 0.0375,
+     "item": "quilted_jerkin",
+     "pieces": "1"
+    },
+    {
+     "chance": 0.03,
+     "item": "ashwood_shortsword",
+     "pieces": "1"
+    },
+    {
+     "chance": 0.015,
+     "item": "capshell_helm",
+     "pieces": "1"
+    },
+    {
+     "chance": 0.015,
+     "item": "homeward_feather",
+     "pieces": "1"
+    },
+    {
+     "chance": 0.2,
+     "item": "gloom_powder",
+     "pieces": "1"
+    },
+    {
+     "chance": 0.05,
+     "item": "gloom_wax",
+     "pieces": "1"
+    },
+    {
+     "chance": 0.0015,
+     "item": "gloom_sporecap_card",
+     "pieces": "1"
+    },
+    {
+     "chance": 0.01,
+     "item": "glintroot_sword",
+     "pieces": "1"
+    },
+    {
+     "chance": 0.01,
+     "item": "sunvein_mace",
+     "pieces": "1"
+    },
+    {
+     "chance": 0.01,
+     "item": "glowcap_staff",
+     "pieces": "1"
+    },
+    {
+     "chance": 0.01,
+     "item": "cinderoak_greatsword",
+     "pieces": "1"
+    },
+    {
+     "bonus": true,
+     "chance": 1.0,
+     "item": "crownstone",
+     "pieces": "1"
+    },
+    {
+     "bonus": true,
+     "chance": 0.6,
+     "item": "red_herb",
+     "pieces": "1"
+    },
+    {
+     "bonus": true,
+     "chance": 0.05,
+     "item": "dewdrop_charm",
+     "pieces": "1"
+    },
+    {
+     "bonus": true,
+     "chance": 0.04,
+     "item": "capshell_helm",
+     "pieces": "1"
+    },
+    {
+     "bonus": true,
+     "chance": 0.03,
+     "item": "ironbark_greatsword",
+     "pieces": "1"
+    },
+    {
+     "bonus": true,
+     "chance": 0.015,
+     "item": "capshell_buckler",
+     "pieces": "1"
+    },
+    {
+     "bonus": true,
+     "chance": 0.1,
+     "item": "gilded_grit",
+     "pieces": "1"
+    },
+    {
+     "bonus": true,
+     "chance": 0.1,
+     "item": "lucent_thread",
+     "pieces": "1"
+    },
+    {
+     "bonus": true,
+     "chance": 0.015,
+     "item": "crownspring_boots",
+     "pieces": "1"
+    },
+    {
+     "bonus": true,
+     "chance": 0.005,
+     "item": "lumenroot_staff",
+     "pieces": "1"
+    }
+   ],
+   "form": {
+    "atk_max": 64,
+    "atk_min": 50,
+    "base_exp": 525,
+    "defense": 9,
+    "job_exp": 343,
+    "level": 26,
+    "max_hp": 2100,
+    "name": "Elite Gloom Sporecap"
+   },
+   "traits": [
+    "armored",
+    "swift",
+    "sporeburst"
+   ],
+   "zones": [
+    {
+     "chance": 0.02,
+     "map": "dewleaf_verge",
+     "monsters": [
+      "bog_moss_slime",
+      "gloom_sporecap"
+     ],
+     "zone": "Reedshade Inlet"
+    },
+    {
+     "chance": 0.02,
+     "map": "dewleaf_verge",
+     "monsters": [
+      "gloom_sporecap"
+     ],
+     "zone": "West Grove Rim"
+    },
+    {
+     "chance": 0.02,
+     "map": "dewleaf_verge",
+     "monsters": [
+      "gloom_sporecap",
+      "bog_moss_slime"
+     ],
+     "zone": "Violetbloom Clearing"
+    }
+   ]
+  },
+  "hp": 700,
+  "id": "gloom_sporecap",
+  "job_exp": 98,
+  "level": 23,
+  "mdef": 16,
+  "mvp": false,
+  "name": "Gloom Sporecap",
+  "race": "Plant",
+  "size": "Medium",
+  "sprite": "img/monsters/gloom_sporecap.png",
+  "stats": {
+   "agi": 20,
+   "dex": 40,
+   "int": 14,
+   "luk": 10,
+   "str": 8,
+   "vit": 12
+  },
+  "summoned_by": "",
+  "thumb": "img/monsters/gloom_sporecap.png",
+  "variant_of": "sporecap",
+  "where": [
+   {
+    "map": "dewleaf_verge",
+    "zones": [
+     {
+      "count": 13,
+      "zone": "West Grove Rim"
+     },
+     {
+      "count": 5,
+      "zone": "Reedshade Inlet"
+     },
+     {
+      "count": 5,
+      "zone": "Violetbloom Clearing"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "atk": [
+   9,
+   12
+  ],
+  "base_exp": 6,
+  "boss": false,
+  "card": "sporeling_card",
+  "coins": 0,
+  "def": 0,
+  "drops": [
+   {
+    "chance": 0.25,
+    "item": "spore_puff",
+    "pieces": "1"
+   },
+   {
+    "chance": 0.05,
+    "item": "red_herb",
+    "pieces": "1"
+   }
+  ],
+  "element": "Poison",
+  "element_level": 1,
+  "hp": 70,
+  "id": "sporeling",
+  "job_exp": 4,
+  "level": 4,
+  "mdef": 5,
+  "mvp": false,
+  "name": "Sporeling",
+  "race": "Plant",
+  "size": "Small",
+  "sprite": "img/monsters/sporeling.png",
+  "stats": {
+   "agi": 5,
+   "dex": 12,
+   "int": 1,
+   "luk": 3,
+   "str": 1,
+   "vit": 3
+  },
+  "summoned_by": "elder_sporecap",
+  "thumb": "img/monsters/sporeling.png",
+  "variant_of": "",
+  "where": [
+   {
+    "map": "dewleaf_fields",
+    "zones": [
+     {
+      "count": 1,
+      "zone": "Sporecap Grove"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "atk": [
+   24,
+   32
+  ],
+  "base_exp": 220,
+  "boss": false,
+  "card": "gildmaw_card",
+  "coins": 0,
+  "def": 6,
+  "drops": [
+   {
+    "chance": 1.0,
+    "item": "crownstone",
+    "pieces": "1"
+   },
+   {
+    "chance": 0.5,
+    "item": "crownstone",
+    "pieces": "1"
+   },
+   {
+    "chance": 0.6,
+    "item": "heartroot_tonic",
+    "pieces": "1"
+   },
+   {
+    "chance": 0.4,
+    "item": "deep_focus_tonic",
+    "pieces": "1"
+   },
+   {
+    "chance": 0.08,
+    "item": "dewdrop_charm",
+    "pieces": "1"
+   },
+   {
+    "chance": 0.08,
+    "item": "capshell_helm",
+    "pieces": "1"
+   },
+   {
+    "chance": 0.06,
+    "item": "ironbark_greatsword",
+    "pieces": "1"
+   },
+   {
+    "chance": 0.06,
+    "item": "sporecrest_helm",
+    "pieces": "1"
+   },
+   {
+    "chance": 0.06,
+    "item": "duskpetal_hood",
+    "pieces": "1"
+   },
+   {
+    "chance": 0.03,
+    "item": "capshell_buckler",
+    "pieces": "1"
+   },
+   {
+    "chance": 0.03,
+    "item": "crownspring_boots",
+    "pieces": "1"
+   },
+   {
+    "chance": 0.0005,
+    "item": "gildmaw_card",
+    "pieces": "1"
+   },
+   {
+    "chance": 0.004,
+    "item": "willowmoss_staff",
+    "pieces": "1"
+   },
+   {
+    "chance": 0.004,
+    "item": "ashbough_greatsword",
+    "pieces": "1"
+   }
+  ],
+  "element": "Neutral",
+  "element_level": 1,
+  "hp": 900,
+  "id": "gildmaw",
+  "job_exp": 150,
+  "level": 12,
+  "mdef": 8,
+  "mvp": false,
+  "name": "Gildmaw",
+  "race": "Formless",
+  "size": "Medium",
+  "sprite": "img/monsters/gildmaw.png",
+  "stats": {
+   "agi": 8,
+   "dex": 18,
+   "int": 2,
+   "luk": 20,
+   "str": 12,
+   "vit": 14
+  },
+  "summoned_by": "",
+  "thumb": "img/monsters/gildmaw.png",
+  "variant_of": "",
+  "where": []
+ }
+]

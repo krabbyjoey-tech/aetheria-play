@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>EMBERWISP · Database 2.0.0</title>
+<meta name="description" content="The item and monster database of the live game">
+<meta name="color-scheme" content="light dark">
+<link rel="icon" href="assets/icon.png">
+<link rel="stylesheet" href="assets/db.css">
+<script>try{var t=localStorage.getItem("db-theme");if(t)document.documentElement.dataset.theme=t;}catch(e){}</script>
+</head>
+<body>
+<header class="top">
+ <div class="bar">
+  <a class="brand" href="index.html"><span class="name">EMBERWISP</span><span class="ver" title="Version">v2.0.0</span></a>
+  <div class="tools">
+   <button type="button" class="btn" id="lang-btn" lang="th">ภาษาไทย</button>
+   <button type="button" class="btn icon" id="theme-btn" aria-label="Theme" title="Theme"><svg viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><circle cx="8" cy="8" r="6.5" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M8 1.5a6.5 6.5 0 0 1 0 13z" fill="currentColor"/></svg></button>
+  </div>
+ </div>
+ <nav class="nav"><a href="items.html"><span data-i18n="nav.items">Items</span></a><a href="monsters.html"><span data-i18n="nav.monsters">Monsters</span></a><a href="cards.html"><span data-i18n="nav.cards">Cards</span></a><a href="maps.html"><span data-i18n="nav.maps">Maps</span></a></nav>
+</header>
+<main id="top">
+
+<section class="hero">
+ <img class="px appicon" src="assets/icon.png" width="128" height="128" alt=""><h1>EMBERWISP</h1>
+ <p class="lead"><span data-i18n="site.tagline">The item and monster database of the live game</span> · <span data-i18n="ui.version">Version</span> <strong>2.0.0</strong></p>
+ <form class="search-all" action="items.html" method="get" id="search-all">
+  <input type="search" name="q" aria-label="Search" data-i18n-ph="ui.search_all_ph" placeholder="Search items and monsters…">
+  <button class="btn primary" type="submit"><span data-i18n="ui.search">Search</span></button>
+ </form>
+ <p class="hint" id="search-all-hint"></p>
+</section>
+<section><h2><span data-i18n="ui.counts">In this version</span></h2><div class="tiles"><a class="tile" href="items.html"><span class="big">176</span><span data-i18n="nav.items">Items</span></a><a class="tile" href="monsters.html"><span class="big">20</span><span data-i18n="nav.monsters">Monsters</span></a><a class="tile" href="cards.html"><span class="big">20</span><span data-i18n="nav.cards">Cards</span></a><a class="tile" href="maps.html"><span class="big">7</span><span data-i18n="nav.maps">Maps</span></a></div></section>
+<section><h2><span data-i18n="h.boss">Boss</span></h2><ul class="plain"><li><a class="ref" href="monster/elder_sporecap.html"><img class="px" src="img/monsters/elder_sporecap.thumb.png" width="38" height="37" alt="" loading="lazy"><span class="nm">Elder Sporecap</span></a> <span class="flag boss"><span data-i18n="flag.field_boss">Field boss</span></span></li><li><a class="ref" href="monster/dewroot_regent.html"><img class="px" src="img/monsters/dewroot_regent.thumb.png" width="41" height="38" alt="" loading="lazy"><span class="nm">Dewroot Regent</span></a> <span class="flag boss"><span data-i18n="flag.mvp">MVP</span></span></li></ul></section>
+<section><h2><span data-i18n="h.rules">Drop rules</span></h2><ul class="rules"><li><span data-i18n="rule.one_piece">Every drop row gives exactly 1 piece; rows roll independently, so one kill can give several items.</span></li><li><span data-i18n="rule.no_coins">Monsters drop no coins. Coins come from selling loot, quests and the like.</span></li><li><span data-i18n="rule.cards" data-i18n-args='{&quot;normal&quot;: &quot;0.05%&quot;, &quot;boss&quot;: &quot;0.5%&quot;}'>Cards drop at 0.05%. A boss&#x27;s own card, and the card of each minion it calls (in the boss&#x27;s table), drop at 0.5%.</span></li><li><span data-i18n="rule.elite" data-i18n-args='{&quot;card&quot;: &quot;3&quot;, &quot;normal&quot;: &quot;0.05%&quot;, &quot;elite&quot;: &quot;0.15%&quot;, &quot;equip&quot;: &quot;2.5&quot;}'>An Elite kill rolls every card row at ×3 (0.05% → 0.15%) and every equipment row at ×2.5, plus the Elite bonus table.</span></li><li><span data-i18n="rule.rates">The world&#x27;s server rates multiply chances only (Drop for items, Card for cards), up to 100%, never the number of pieces.</span></li><li><span data-i18n="rule.rarity_on" data-i18n-args='{&quot;mvps&quot;: &quot;Dewroot Regent&quot;}'>Rarity: monster-dropped equipment rolls its rarity and options, up to Epic from normal monsters and Elites, Legendary only from the designated MVPs: Dewroot Regent. Shop items never roll.</span></li><li><span data-i18n="rule.hidden">Only what the live game can reach is listed: maps no portal leads to, their monsters, and items nothing gives yet stay out until they join the game.</span></li></ul></section>
+<section id="data"><h2><span data-i18n="ui.data_files">Data files (JSON)</span></h2>
+ <ul class="files">
+  <li><a href="data/items.json">data/items.json</a></li>
+  <li><a href="data/monsters.json">data/monsters.json</a></li>
+  <li><a href="data/cards.json">data/cards.json</a></li>
+  <li><a href="data/maps.json">data/maps.json</a></li>
+  <li><a href="data/meta.json">data/meta.json</a></li>
+ </ul>
+</section>
+
+</main>
+<footer class="foot">
+ <p><strong>EMBERWISP</strong> v2.0.0 · <span data-i18n="ui.generated">Built from the game&#x27;s own data files.</span> · <a href="index.html#data"><span data-i18n="ui.data_files">Data files (JSON)</span></a></p>
+</footer>
+<script src="assets/i18n.js"></script>
+<script src="assets/db.js"></script>
+</body>
+</html>

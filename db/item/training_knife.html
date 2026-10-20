@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Training Knife · EMBERWISP</title>
+<meta name="description" content="Training Knife: A dull practice blade from the guild&#x27;s rack. Every journey starts with one.">
+<meta name="color-scheme" content="light dark">
+<link rel="icon" href="../assets/icon.png">
+<link rel="stylesheet" href="../assets/db.css">
+<script>try{var t=localStorage.getItem("db-theme");if(t)document.documentElement.dataset.theme=t;}catch(e){}</script>
+</head>
+<body>
+<header class="top">
+ <div class="bar">
+  <a class="brand" href="../index.html"><span class="name">EMBERWISP</span><span class="ver" title="Version">v2.0.0</span></a>
+  <div class="tools">
+   <button type="button" class="btn" id="lang-btn" lang="th">ภาษาไทย</button>
+   <button type="button" class="btn icon" id="theme-btn" aria-label="Theme" title="Theme"><svg viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><circle cx="8" cy="8" r="6.5" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M8 1.5a6.5 6.5 0 0 1 0 13z" fill="currentColor"/></svg></button>
+  </div>
+ </div>
+ <nav class="nav"><a href="../items.html" aria-current="page"><span data-i18n="nav.items">Items</span></a><a href="../monsters.html"><span data-i18n="nav.monsters">Monsters</span></a><a href="../cards.html"><span data-i18n="nav.cards">Cards</span></a><a href="../maps.html"><span data-i18n="nav.maps">Maps</span></a></nav>
+</header>
+<main id="top">
+
+<article class="detail">
+ <div class="head">
+  <div class="art"><img class="px big" src="../img/items/training_knife.png" width="64" height="64" alt="" loading="lazy"></div>
+  <div><h1 class="nm r0">Training Knife</h1>
+   <p><span class="badge r2"><span data-i18n="rar.drops.2">Drops as Normal–Epic</span></span> <span class="badge r0"><span data-i18n="rar.shop">Shop: Normal</span></span> </p>
+   <p class="desc">A dull practice blade from the guild&#x27;s rack. Every journey starts with one.</p>
+   <p class="muted small"><span data-i18n="st.id">id</span>: <code>training_knife</code></p>
+  </div>
+ </div>
+ <section><h2><span data-i18n="h.stats">Stats</span></h2><dl class="kv"><dt><span data-i18n="st.type">Type</span></dt><dd><span data-i18n="slot.weapon">Arm Right</span> · Dagger</dd><dt><span data-i18n="st.req_level">Required level</span></dt><dd>1</dd><dt><span data-i18n="st.classes">Classes</span></dt><dd><span data-i18n="ui.everyone">Every class</span></dd><dt><span data-i18n="st.weapon_level">Weapon level</span></dt><dd>1</dd><dt><span data-i18n="st.bonuses">Bonuses</span></dt><dd>ATK +17</dd><dt><span data-i18n="st.option_families">Random options</span></dt><dd><span data-i18n="fam.Power">Power</span></dd><dt><span data-i18n="st.weight">Weight</span></dt><dd>30</dd><dt><span data-i18n="st.sells_for">Sells for</span></dt><dd>25 <span data-i18n="st.coins_unit">coins</span></dd></dl></section>
+ <section><h2><span data-i18n="h.card_slots">Card slots</span></h2><p class="muted"><span data-i18n="note.no_slots">No card slots.</span></p></section>
+ <section><h2><span data-i18n="h.dropped_by">Dropped by</span></h2><div class="scroll"><table class="list">
+<thead><tr><th><span data-i18n="col.monster">Monster</span></th><th class="num"><span data-i18n="col.level">Lv</span></th><th class="num"><span data-i18n="col.chance">Chance</span></th><th class="num"><span data-i18n="col.pieces">Pieces</span></th></tr></thead>
+<tbody><tr><td class="name"><a class="ref" href="../monster/dewdrop_slime.html"><img class="px" src="../img/monsters/dewdrop_slime.png" width="25" height="23" alt="" loading="lazy"><span class="nm">Dewdrop Slime</span></a> </td><td class="num">1</td><td class="num" data-v="0.005" title="about 1 in 200">0.5%</td><td class="num">1</td></tr></tbody></table></div><p class="note"><span data-i18n="note.drop">Base chance per kill. Every drop row gives exactly 1 piece, and rows roll on their own. The world&#x27;s Drop rate multiplies the chance only (cards use the Card rate), never the number of pieces; at most 100%.</span></p></section>
+ <section><h2><span data-i18n="h.sold_at">Sold at</span></h2><div class="scroll"><table class="list"><thead><tr><th><span data-i18n="col.shop">Shop</span></th><th><span data-i18n="col.keeper">Keeper</span></th><th><span data-i18n="col.where">Where</span></th><th class="num"><span data-i18n="col.price">Price</span></th></tr></thead>
+<tbody><tr><td>Weapons &amp; Armor</td><td>Hadrik</td><td>Merchant Row, <a href="../map/brightvale.html">Brightvale</a></td><td class="num">50 <span data-i18n="st.coins_unit">coins</span></td></tr></tbody></table></div><p class="note"><span data-i18n="note.prices">Shops sell at twice the item&#x27;s sell price and buy at its sell price (the world&#x27;s Coins rate can raise what they pay, never above the shop&#x27;s own price).</span></p></section>
+ 
+ <section><h2><span data-i18n="h.other_sources">Other ways to get it</span></h2><ul class="plain"><li><span data-i18n="src.starter">Every new character starts wearing it.</span></li></ul></section>
+</article>
+
+</main>
+<footer class="foot">
+ <p><strong>EMBERWISP</strong> v2.0.0 · <span data-i18n="ui.generated">Built from the game&#x27;s own data files.</span> · <a href="../index.html#data"><span data-i18n="ui.data_files">Data files (JSON)</span></a></p>
+</footer>
+<script src="../assets/i18n.js"></script>
+<script src="../assets/db.js"></script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+{
+ "counts": {
+  "cards": 20,
+  "items": 176,
+  "maps": 7,
+  "monsters": 20
+ },
+ "rules": {
+  "card_chances": {
+   "boss": [
+    0.005
+   ],
+   "normal": [
+    0.0005
+   ]
+  },
+  "elite_card_mult": 3.0,
+  "elite_equip_mult": 2.5,
+  "monster_coins": 0,
+  "pieces_per_row": [
+   "1"
+  ],
+  "random_options": {
+   "live": true,
+   "mvps": [
+    "dewroot_regent"
+   ]
+  }
+ },
+ "title": "EMBERWISP",
+ "version": "2.0.0"
+}

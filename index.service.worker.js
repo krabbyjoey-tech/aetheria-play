@@ -4,7 +4,7 @@
 // Incrementing CACHE_VERSION will kick off the install event and force
 // previously cached resources to be updated from the network.
 /** @type {string} */
-const CACHE_VERSION = '1792414917|10956868';
+const CACHE_VERSION = '1792465121|12683454';
 /** @type {string} */
 const CACHE_PREFIX = 'Aetheria-sw-cache-';
 const CACHE_NAME = CACHE_PREFIX + CACHE_VERSION;
@@ -14,10 +14,10 @@ const OFFLINE_URL = 'index.offline.html';
 const ENSURE_CROSSORIGIN_ISOLATION_HEADERS = false;
 // Files that will be cached on load.
 /** @type {string[]} */
-const CACHED_FILES = ["index.html","index.20261019130200.js","index.offline.html","index.icon.png","index.apple-touch-icon.png","index.20261019130200.audio.worklet.js"];
+const CACHED_FILES = ["index.html","index.20261020025843.js","index.offline.html","index.icon.png","index.apple-touch-icon.png","index.20261020025843.audio.worklet.js"];
 // Files that we might not want the user to preload, and will only be cached on first load.
 /** @type {string[]} */
-const CACHABLE_FILES = ["index.20261019130200.wasm","index.20261019130200.pck","music/boss_elder.ogg","music/brightvale_day.ogg","music/brightvale_night.ogg","music/dewleaf_fields.ogg","music/sporecap_grove.ogg"];
+const CACHABLE_FILES = ["index.20261020025843.wasm","index.20261020025843.pck.gz","music/boss_elder.ogg","music/bramblebrook_woods.ogg","music/brightvale_day.ogg","music/brightvale_night.ogg","music/chimewell_depths.ogg","music/dewleaf_fields.ogg","music/dewleaf_verge.ogg","music/larkglass_reach.ogg","music/rootglow_f1.ogg","music/rootglow_f2.ogg","music/rootglow_f3.ogg","music/sporecap_grove.ogg","packs/rootglow.20261020025843.pck","packs/verge.20261020025843.pck","packs/woods.20261020025843.pck","art/02_Brightvale_Town_Loading.webp","art/03_Dewleaf_Fields_Loading.webp","art/04_Dewleaf_Crossing_Loading.webp","art/05_Rootglow_Hollow_F1_Loading.webp","art/06_Rootglow_Hollow_F2_Loading.webp","art/07_Rootglow_Hollow_F3_Loading.webp","art/08_Bramblebrook_Woods_Loading.webp","art/09_Dewleaf_Verge_Loading.webp","art/10_Reedglass_Town_Loading.webp","art/11_Goldreed_Plains_Loading.webp","art/12_Brookglass_Banks_Loading.webp","art/13_Sunfacet_Rise_Loading.webp","art/14_Larkglass_Crown_Loading.webp","art/15_Chimewell_Depths_F1_Loading.webp","art/16_Chimewell_Depths_F2_Loading.webp","art/17_Chimewell_Depths_F3_Loading.webp"];
 const FULL_CACHE = CACHED_FILES.concat(CACHABLE_FILES);
 
 self.addEventListener('install', (event) => {

@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Brightvale · EMBERWISP</title>
+<meta name="description" content="The item and monster database of the live game">
+<meta name="color-scheme" content="light dark">
+<link rel="icon" href="../assets/icon.png">
+<link rel="stylesheet" href="../assets/db.css">
+<script>try{var t=localStorage.getItem("db-theme");if(t)document.documentElement.dataset.theme=t;}catch(e){}</script>
+</head>
+<body>
+<header class="top">
+ <div class="bar">
+  <a class="brand" href="../index.html"><span class="name">EMBERWISP</span><span class="ver" title="Version">v2.0.0</span></a>
+  <div class="tools">
+   <button type="button" class="btn" id="lang-btn" lang="th">ภาษาไทย</button>
+   <button type="button" class="btn icon" id="theme-btn" aria-label="Theme" title="Theme"><svg viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><circle cx="8" cy="8" r="6.5" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M8 1.5a6.5 6.5 0 0 1 0 13z" fill="currentColor"/></svg></button>
+  </div>
+ </div>
+ <nav class="nav"><a href="../items.html"><span data-i18n="nav.items">Items</span></a><a href="../monsters.html"><span data-i18n="nav.monsters">Monsters</span></a><a href="../cards.html"><span data-i18n="nav.cards">Cards</span></a><a href="../maps.html" aria-current="page"><span data-i18n="nav.maps">Maps</span></a></nav>
+</header>
+<main id="top">
+
+<article class="detail">
+ <h1>Brightvale</h1>
+ <p><span class="flag"><span data-i18n="map.town">Town</span></span> <span data-i18n="note.safe">Safe zone: no monsters attack here.</span></p>
+ <section><h2><span data-i18n="h.portals">Leads to</span></h2><p><a href="../map/dewleaf_fields.html">Dewleaf Fields</a></p></section>
+ 
+ 
+ <section><h2><span data-i18n="h.shops">Shops</span></h2><ul class="plain"><li><b>General Store</b> · Wren · Merchant Row <span class="muted">(8)</span></li><li><b>Weapons &amp; Armor</b> · Hadrik · Merchant Row <span class="muted">(46)</span></li><li><b>Arrows</b> · Saffi Brackwood ·  <span class="muted">(8)</span></li></ul></section>
+ <section><h2><span data-i18n="h.dummies">Training dummies</span></h2><p>Training Ground ×3</p><p class="muted"><span data-i18n="note.dummies">They stand still, never fight back and count your damage.</span></p></section>
+ <section><h2><span data-i18n="col.zones">Zones</span></h2><p class="muted">Upper Town, Central Plaza, Market Square, Training Ground, Merchant Row, Riverside, Timber Lane, Stone Row, Warp Court, South Gate, East Road, Guild Hall, Mage Tower, Arcane Curios, Brightvale Inn, Storage, Apothecary, General Store, Forge</p></section>
+</article>
+
+</main>
+<footer class="foot">
+ <p><strong>EMBERWISP</strong> v2.0.0 · <span data-i18n="ui.generated">Built from the game&#x27;s own data files.</span> · <a href="../index.html#data"><span data-i18n="ui.data_files">Data files (JSON)</span></a></p>
+</footer>
+<script src="../assets/i18n.js"></script>
+<script src="../assets/db.js"></script>
+</body>
+</html>

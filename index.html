@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
-		<title>Aetheria</title>
+		<title>EMBERWISP</title>
 		<style>
 html, body, #canvas {
 	margin: 0;
@@ -82,7 +82,7 @@ body {
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black">
-<meta name="apple-mobile-web-app-title" content="Aetheria">
+<meta name="apple-mobile-web-app-title" content="EMBERWISP">
 <meta name="theme-color" content="#1b2033">
 	<!-- TEMPORARY diagnostics (the freeze after leaving town, 2026-10-17). The web page and app builds
      inject this into <head> (tools/build_pixel_web_page.sh, tools/build_pwa.sh). Remove it once
@@ -583,6 +583,32 @@ body {
 }());
 </script>
 
+<script>window.__aetheriaPackSuffix = ".20261020025843";</script>
+<script>
+(function () {
+	const PACK = /(^|\/)index\.20261020025843\.pck(\?|$)/;
+	const nativeFetch = window.fetch.bind(window);
+	window.fetch = async function (input, init) {
+		const url = typeof input === 'string' ? input : (input && input.url) || '';
+		if (!PACK.test(url)) return nativeFetch(input, init);
+		const res = await nativeFetch(url.replace(/\.pck(\?|$)/, '.pck.gz$1'), init);
+		if (!res.ok || !res.body) return res;
+		const reader = res.body.getReader();
+		const first = await reader.read();
+		const head = first.done ? new Uint8Array(0) : first.value;
+		const body = new ReadableStream({
+			start(c) { if (head.length) c.enqueue(head); if (first.done) c.close(); },
+			async pull(c) { const r = await reader.read(); if (r.done) c.close(); else c.enqueue(r.value); },
+		});
+		const gz = head.length > 1 && head[0] === 0x1f && head[1] === 0x8b;
+		if (gz && typeof DecompressionStream === 'undefined') {
+			throw new Error('This browser is too old to unpack the game. Update it, or use Chrome, Edge, Firefox or Safari 16.4+.');
+		}
+		return new Response(gz ? body.pipeThrough(new DecompressionStream('gzip')) : body,
+			{ status: 200, headers: { 'Content-Type': 'application/octet-stream' } });
+	};
+}());
+</script>
 </head>
 	<body>
 		<canvas id="canvas">
@@ -597,12 +623,12 @@ body {
 			<img id="status-splash" src="index.png" alt="">
 			<progress id="status-progress"></progress>
 			<div id="status-notice"></div>
-			<div id="aetheria-build" style="position:absolute;left:10px;bottom:8px;font:12px sans-serif;color:#7f88aa">v1.1.1 · build 20261019130200</div>
+			<div id="aetheria-build" style="position:absolute;left:10px;bottom:8px;font:12px sans-serif;color:#7f88aa">v2.0.0 · build 20261020025843</div>
 		</div>
 
-		<script src="index.20261019130200.js"></script>
+		<script src="index.20261020025843.js"></script>
 		<script>
-const GODOT_CONFIG = {"args":[],"canvasResizePolicy":2,"ensureCrossOriginIsolationHeaders":false,"executable":"index.20261019130200","experimentalVK":false,"fileSizes":{"index.20261019130200.pck":18382448,"index.20261019130200.wasm":35376909},"focusCanvas":true,"gdextensionLibs":[],"serviceWorker":"index.service.worker.js"};
+const GODOT_CONFIG = {"args":[],"canvasResizePolicy":2,"ensureCrossOriginIsolationHeaders":false,"executable":"index.20261020025843","experimentalVK":false,"fileSizes":{"index.20261020025843.pck":19496592,"index.20261020025843.wasm":35376909},"focusCanvas":true,"gdextensionLibs":[],"serviceWorker":"index.service.worker.js"};
 const GODOT_THREADS_ENABLED = false;
 const engine = new Engine(GODOT_CONFIG);
 
@@ -700,7 +726,7 @@ window.aetheriaStart = (function () {
 });
 
 (function () {
-	const BUILD = "20261019130200";
+	const BUILD = "20261020025843";
 	let started = false;
 	const go = () => { if (!started) { started = true; window.aetheriaStart(); } };
 	const timer = setTimeout(go, 2500);                // offline or slow: play the copy we have

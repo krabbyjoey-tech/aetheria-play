@@ -1,0 +1,189 @@
+[
+ {
+  "id": "brightvale",
+  "leads_to": [
+   "dewleaf_fields"
+  ],
+  "monsters": [],
+  "name": "Brightvale",
+  "shops": [
+   "general",
+   "arms",
+   "fletcher"
+  ],
+  "town": true,
+  "zones": [
+   "Upper Town",
+   "Central Plaza",
+   "Market Square",
+   "Training Ground",
+   "Merchant Row",
+   "Riverside",
+   "Timber Lane",
+   "Stone Row",
+   "Warp Court",
+   "South Gate",
+   "East Road",
+   "Guild Hall",
+   "Mage Tower",
+   "Arcane Curios",
+   "Brightvale Inn",
+   "Storage",
+   "Apothecary",
+   "General Store",
+   "Forge"
+  ]
+ },
+ {
+  "id": "dewleaf_fields",
+  "leads_to": [
+   "bramblebrook_woods",
+   "brightvale",
+   "dewleaf_verge",
+   "rootglow_hollow_f1"
+  ],
+  "monsters": [
+   "dewdrop_slime",
+   "moss_slime",
+   "sporeling",
+   "sporecap",
+   "elder_sporecap"
+  ],
+  "name": "Dewleaf Fields",
+  "shops": [],
+  "town": false,
+  "zones": [
+   "Dewleaf Crossing",
+   "Sunlit Meadow",
+   "Mossy Hollow",
+   "Wayfarer Camp",
+   "Old Ruins",
+   "Glimmer Lake",
+   "Sporecap Grove",
+   "North Fields",
+   "East Trail",
+   "Hollow Lookout",
+   "Ruin Camp",
+   "Lakeside Rest",
+   "Meadow Lookout",
+   "Old Shrine"
+  ]
+ },
+ {
+  "id": "rootglow_hollow_f1",
+  "leads_to": [
+   "dewleaf_fields",
+   "rootglow_hollow_f2"
+  ],
+  "monsters": [
+   "rootnib",
+   "dripfin"
+  ],
+  "name": "Rootglow Hollow — Rootfall Entry",
+  "shops": [],
+  "town": false,
+  "zones": [
+   "Rootgate Landing",
+   "Rootthread Loop",
+   "Ambercap Gallery",
+   "Dripstone Bank",
+   "Glowpool Bend",
+   "Waterfall Shelf"
+  ]
+ },
+ {
+  "id": "rootglow_hollow_f2",
+  "leads_to": [
+   "rootglow_hollow_f1",
+   "rootglow_hollow_f3"
+  ],
+  "monsters": [
+   "dripfin",
+   "hushcap"
+  ],
+  "name": "Rootglow Hollow — Hushwater Veins",
+  "shops": [],
+  "town": false,
+  "zones": [
+   "Driftroot Landing",
+   "Stillwater Loop",
+   "Quietcap Walk",
+   "Mufflecap Garden",
+   "Rootbridge Hall",
+   "Hushed Descent"
+  ]
+ },
+ {
+  "id": "rootglow_hollow_f3",
+  "leads_to": [
+   "rootglow_hollow_f2"
+  ],
+  "monsters": [
+   "wickmoth",
+   "rootmantle",
+   "dewroot_regent"
+  ],
+  "name": "Rootglow Hollow — Deepheart Bower",
+  "shops": [],
+  "town": false,
+  "zones": [
+   "Deepglow Landing",
+   "Wicklight Grove",
+   "Mantlefoot Hall",
+   "Rootmantle Loop",
+   "Lanternroot Walk",
+   "Regent Bower"
+  ]
+ },
+ {
+  "id": "bramblebrook_woods",
+  "leads_to": [
+   "dewleaf_fields",
+   "dewleaf_verge"
+  ],
+  "monsters": [
+   "bramblebun",
+   "reedbeak",
+   "tuftguard",
+   "gale_bramblebun",
+   "bellwisp"
+  ],
+  "name": "Bramblebrook Woods",
+  "shops": [],
+  "town": false,
+  "zones": [
+   "Brookentry Green",
+   "Thornrun Loop",
+   "Reedbank Run",
+   "Tuftbank Hollow",
+   "Canopy Turn",
+   "Gale Shelf",
+   "Bellshade Glade",
+   "Threeway Trail",
+   "Fernring Clearing"
+  ]
+ },
+ {
+  "id": "dewleaf_verge",
+  "leads_to": [
+   "bramblebrook_woods",
+   "dewleaf_fields"
+  ],
+  "monsters": [
+   "dusk_dewdrop_slime",
+   "bog_moss_slime",
+   "gloom_sporecap"
+  ],
+  "name": "Dewleaf Verge",
+  "shops": [],
+  "town": false,
+  "zones": [
+   "Ruins Beyond",
+   "Tumbled Arch Walk",
+   "Outer Glimmer Shore",
+   "Reedshade Inlet",
+   "West Grove Rim",
+   "Violetbloom Clearing"
+  ]
+ }
+]

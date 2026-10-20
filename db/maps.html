@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Maps · EMBERWISP</title>
+<meta name="description" content="The item and monster database of the live game">
+<meta name="color-scheme" content="light dark">
+<link rel="icon" href="assets/icon.png">
+<link rel="stylesheet" href="assets/db.css">
+<script>try{var t=localStorage.getItem("db-theme");if(t)document.documentElement.dataset.theme=t;}catch(e){}</script>
+</head>
+<body>
+<header class="top">
+ <div class="bar">
+  <a class="brand" href="index.html"><span class="name">EMBERWISP</span><span class="ver" title="Version">v2.0.0</span></a>
+  <div class="tools">
+   <button type="button" class="btn" id="lang-btn" lang="th">ภาษาไทย</button>
+   <button type="button" class="btn icon" id="theme-btn" aria-label="Theme" title="Theme"><svg viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><circle cx="8" cy="8" r="6.5" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M8 1.5a6.5 6.5 0 0 1 0 13z" fill="currentColor"/></svg></button>
+  </div>
+ </div>
+ <nav class="nav"><a href="items.html"><span data-i18n="nav.items">Items</span></a><a href="monsters.html"><span data-i18n="nav.monsters">Monsters</span></a><a href="cards.html"><span data-i18n="nav.cards">Cards</span></a><a href="maps.html" aria-current="page"><span data-i18n="nav.maps">Maps</span></a></nav>
+</header>
+<main id="top">
+<h1><span data-i18n="nav.maps">Maps</span></h1><ul class="mapcards"><li class="mapcard"><h2><a href="map/brightvale.html">Brightvale</a></h2>
+<p><span class="flag"><span data-i18n="map.town">Town</span></span>  · 19 <span data-i18n="col.zones">Zones</span></p>
+<p class="mons"></p>
+<p class="muted small"><span data-i18n="col.links">Leads to</span>: <a href="map/dewleaf_fields.html">Dewleaf Fields</a></p></li><li class="mapcard"><h2><a href="map/dewleaf_fields.html">Dewleaf Fields</a></h2>
+<p><span class="flag"><span data-i18n="map.field">Field</span></span> Lv 1–9 · 14 <span data-i18n="col.zones">Zones</span></p>
+<p class="mons"><a class="ref" href="monster/dewdrop_slime.html"><img class="px" src="img/monsters/dewdrop_slime.png" width="25" height="23" alt="" loading="lazy"><span class="nm">Dewdrop Slime</span></a> <a class="ref" href="monster/moss_slime.html"><img class="px" src="img/monsters/moss_slime.png" width="25" height="21" alt="" loading="lazy"><span class="nm">Moss Slime</span></a> <a class="ref" href="monster/sporeling.html"><img class="px" src="img/monsters/sporeling.png" width="19" height="19" alt="" loading="lazy"><span class="nm">Sporeling</span></a> <a class="ref" href="monster/sporecap.html"><img class="px" src="img/monsters/sporecap.png" width="26" height="27" alt="" loading="lazy"><span class="nm">Sporecap</span></a> <a class="ref" href="monster/elder_sporecap.html"><img class="px" src="img/monsters/elder_sporecap.thumb.png" width="38" height="37" alt="" loading="lazy"><span class="nm">Elder Sporecap</span></a></p>
+<p class="muted small"><span data-i18n="col.links">Leads to</span>: <a href="map/bramblebrook_woods.html">Bramblebrook Woods</a>, <a href="map/brightvale.html">Brightvale</a>, <a href="map/dewleaf_verge.html">Dewleaf Verge</a>, <a href="map/rootglow_hollow_f1.html">Rootglow Hollow — Rootfall Entry</a></p></li><li class="mapcard"><h2><a href="map/rootglow_hollow_f1.html">Rootglow Hollow — Rootfall Entry</a></h2>
+<p><span class="flag"><span data-i18n="map.field">Field</span></span> Lv 11–16 · 6 <span data-i18n="col.zones">Zones</span></p>
+<p class="mons"><a class="ref" href="monster/rootnib.html"><img class="px" src="img/monsters/rootnib.png" width="39" height="34" alt="" loading="lazy"><span class="nm">Rootnib</span></a> <a class="ref" href="monster/dripfin.html"><img class="px" src="img/monsters/dripfin.png" width="40" height="34" alt="" loading="lazy"><span class="nm">Dripfin</span></a></p>
+<p class="muted small"><span data-i18n="col.links">Leads to</span>: <a href="map/dewleaf_fields.html">Dewleaf Fields</a>, <a href="map/rootglow_hollow_f2.html">Rootglow Hollow — Hushwater Veins</a></p></li><li class="mapcard"><h2><a href="map/rootglow_hollow_f2.html">Rootglow Hollow — Hushwater Veins</a></h2>
+<p><span class="flag"><span data-i18n="map.field">Field</span></span> Lv 16–20 · 6 <span data-i18n="col.zones">Zones</span></p>
+<p class="mons"><a class="ref" href="monster/dripfin.html"><img class="px" src="img/monsters/dripfin.png" width="40" height="34" alt="" loading="lazy"><span class="nm">Dripfin</span></a> <a class="ref" href="monster/hushcap.html"><img class="px" src="img/monsters/hushcap.thumb.png" width="24" height="30" alt="" loading="lazy"><span class="nm">Hushcap</span></a></p>
+<p class="muted small"><span data-i18n="col.links">Leads to</span>: <a href="map/rootglow_hollow_f1.html">Rootglow Hollow — Rootfall Entry</a>, <a href="map/rootglow_hollow_f3.html">Rootglow Hollow — Deepheart Bower</a></p></li><li class="mapcard"><h2><a href="map/rootglow_hollow_f3.html">Rootglow Hollow — Deepheart Bower</a></h2>
+<p><span class="flag"><span data-i18n="map.field">Field</span></span> Lv 22–30 · 6 <span data-i18n="col.zones">Zones</span></p>
+<p class="mons"><a class="ref" href="monster/wickmoth.html"><img class="px" src="img/monsters/wickmoth.png" width="45" height="38" alt="" loading="lazy"><span class="nm">Wickmoth</span></a> <a class="ref" href="monster/rootmantle.html"><img class="px" src="img/monsters/rootmantle.thumb.png" width="29" height="29" alt="" loading="lazy"><span class="nm">Rootmantle</span></a> <a class="ref" href="monster/dewroot_regent.html"><img class="px" src="img/monsters/dewroot_regent.thumb.png" width="41" height="38" alt="" loading="lazy"><span class="nm">Dewroot Regent</span></a></p>
+<p class="muted small"><span data-i18n="col.links">Leads to</span>: <a href="map/rootglow_hollow_f2.html">Rootglow Hollow — Hushwater Veins</a></p></li><li class="mapcard"><h2><a href="map/bramblebrook_woods.html">Bramblebrook Woods</a></h2>
+<p><span class="flag"><span data-i18n="map.field">Field</span></span> Lv 7–28 · 9 <span data-i18n="col.zones">Zones</span></p>
+<p class="mons"><a class="ref" href="monster/bramblebun.html"><img class="px" src="img/monsters/bramblebun.png" width="30" height="40" alt="" loading="lazy"><span class="nm">Bramblebun</span></a> <a class="ref" href="monster/reedbeak.html"><img class="px" src="img/monsters/reedbeak.thumb.png" width="23" height="27" alt="" loading="lazy"><span class="nm">Reedbeak</span></a> <a class="ref" href="monster/tuftguard.html"><img class="px" src="img/monsters/tuftguard.thumb.png" width="26" height="29" alt="" loading="lazy"><span class="nm">Tuftguard</span></a> <a class="ref" href="monster/gale_bramblebun.html"><img class="px" src="img/monsters/gale_bramblebun.png" width="30" height="40" alt="" loading="lazy"><span class="nm">Gale Bramblebun</span></a> <a class="ref" href="monster/bellwisp.html"><img class="px" src="img/monsters/bellwisp.png" width="29" height="36" alt="" loading="lazy"><span class="nm">Bellwisp</span></a></p>
+<p class="muted small"><span data-i18n="col.links">Leads to</span>: <a href="map/dewleaf_fields.html">Dewleaf Fields</a>, <a href="map/dewleaf_verge.html">Dewleaf Verge</a></p></li><li class="mapcard"><h2><a href="map/dewleaf_verge.html">Dewleaf Verge</a></h2>
+<p><span class="flag"><span data-i18n="map.field">Field</span></span> Lv 15–23 · 6 <span data-i18n="col.zones">Zones</span></p>
+<p class="mons"><a class="ref" href="monster/dusk_dewdrop_slime.html"><img class="px" src="img/monsters/dusk_dewdrop_slime.png" width="31" height="29" alt="" loading="lazy"><span class="nm">Dusk Dewdrop Slime</span></a> <a class="ref" href="monster/bog_moss_slime.html"><img class="px" src="img/monsters/bog_moss_slime.png" width="31" height="26" alt="" loading="lazy"><span class="nm">Bog Moss Slime</span></a> <a class="ref" href="monster/gloom_sporecap.html"><img class="px" src="img/monsters/gloom_sporecap.png" width="32" height="34" alt="" loading="lazy"><span class="nm">Gloom Sporecap</span></a></p>
+<p class="muted small"><span data-i18n="col.links">Leads to</span>: <a href="map/bramblebrook_woods.html">Bramblebrook Woods</a>, <a href="map/dewleaf_fields.html">Dewleaf Fields</a></p></li></ul><p class="note"><span data-i18n="note.hidden">Only what the live game can reach is listed.</span></p>
+</main>
+<footer class="foot">
+ <p><strong>EMBERWISP</strong> v2.0.0 · <span data-i18n="ui.generated">Built from the game&#x27;s own data files.</span> · <a href="index.html#data"><span data-i18n="ui.data_files">Data files (JSON)</span></a></p>
+</footer>
+<script src="assets/i18n.js"></script>
+<script src="assets/db.js"></script>
+</body>
+</html>
