@@ -587,9 +587,20 @@ body {
 <script>
 (function () {
 	const PACK = /(^|\/)index\.20261020025843\.pck(\?|$)/;
+	const REGION = /(^|\/)packs\/[^/?#]+\.pck(\?|$)/;
 	const nativeFetch = window.fetch.bind(window);
 	window.fetch = async function (input, init) {
 		const url = typeof input === 'string' ? input : (input && input.url) || '';
+		if (REGION.test(url)) {
+			// GitHub Pages gzips region packs; the browser already inflated the body, so drop the
+			// Content-Encoding header or the game tries to inflate it a second time and fails.
+			const res = await nativeFetch(input, init);
+			if (!res.ok || !res.body) return res;
+			const headers = new Headers(res.headers);
+			headers.delete('Content-Encoding');
+			headers.delete('Content-Length');
+			return new Response(res.body, { status: res.status, statusText: res.statusText, headers });
+		}
 		if (!PACK.test(url)) return nativeFetch(input, init);
 		const res = await nativeFetch(url.replace(/\.pck(\?|$)/, '.pck.gz$1'), init);
 		if (!res.ok || !res.body) return res;

@@ -4,7 +4,7 @@
 // Incrementing CACHE_VERSION will kick off the install event and force
 // previously cached resources to be updated from the network.
 /** @type {string} */
-const CACHE_VERSION = '1792465121|12683454';
+const CACHE_VERSION = '1792465121|12683454-hotfix1';
 /** @type {string} */
 const CACHE_PREFIX = 'Aetheria-sw-cache-';
 const CACHE_NAME = CACHE_PREFIX + CACHE_VERSION;
